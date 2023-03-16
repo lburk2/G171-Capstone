@@ -20,7 +20,9 @@ add_executable(LCD
         imageN.h
         font.h
         OLED.c
-        OLED.h 
+        OLED.h
+        SD.c
+        SD.h 
         )
 #
 # pull in common dependencies
