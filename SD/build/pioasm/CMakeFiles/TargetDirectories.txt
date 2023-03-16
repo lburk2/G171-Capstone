@@ -1,3 +1,0 @@
-C:/Users/lando/iCloudDrive/Documents/Semester8/Capstone II/Code/SD/build/pioasm/CMakeFiles/pioasm.dir
-C:/Users/lando/iCloudDrive/Documents/Semester8/Capstone II/Code/SD/build/pioasm/CMakeFiles/edit_cache.dir
-C:/Users/lando/iCloudDrive/Documents/Semester8/Capstone II/Code/SD/build/pioasm/CMakeFiles/rebuild_cache.dir
