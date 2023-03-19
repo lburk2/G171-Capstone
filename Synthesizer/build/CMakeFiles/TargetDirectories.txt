@@ -1,4 +1,4 @@
-Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/CMakeFiles/LCD.dir
+Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/CMakeFiles/SYNTH.dir
 Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/CMakeFiles/ELF2UF2Build.dir
 Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/CMakeFiles/edit_cache.dir
 Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/CMakeFiles/rebuild_cache.dir
@@ -154,3 +154,5 @@ Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/pico-sdk/src/rp204
 Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2040/hardware_structs/CMakeFiles/rebuild_cache.dir
 Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/pico-sdk/docs/CMakeFiles/edit_cache.dir
 Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/pico-sdk/docs/CMakeFiles/rebuild_cache.dir
+Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/build/CMakeFiles/edit_cache.dir
+Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/build/CMakeFiles/rebuild_cache.dir

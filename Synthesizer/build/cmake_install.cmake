@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/LCD")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/SYNTH")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -40,6 +40,11 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
   include("Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/pico-sdk/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/build/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

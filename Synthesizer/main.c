@@ -6,7 +6,8 @@
 // #include "font24.h"
 #include "menuButtons.h"
 #include "OLED.h"
-
+#include "sd_card.h"
+#include "ff.h"
 
 uint8_t g_buttonPress = -1; 
 
@@ -17,6 +18,14 @@ void irq_en(bool en);
 
 
 int main(void){
+
+    FRESULT fr;
+    FATFS fs;
+    // FIL fil;
+    // int ret;
+    // char buf[100];
+    // char filename[] = "test02.txt";
+    spi_inst_t *spi = spi0;
 
     stdio_init_all();
 
@@ -37,6 +46,21 @@ int main(void){
     
     sleep_ms(500);
     Paint_DrawRectangle(32,182,288,198,RED,2,1);
+
+    // Initialize SD card
+    if (!sd_init_driver()) {
+        printf("ERROR: Could not initialize SD card\r\n");
+        while (true);
+    }
+
+    // Mount drive
+    fr = f_mount(&fs, "0:", 1);
+    if (fr != FR_OK) {
+        printf("ERROR: Could not mount filesystem (%d)\r\n", fr);
+        while (true);
+    }
+    
+    spi_init(spi, 125000000);
     
     sleep_ms(500);
     LCD_clear(MAGENTA);

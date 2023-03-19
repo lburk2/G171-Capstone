@@ -116,17 +116,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named LCD
+# Target rules for targets named SYNTH
 
 # Build rule for target.
-LCD: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 LCD
-.PHONY : LCD
+SYNTH: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 SYNTH
+.PHONY : SYNTH
 
 # fast build rule for target.
-LCD/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/build
-.PHONY : LCD/fast
+SYNTH/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/build
+.PHONY : SYNTH/fast
 
 #=============================================================================
 # Target rules for targets named ELF2UF2Build
@@ -224,7 +224,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: C_/VSAR
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
@@ -232,7 +232,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i: C_/VSARM/
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
@@ -240,7 +240,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s: C_/VSARM/
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.obj: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
@@ -248,7 +248,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.obj: C_/VSARM/sd
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
@@ -256,7 +256,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i: C_/VSARM/sdk/
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
@@ -264,7 +264,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s: C_/VSARM/sdk/
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.obj: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
@@ -272,7 +272,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.obj: C_/VSARM/sd
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
@@ -280,7 +280,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i: C_/VSARM/sdk/
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
@@ -288,7 +288,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s: C_/VSARM/sdk/
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.obj: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
@@ -296,7 +296,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.obj: C_/VSARM
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
@@ -304,7 +304,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i: C_/VSARM/s
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
@@ -312,7 +312,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s: C_/VSARM/s
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.obj: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
@@ -320,7 +320,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.obj: C_/VSARM/sd
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
@@ -328,7 +328,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i: C_/VSARM/sdk/
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
@@ -336,7 +336,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s: C_/VSARM/sdk/
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.obj: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
@@ -344,7 +344,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.obj: C_/VSARM/
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
@@ -352,7 +352,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i: C_/VSARM/sd
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
@@ -360,7 +360,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s: C_/VSARM/sd
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.obj: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
@@ -368,7 +368,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.obj: C_/VSARM/sd
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
@@ -376,7 +376,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i: C_/VSARM/sdk/
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
@@ -384,7 +384,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s: C_/VSARM/sdk/
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.obj: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
@@ -392,7 +392,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.obj: C_/VS
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
@@ -400,7 +400,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i: C_/VSAR
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
@@ -408,7 +408,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s: C_/VSAR
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.obj: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
@@ -416,7 +416,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.obj: C_/VSARM/sd
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
@@ -424,7 +424,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i: C_/VSARM/sdk/
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
@@ -432,7 +432,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s: C_/VSARM/sdk/
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.obj: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
@@ -440,7 +440,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.obj: C_/VS
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
@@ -448,7 +448,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i: C_/VSAR
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
@@ -456,7 +456,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s: C_/VSAR
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.obj: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
@@ -464,7 +464,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.obj: C_/VS
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
@@ -472,7 +472,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i: C_/VSAR
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
@@ -480,7 +480,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s: C_/VSAR
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.obj: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
@@ -488,7 +488,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.obj: C_/VSAR
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.i: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
@@ -496,7 +496,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.i: C_/VSARM/
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.s: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
@@ -504,7 +504,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.s: C_/VSARM/
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.obj: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
@@ -512,7 +512,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.obj: C_/VSARM/sdk/pi
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
@@ -520,7 +520,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i: C_/VSARM/sdk/pico
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
@@ -528,7 +528,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s: C_/VSARM/sdk/pico
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.obj: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
@@ -536,7 +536,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.obj: C_/VSARM/sdk/pico/pi
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.i: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
@@ -544,7 +544,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.i: C_/VSARM/sdk/pico/pico
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.s: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
@@ -552,7 +552,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.s: C_/VSARM/sdk/pico/pico
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.obj: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
@@ -560,7 +560,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.obj: C_/VSARM/sdk
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.i: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
@@ -568,7 +568,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.i: C_/VSARM/sdk/p
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.s: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
@@ -576,7 +576,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.s: C_/VSARM/sdk/p
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.obj: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
@@ -584,7 +584,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp204
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
@@ -592,7 +592,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp204
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
@@ -600,7 +600,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp204
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.obj: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
@@ -608,7 +608,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_us
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
@@ -616,7 +616,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_us
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
@@ -624,7 +624,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_us
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.obj: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
@@ -632,7 +632,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.obj: C_/VSARM/sdk/pico/pico-sdk/
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.i: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
@@ -640,7 +640,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.i: C_/VSARM/sdk/pico/pico-sdk/li
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.s: C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
@@ -648,7 +648,7 @@ C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.s: C_/VSARM/sdk/pico/pico-sdk/li
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.obj: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
@@ -656,7 +656,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.obj: C_/VSARM/s
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.i: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
@@ -664,7 +664,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.i: C_/VSARM/sdk
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.s: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
@@ -672,7 +672,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.s: C_/VSARM/sdk
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.obj: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
@@ -680,7 +680,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.obj: C_/VSARM/sdk/pico
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.i: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
@@ -688,7 +688,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.i: C_/VSARM/sdk/pico/p
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.s: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
@@ -696,7 +696,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.s: C_/VSARM/sdk/pico/p
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.obj: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
@@ -704,7 +704,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.obj: C_/VSARM/sdk/pico/pic
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.i: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.i
@@ -712,7 +712,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.i: C_/VSARM/sdk/pico/pico-
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.s: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.s
@@ -720,7 +720,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.s: C_/VSARM/sdk/pico/pico-
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.obj: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.c.obj
@@ -728,7 +728,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.obj: C_/VSARM/sdk/pico/pico-
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.i: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.c.i
@@ -736,7 +736,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.i: C_/VSARM/sdk/pico/pico-sd
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.s: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.c.s
@@ -744,7 +744,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.s: C_/VSARM/sdk/pico/pico-sd
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.obj: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj
@@ -752,7 +752,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.obj: C_/VSARM/sdk/pico/pico
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.i: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.c.i
@@ -760,7 +760,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.i: C_/VSARM/sdk/pico/pico-s
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.s: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.c.s
@@ -768,7 +768,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.s: C_/VSARM/sdk/pico/pico-s
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.obj: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
@@ -776,7 +776,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.obj: C_/VSARM/sdk
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.i: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
@@ -784,7 +784,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.i: C_/VSARM/sdk/p
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.s: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
@@ -792,7 +792,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.s: C_/VSARM/sdk/p
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.obj: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.c.obj
@@ -800,7 +800,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.obj: C_/VSARM/sdk/pico/
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.i: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.c.i
@@ -808,7 +808,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.i: C_/VSARM/sdk/pico/pi
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.s: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.c.s
@@ -816,7 +816,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.s: C_/VSARM/sdk/pico/pi
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.obj: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj
@@ -824,7 +824,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.obj: C_/VSARM/sdk/pico/pic
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.i: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.i
@@ -832,7 +832,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.i: C_/VSARM/sdk/pico/pico-
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.s: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.s
@@ -840,7 +840,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.s: C_/VSARM/sdk/pico/pico-
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.obj: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.c.obj
@@ -848,7 +848,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.obj: C_/VSARM/sdk/pico/pic
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.i: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.c.i
@@ -856,7 +856,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.i: C_/VSARM/sdk/pico/pico-
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.s: C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.c.s
@@ -864,15 +864,39 @@ C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.s: C_/VSARM/sdk/pico/pico-
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.c.s
+
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.obj
+
+# target to build an object file
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
+
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.i
+
+# target to preprocess a source file
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.i
+
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.s
+
+# target to generate assembly for a file
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.obj
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
@@ -880,7 +904,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.i: C_/VSARM/sdk/p
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
@@ -888,7 +912,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.s: C_/VSARM/sdk/p
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
@@ -896,7 +920,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj: C_/VSARM/s
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
@@ -904,7 +928,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: C_/VSARM/sdk
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
@@ -912,7 +936,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.s: C_/VSARM/sdk
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_divider/divider.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
@@ -920,15 +944,39 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_divider/divider.obj: C_/VSARM
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
+
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.obj
+
+# target to build an object file
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj
+
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.i
+
+# target to preprocess a source file
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.s
+
+# target to generate assembly for a file
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.obj
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
@@ -936,7 +984,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.i: C_/VSARM/sdk/p
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
@@ -944,7 +992,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.s: C_/VSARM/sdk/p
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
@@ -952,7 +1000,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj: C_/VSARM/sdk/p
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
@@ -960,7 +1008,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: C_/VSARM/sdk/pic
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
@@ -968,7 +1016,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: C_/VSARM/sdk/pic
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
@@ -976,7 +1024,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.obj: C_/VSARM/sdk/pic
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
@@ -984,7 +1032,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.i: C_/VSARM/sdk/pico/
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
@@ -992,7 +1040,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.s: C_/VSARM/sdk/pico/
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
@@ -1000,7 +1048,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.obj: C_/VSARM/sdk/pic
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
@@ -1008,7 +1056,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.i: C_/VSARM/sdk/pico/
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
@@ -1016,7 +1064,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.s: C_/VSARM/sdk/pico/
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
@@ -1024,7 +1072,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj: C_
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
@@ -1032,7 +1080,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj: C_/VSARM/sdk/pic
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
@@ -1040,7 +1088,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i: C_/VSARM/sdk/pico/
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
@@ -1048,15 +1096,39 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s: C_/VSARM/sdk/pico/
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
+
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.obj
+
+# target to build an object file
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj
+
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.i
+
+# target to preprocess a source file
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i
+
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.s
+
+# target to generate assembly for a file
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.obj
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
@@ -1064,7 +1136,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.i: C_/VSARM/sdk/pico/
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
@@ -1072,7 +1144,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.s: C_/VSARM/sdk/pico/
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
@@ -1080,7 +1152,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj: C_/VSARM/sdk/p
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
@@ -1088,7 +1160,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.i: C_/VSARM/sdk/pic
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
@@ -1096,7 +1168,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.s: C_/VSARM/sdk/pic
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
@@ -1104,7 +1176,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.obj: C_/VSARM/sdk
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
@@ -1112,7 +1184,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.i: C_/VSARM/sdk/p
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
@@ -1120,7 +1192,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.s: C_/VSARM/sdk/p
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
@@ -1128,7 +1200,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.obj: C_/VSARM/sdk/p
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
@@ -1136,7 +1208,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.i: C_/VSARM/sdk/pic
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
@@ -1144,7 +1216,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.s: C_/VSARM/sdk/pic
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
@@ -1152,7 +1224,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj: C_/VSARM/sdk/p
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
@@ -1160,7 +1232,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: C_/VSARM/sdk/pic
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
@@ -1168,7 +1240,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: C_/VSARM/sdk/pic
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
@@ -1176,7 +1248,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj: C_/VSA
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
@@ -1184,7 +1256,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: C_/VSARM
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
@@ -1192,7 +1264,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s: C_/VSARM
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
@@ -1200,7 +1272,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj: C_/VSARM/sdk/p
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
@@ -1208,7 +1280,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: C_/VSARM/sdk/pic
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
@@ -1216,7 +1288,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: C_/VSARM/sdk/pic
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
@@ -1224,7 +1296,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj: C_/VSA
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
@@ -1232,7 +1304,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj: C_/VSARM/sdk
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
@@ -1240,7 +1312,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: C_/VSARM/sdk/p
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
@@ -1248,7 +1320,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: C_/VSARM/sdk/p
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_divider/divider.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
@@ -1256,7 +1328,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_divider/divider.obj: C_/VSARM/sdk
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
@@ -1264,7 +1336,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.obj: C_/VSARM
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
@@ -1272,7 +1344,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.obj: C_/VS
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
@@ -1280,7 +1352,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.i: C_/VSAR
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
@@ -1288,7 +1360,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.s: C_/VSAR
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
@@ -1296,7 +1368,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.obj: C_/VSARM/
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
@@ -1304,7 +1376,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.i: C_/VSARM/sd
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
@@ -1312,7 +1384,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.s: C_/VSARM/sd
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
@@ -1320,7 +1392,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.obj: C_
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
@@ -1328,7 +1400,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
@@ -1336,7 +1408,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
@@ -1344,7 +1416,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
@@ -1352,7 +1424,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.obj: C_/VSARM/s
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
@@ -1360,7 +1432,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.obj: C_/VSAR
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
@@ -1368,7 +1440,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.i: C_/VSARM/
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
@@ -1376,7 +1448,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.s: C_/VSARM/
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
@@ -1384,7 +1456,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.obj: C_/VSARM/sd
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
@@ -1392,7 +1464,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.i: C_/VSARM/sdk/
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
@@ -1400,7 +1472,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.s: C_/VSARM/sdk/
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
@@ -1408,7 +1480,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.obj: C_/V
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
@@ -1416,7 +1488,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.ob
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
@@ -1424,7 +1496,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.obj: C_/VSARM/
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
@@ -1432,7 +1504,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.i: C_/VSARM/sd
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
@@ -1440,7 +1512,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.s: C_/VSARM/sd
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
@@ -1448,7 +1520,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj: C_/VSA
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
@@ -1456,7 +1528,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.obj: C_/VSARM/s
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
@@ -1464,7 +1536,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.i: C_/VSARM/sdk
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
@@ -1472,7 +1544,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.s: C_/VSARM/sdk
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
@@ -1480,7 +1552,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.obj: C_/VSARM/sdk/p
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
@@ -1488,7 +1560,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.i: C_/VSARM/sdk/pic
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
@@ -1496,7 +1568,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.s: C_/VSARM/sdk/pic
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
@@ -1504,7 +1576,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.obj: C_/VSARM/sdk
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
@@ -1512,7 +1584,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.i: C_/VSARM/sdk/p
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
@@ -1520,7 +1592,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.s: C_/VSARM/sdk/p
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
@@ -1528,7 +1600,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.obj: C_
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
@@ -1536,7 +1608,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.i: C_/V
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
@@ -1544,7 +1616,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.s: C_/V
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1552,7 +1624,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.obj: C_/VSARM/
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
@@ -1560,7 +1632,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.obj: C_/
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
@@ -1568,7 +1640,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.i: C_/VS
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
@@ -1576,7 +1648,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.s: C_/VS
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
@@ -1584,7 +1656,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.obj: C_/VSARM/sdk/pic
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
@@ -1592,7 +1664,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i: C_/VSARM/sdk/pico/
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
@@ -1600,7 +1672,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.s: C_/VSARM/sdk/pico/
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
@@ -1608,7 +1680,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj: C_
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
@@ -1616,7 +1688,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i: C_/V
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
@@ -1624,7 +1696,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s: C_/V
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
@@ -1632,7 +1704,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.obj: C_/VSARM
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
@@ -1640,7 +1712,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i: C_/VSARM/s
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
@@ -1648,7 +1720,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s: C_/VSARM/s
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
@@ -1656,7 +1728,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.o
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
@@ -1664,7 +1736,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
@@ -1672,7 +1744,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
@@ -1680,7 +1752,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj: C_/VSARM/sdk/p
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
@@ -1688,7 +1760,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: C_/VSARM/sdk/pic
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
@@ -1696,7 +1768,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: C_/VSARM/sdk/pic
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
@@ -1704,7 +1776,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj: C_/VSARM
 
 # target to build an object file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
@@ -1712,7 +1784,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i: C_/VSARM/s
 
 # target to preprocess a source file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
 
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
@@ -1720,7 +1792,7 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s: C_/VSARM/s
 
 # target to generate assembly for a file
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 
 LCD.obj: LCD.c.obj
@@ -1728,7 +1800,7 @@ LCD.obj: LCD.c.obj
 
 # target to build an object file
 LCD.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/LCD.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/LCD.c.obj
 .PHONY : LCD.c.obj
 
 LCD.i: LCD.c.i
@@ -1736,7 +1808,7 @@ LCD.i: LCD.c.i
 
 # target to preprocess a source file
 LCD.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/LCD.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/LCD.c.i
 .PHONY : LCD.c.i
 
 LCD.s: LCD.c.s
@@ -1744,7 +1816,7 @@ LCD.s: LCD.c.s
 
 # target to generate assembly for a file
 LCD.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/LCD.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/LCD.c.s
 .PHONY : LCD.c.s
 
 OLED.obj: OLED.c.obj
@@ -1752,7 +1824,7 @@ OLED.obj: OLED.c.obj
 
 # target to build an object file
 OLED.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/OLED.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/OLED.c.obj
 .PHONY : OLED.c.obj
 
 OLED.i: OLED.c.i
@@ -1760,7 +1832,7 @@ OLED.i: OLED.c.i
 
 # target to preprocess a source file
 OLED.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/OLED.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/OLED.c.i
 .PHONY : OLED.c.i
 
 OLED.s: OLED.c.s
@@ -1768,39 +1840,351 @@ OLED.s: OLED.c.s
 
 # target to generate assembly for a file
 OLED.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/OLED.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/OLED.c.s
 .PHONY : OLED.c.s
 
-SD.obj: SD.c.obj
-.PHONY : SD.obj
+hw_config.obj: hw_config.c.obj
+.PHONY : hw_config.obj
 
 # target to build an object file
-SD.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/SD.c.obj
-.PHONY : SD.c.obj
+hw_config.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/hw_config.c.obj
+.PHONY : hw_config.c.obj
 
-SD.i: SD.c.i
-.PHONY : SD.i
+hw_config.i: hw_config.c.i
+.PHONY : hw_config.i
 
 # target to preprocess a source file
-SD.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/SD.c.i
-.PHONY : SD.c.i
+hw_config.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/hw_config.c.i
+.PHONY : hw_config.c.i
 
-SD.s: SD.c.s
-.PHONY : SD.s
+hw_config.s: hw_config.c.s
+.PHONY : hw_config.s
 
 # target to generate assembly for a file
-SD.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/SD.c.s
-.PHONY : SD.c.s
+hw_config.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/hw_config.c.s
+.PHONY : hw_config.c.s
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.obj: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.obj
+
+# target to build an object file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.i: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.i
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.i
+
+# target to preprocess a source file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.i
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.i
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.s: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.s
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.s
+
+# target to generate assembly for a file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.s
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.s
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.obj: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.obj
+
+# target to build an object file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.i: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.i
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.i
+
+# target to preprocess a source file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.i
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.i
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.s: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.s
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.s
+
+# target to generate assembly for a file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.s
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.s
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.obj: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.obj
+
+# target to build an object file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.i: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.i
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.i
+
+# target to preprocess a source file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.i
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.i
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.s: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.s
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.s
+
+# target to generate assembly for a file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.s
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.s
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.obj: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.obj
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.obj
+
+# target to build an object file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.obj
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.obj
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.i: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.i
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.i
+
+# target to preprocess a source file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.i
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.i
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.s: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.s
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.s
+
+# target to generate assembly for a file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.s
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.s
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.obj: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.obj
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.obj
+
+# target to build an object file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.obj
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.obj
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.i: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.i
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.i
+
+# target to preprocess a source file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.i
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.i
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.s: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.s
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.s
+
+# target to generate assembly for a file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.s
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.s
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.obj: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.obj
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.obj
+
+# target to build an object file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.obj
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.obj
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.i: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.i
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.i
+
+# target to preprocess a source file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.i
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.i
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.s: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.s
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.s
+
+# target to generate assembly for a file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.s
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.s
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.obj: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.obj
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.obj
+
+# target to build an object file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.obj
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.obj
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.i: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.i
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.i
+
+# target to preprocess a source file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.i
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.i
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.s: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.s
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.s
+
+# target to generate assembly for a file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.s
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.s
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.obj: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.obj
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.obj
+
+# target to build an object file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.obj
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.obj
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.i: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.i
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.i
+
+# target to preprocess a source file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.i
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.i
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.s: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.s
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.s
+
+# target to generate assembly for a file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.s
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.s
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.obj: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.obj
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.obj
+
+# target to build an object file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.obj
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.obj
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.i: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.i
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.i
+
+# target to preprocess a source file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.i
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.i
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.s: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.s
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.s
+
+# target to generate assembly for a file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.s
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.s
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.obj: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.obj
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.obj
+
+# target to build an object file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.obj
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.obj
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.i: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.i
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.i
+
+# target to preprocess a source file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.i
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.i
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.s: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.s
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.s
+
+# target to generate assembly for a file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.s
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.s
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.obj: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.obj
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.obj
+
+# target to build an object file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.obj
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.obj
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.i: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.i
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.i
+
+# target to preprocess a source file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.i
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.i
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.s: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.s
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.s
+
+# target to generate assembly for a file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.s
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.s
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.obj: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.obj
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.obj
+
+# target to build an object file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.obj
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.obj
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.i: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.i
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.i
+
+# target to preprocess a source file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.i
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.i
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.s: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.s
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.s
+
+# target to generate assembly for a file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.s
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.s
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.obj: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.obj
+
+# target to build an object file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.i: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.i
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.i
+
+# target to preprocess a source file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.i
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.i
+
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.s: lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.s
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.s
+
+# target to generate assembly for a file
+lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.s
+.PHONY : lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.s
 
 main.obj: main.c.obj
 .PHONY : main.obj
 
 # target to build an object file
 main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/main.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/main.c.obj
 .PHONY : main.c.obj
 
 main.i: main.c.i
@@ -1808,7 +2192,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -1816,7 +2200,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/main.c.s
 .PHONY : main.c.s
 
 menuButtons.obj: menuButtons.c.obj
@@ -1824,7 +2208,7 @@ menuButtons.obj: menuButtons.c.obj
 
 # target to build an object file
 menuButtons.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/menuButtons.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/menuButtons.c.obj
 .PHONY : menuButtons.c.obj
 
 menuButtons.i: menuButtons.c.i
@@ -1832,7 +2216,7 @@ menuButtons.i: menuButtons.c.i
 
 # target to preprocess a source file
 menuButtons.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/menuButtons.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/menuButtons.c.i
 .PHONY : menuButtons.c.i
 
 menuButtons.s: menuButtons.c.s
@@ -1840,7 +2224,7 @@ menuButtons.s: menuButtons.c.s
 
 # target to generate assembly for a file
 menuButtons.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\LCD.dir\build.make CMakeFiles/LCD.dir/menuButtons.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/menuButtons.c.s
 .PHONY : menuButtons.c.s
 
 # Help Target
@@ -1857,7 +2241,7 @@ help:
 	@echo ... bs2_default_padded_checksummed_asm
 	@echo ... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h
 	@echo ... cyw43_firmware_package
-	@echo ... LCD
+	@echo ... SYNTH
 	@echo ... bs2_default
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i
@@ -1940,6 +2324,9 @@ help:
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.obj
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.i
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.s
+	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.obj
+	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.i
+	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.s
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.obj
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.i
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.s
@@ -1947,6 +2334,9 @@ help:
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.s
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_divider/divider.obj
+	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.obj
+	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.i
+	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.s
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.obj
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.i
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.s
@@ -1963,6 +2353,9 @@ help:
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s
+	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.obj
+	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.i
+	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.s
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.obj
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.i
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.s
@@ -2053,9 +2446,48 @@ help:
 	@echo ... OLED.obj
 	@echo ... OLED.i
 	@echo ... OLED.s
-	@echo ... SD.obj
-	@echo ... SD.i
-	@echo ... SD.s
+	@echo ... hw_config.obj
+	@echo ... hw_config.i
+	@echo ... hw_config.s
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.obj
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.i
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.s
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.obj
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.i
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.s
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.obj
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.i
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.s
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.obj
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.i
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.s
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.obj
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.i
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.s
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.obj
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.i
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.s
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.obj
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.i
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.s
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.obj
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.i
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.s
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.obj
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.i
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.s
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.obj
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.i
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.s
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.obj
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.i
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.s
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.obj
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.i
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.s
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.obj
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.i
+	@echo ... lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
