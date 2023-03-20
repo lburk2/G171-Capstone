@@ -21,10 +21,11 @@ int main(void){
 
     FRESULT fr;
     FATFS fs;
-    // FIL fil;
-    // int ret;
-    // char buf[100];
-    // char filename[] = "test02.txt";
+    FIL fil;
+    //int ret;
+    char buf2[100];
+    char filename[] = "as-early.wav";
+    //char filename[] = "test02.txt";
     spi_inst_t *spi = spi0;
 
     stdio_init_all();
@@ -73,8 +74,8 @@ int main(void){
     oled_WriteString16("***Nebraska!***\n");
 
     uint16_t squareY = 0;
-    uint16_t color[] = {WHITE, GREEN, BLUE, MAGENTA};
-    uint8_t colorIndex = 0;
+    // uint16_t color[] = {WHITE, GREEN, BLUE, MAGENTA};
+    // uint8_t colorIndex = 0;
 
     uint8_t menuLocation = 5;
     uint8_t prevMenuLocation = 5;
@@ -88,8 +89,37 @@ int main(void){
     calc_render_area_buflen(&frame_area);
     uint8_t buf[OLED_BUF_LEN];
     oled_fill(buf,0x00);
-    
-    
+
+    // spi_init(spi, 25 * 1000 * 1000);
+    // // Open file for writing ()
+    // fr = f_open(&fil, filename, FA_WRITE | FA_CREATE_ALWAYS);
+    // if (fr != FR_OK) {
+    //     printf("ERROR: Could not open file (%d)\r\n", fr);
+    //     while (true);
+    // }
+
+    // // Write something to file
+    // ret = f_printf(&fil, "This is another test\r\n");
+    // if (ret < 0) {
+    //     printf("ERROR: Could not write to file (%d)\r\n", ret);
+    //     f_close(&fil);
+    //     while (true);
+    // }
+    // ret = f_printf(&fil, "of writing to an SD card.\r\n");
+    // if (ret < 0) {
+    //     printf("ERROR: Could not write to file (%d)\r\n", ret);
+    //     f_close(&fil);
+    //     while (true);
+    // }
+
+    // // Close file
+    // fr = f_close(&fil);
+    // if (fr != FR_OK) {
+    //     printf("ERROR: Could not close file (%d)\r\n", fr);
+    //     while (true);
+    // }
+    // spi_init(spi, 125000000);
+
     while (true)
     {
         prevMenuLocation = menuLocation;
@@ -238,6 +268,30 @@ int main(void){
             case SD:
                 LCD_clear(RED);
                 Paint_DrawString_EN(20, 30, "SD Card Stuff Here", RED, WHITE);
+
+                spi_init(spi, 25 * 1000 * 1000);
+                
+                // Open file for reading
+                fr = f_open(&fil, filename, FA_READ);
+                if (fr != FR_OK) {
+                    printf("ERROR: Could not open file (%d)\r\n", fr);
+                    while (true);
+                }
+                // Print every line in file over serial
+                printf("Reading from file '%s':\r\n", filename);
+                printf("---\r\n");
+                while (f_gets(buf2, sizeof(buf2), &fil)) {
+                    //printf(buf2);
+                    printf("%d \n",(int)buf2);
+                }
+                printf("\r\n---\r\n");
+                
+                // f_open(&fil, filename, FA_READ | FA_CREATE_ALWAYS);
+                // while (f_gets(buf2, sizeof(buf2), &fil)) {
+                // Paint_DrawString_EN(20, 50, (const char *)buf2, RED, WHITE);}
+                
+                f_close(&fil);
+                spi_init(spi, 125000000);
                 break;
             case SPECTRUM:
                 LCD_clear(BLUE);
