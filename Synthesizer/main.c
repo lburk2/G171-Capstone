@@ -9,6 +9,8 @@
 #include "sd_card.h"
 #include "ff.h"
 #include "MCP23017.h"
+#include "pwm_audio_setup.h"
+#include "pico_button_matrix.h"
 
 uint8_t g_buttonPress = -1; 
 
@@ -91,6 +93,21 @@ int main(void){
     calc_render_area_buflen(&frame_area);
     uint8_t buf[OLED_BUF_LEN];
     oled_fill(buf,0x00);
+
+    //button init
+    uint columns[5] = { 22, 23, 24, 25, 12 };
+    uint rows[6] = { 26, 27, 28, 29, 11, 13 };
+    char matrix[30] = 
+    {
+        '1', '2', '3', '4','0', 
+        '5', '6', '7','8', '0', 
+        '9', '10','11', '12' ,'0', 
+        '13', '0', '0', '0', '0',
+        'w', 's', 'a', 'd', 'x',
+        'g', 'b', 'r', '!', '$',
+    };
+    pico_keypad_init(columns, rows, matrix);
+    int key = pico_keypad_get_key();
 
     while (true)
     {

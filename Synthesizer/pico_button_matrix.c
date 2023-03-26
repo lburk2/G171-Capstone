@@ -9,7 +9,7 @@
 || | keypad with the Raspberry Pi Pico.
 */
 
-#include "pico_keypad4x4.h"
+#include "pico_button_matrix.h"
 
 #define GPIO_INPUT false
 #define GPIO_OUTPUT true

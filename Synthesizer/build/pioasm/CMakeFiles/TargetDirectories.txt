@@ -1,3 +1,3 @@
-/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/pioasm/CMakeFiles/pioasm.dir
-/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/pioasm/CMakeFiles/edit_cache.dir
-/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/pioasm/CMakeFiles/rebuild_cache.dir
+C:/Users/jisat/OneDrive/Documents/GitHub/G171-Capstone/Synthesizer/build/pioasm/CMakeFiles/pioasm.dir
+C:/Users/jisat/OneDrive/Documents/GitHub/G171-Capstone/Synthesizer/build/pioasm/CMakeFiles/edit_cache.dir
+C:/Users/jisat/OneDrive/Documents/GitHub/G171-Capstone/Synthesizer/build/pioasm/CMakeFiles/rebuild_cache.dir
