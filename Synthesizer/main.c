@@ -27,8 +27,7 @@ int main(void){
     FIL fil;
     //int ret;
     char buf2[100];
-    char filename[] = "as-early.wav";
-    //char filename[] = "test02.txt";
+    char filename[] = "test02.txt";
     spi_inst_t *spi = spi0;
 
     stdio_init_all();
@@ -270,9 +269,9 @@ int main(void){
                 printf("Reading from file '%s':\r\n", filename);
                 printf("---\r\n");
                 while (f_gets(buf2, sizeof(buf2), &fil)) {
-                    //printf(buf2);
-                    printf("%d \n",(int)buf2);
+                    printf(buf2);
                 }
+                
                 printf("\r\n---\r\n");
                 
                 // f_open(&fil, filename, FA_READ | FA_CREATE_ALWAYS);
