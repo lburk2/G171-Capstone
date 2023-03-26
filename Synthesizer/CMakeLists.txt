@@ -24,6 +24,12 @@ add_executable(SYNTH
         hw_config.c
         MCP23017.c
         MCP23017.h
+        pico_button_matrix.c
+        pico_button_matrix.h
+        myNCO.c #TAKE OUT IF NOT USE
+        myNCO.h
+        pwm_audio_setup.c
+        pwm_audio_setup.h
         )
 #
 # pull in common dependencies
@@ -40,6 +46,11 @@ target_link_libraries(SYNTH
         FatFs_SPI
         hardware_clocks
         hardware_adc
+        hardware_dma
+        hardware_pwm
+        hardware_sync
+        hardware_adc
+        hardware_timer
         )
 
 # create map/bin/hex file etc.
