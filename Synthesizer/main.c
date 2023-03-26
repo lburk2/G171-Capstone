@@ -37,15 +37,16 @@ int main(void){
     Paint_DrawRectangle(0,180,320,240,WHITE,2,1);
     LCD_Write_Command(0x11);
     Paint_DrawRectangle(30,180,290,200,BLACK,2,0);
-    Paint_DrawRectangle(32,182,117,198,RED,2,1);  
+    Paint_DrawRectangle(32,182,96,198,RED,2,1);  
     
     sleep_ms(500);
     menuButtons_init();
-    Paint_DrawRectangle(32,182,204,198,RED,2,1);
+    Paint_DrawRectangle(32,182,160,198,RED,2,1);
     
     sleep_ms(500);
     oled_init();
-    
+    Paint_DrawRectangle(32,182,224,198,RED,2,1);
+
     sleep_ms(500);
     Paint_DrawRectangle(32,182,288,198,RED,2,1);
 
@@ -90,36 +91,6 @@ int main(void){
     calc_render_area_buflen(&frame_area);
     uint8_t buf[OLED_BUF_LEN];
     oled_fill(buf,0x00);
-
-    // spi_init(spi, 25 * 1000 * 1000);
-    // // Open file for writing ()
-    // fr = f_open(&fil, filename, FA_WRITE | FA_CREATE_ALWAYS);
-    // if (fr != FR_OK) {
-    //     printf("ERROR: Could not open file (%d)\r\n", fr);
-    //     while (true);
-    // }
-
-    // // Write something to file
-    // ret = f_printf(&fil, "This is another test\r\n");
-    // if (ret < 0) {
-    //     printf("ERROR: Could not write to file (%d)\r\n", ret);
-    //     f_close(&fil);
-    //     while (true);
-    // }
-    // ret = f_printf(&fil, "of writing to an SD card.\r\n");
-    // if (ret < 0) {
-    //     printf("ERROR: Could not write to file (%d)\r\n", ret);
-    //     f_close(&fil);
-    //     while (true);
-    // }
-
-    // // Close file
-    // fr = f_close(&fil);
-    // if (fr != FR_OK) {
-    //     printf("ERROR: Could not close file (%d)\r\n", fr);
-    //     while (true);
-    // }
-    // spi_init(spi, 125000000);
 
     while (true)
     {
