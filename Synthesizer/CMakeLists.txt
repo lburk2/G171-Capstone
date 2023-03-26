@@ -22,6 +22,8 @@ add_executable(SYNTH
         OLED.c
         OLED.h
         hw_config.c
+        MCP23017.c
+        MCP23017.h
         )
 #
 # pull in common dependencies

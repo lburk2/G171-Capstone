@@ -4,19 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "C:/VSARM/sdk/pico/pico-sdk/tools/elf2uf2"
-  "Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/elf2uf2"
-  "Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/elf2uf2"
-  "Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/elf2uf2/tmp"
-  "Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/elf2uf2/src/ELF2UF2Build-stamp"
-  "Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/elf2uf2/src"
-  "Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/elf2uf2/src/ELF2UF2Build-stamp"
+  "/Users/landonburk/pico/pico-sdk/tools/elf2uf2"
+  "/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/elf2uf2"
+  "/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/elf2uf2"
+  "/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/elf2uf2/tmp"
+  "/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/elf2uf2/src/ELF2UF2Build-stamp"
+  "/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/elf2uf2/src"
+  "/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/elf2uf2/src/ELF2UF2Build-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/elf2uf2/src/ELF2UF2Build-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/elf2uf2/src/ELF2UF2Build-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/elf2uf2/src/ELF2UF2Build-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/elf2uf2/src/ELF2UF2Build-stamp${cfgdir}") # cfgdir has leading slash
 endif()
