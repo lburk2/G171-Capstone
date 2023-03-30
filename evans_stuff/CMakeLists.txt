@@ -11,7 +11,7 @@ set(CMAKE_CXX_STANDARD 17)
 pico_sdk_init()
 
 add_executable(${PROJECT_NAME}
-    main.c
+    button_test.c
 )
 
 pico_add_extra_outputs(${PROJECT_NAME})

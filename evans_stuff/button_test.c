@@ -21,7 +21,7 @@
 #include "hardware/gpio.h" // gpio
 #include "hardware/pwm.h"  // pwm 
 #include "hardware/sync.h"
-#include "ADSR_c.h" // wait for interrupt
+#include "ADSR_c.h"
 
 #include "sample.h"
 
@@ -61,5 +61,46 @@ int main() {
     return 0;
 
 
-    // Lets see if we can plug in the ADSR to this code
+    // Lets see if we can plug in the ADSR to this code 3/30/23
+
+    // global variables 
+    // encoder_ISR when knob is turned. Increment or decimate a glob var based on 
+    // which direction you turn it
+
+    // then, run a switch and affect ADSR based on that glob var
+
+    void ADSR_callback(uint gpio, uint32_t events) {
+            if(gpio == ARER) //  attack rotary encoder right
+                if(g_attackRate < 10) {
+                    // increment 
+                }
+            if(gpio == AREL)
+                if(g_attackRate )
+                // decrement g_attackRate
+        }
+
+
+    }
+    if(currentDecayRate != g_decayRate) {
+        // update current decay rate
+        currentDecayRate = g_decayRate;
+    }
+
+    PIN9
+    PIN10 
+    PIN11 
+    PIN12 
+
+
+    if(buttonPress_to_activateADSR) -> then initialize ADSR.
+    ADSR testADSR;
+    initADSR(testADSR);
+
+    testADSR->output = process(testADSR); // should I use arrow or dot here?
+    // Dot is for struct, arrow is for a pointer to da struct
+    // How to work this with knobs? switch?
+
+    adsrAudio = (testADSR->output)*audioSignalArray[];
+
+    
 }
