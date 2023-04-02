@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/jisat/OneDrive/Documents/GitHub/G171-Capstone/Synthesizer
+# Install script for directory: /Users/landonburk/Documents/G171-Capstone/Synthesizer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/SYNTH")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,17 +34,17 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/VSARM/armcc/12.2 mpacbti-bet1/bin/arm-none-eabi-objdump.exe")
+  set(CMAKE_OBJDUMP "/usr/local/bin/arm-none-eabi-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/jisat/OneDrive/Documents/GitHub/G171-Capstone/Synthesizer/build/pico-sdk/cmake_install.cmake")
+  include("/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/pico-sdk/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/jisat/OneDrive/Documents/GitHub/G171-Capstone/Synthesizer/build/build/cmake_install.cmake")
+  include("/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/build/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -55,5 +55,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/jisat/OneDrive/Documents/GitHub/G171-Capstone/Synthesizer/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

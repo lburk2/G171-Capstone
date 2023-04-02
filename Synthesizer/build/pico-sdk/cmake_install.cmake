@@ -1,8 +1,8 @@
-# Install script for directory: C:/VSARM/sdk/pico/pico-sdk
+# Install script for directory: /Users/landonburk/pico/pico-sdk
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/SYNTH")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,14 +34,14 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/VSARM/armcc/12.2 mpacbti-bet1/bin/arm-none-eabi-objdump.exe")
+  set(CMAKE_OBJDUMP "/usr/local/bin/arm-none-eabi-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/jisat/OneDrive/Documents/GitHub/G171-Capstone/Synthesizer/build/pico-sdk/tools/cmake_install.cmake")
-  include("C:/Users/jisat/OneDrive/Documents/GitHub/G171-Capstone/Synthesizer/build/pico-sdk/src/cmake_install.cmake")
-  include("C:/Users/jisat/OneDrive/Documents/GitHub/G171-Capstone/Synthesizer/build/pico-sdk/docs/cmake_install.cmake")
+  include("/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/pico-sdk/tools/cmake_install.cmake")
+  include("/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/pico-sdk/src/cmake_install.cmake")
+  include("/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/pico-sdk/docs/cmake_install.cmake")
 
 endif()
 
