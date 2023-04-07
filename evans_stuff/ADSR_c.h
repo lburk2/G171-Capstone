@@ -17,16 +17,20 @@
 //  You may modify and use this source code to create binary code for your own purposes, free or commercial.
 //
 
-// DOING DEFINES HERE 
-
-
 
 #ifndef ADRS_h
 #define ADRS_h
 
 // if the pins are pulled low, there is a twist on the encoder
-#define ARER
-#define AREL 
+#define ARER 9  
+#define AREL 10
+#define DRER 11
+#define DREL 12
+#define SRER 13
+#define SREL 14
+#define RRER 15
+#define RREL 16
+
 
 
     enum envState {
