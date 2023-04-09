@@ -30,9 +30,22 @@ int main(void){
     FIL fil;
     //int ret;
     char buf2[10000];
-    uint16_t samples[1000];
+    uint16_t samples1[1000];
+    uint16_t samples2[1000];
+    uint16_t samples3[1000];
+    uint16_t samples4[1000];
+    uint16_t samples5[1000];
+    uint16_t samples6[1000];
+    uint16_t samples7[1000];
+    uint16_t samples8[1000];
+    uint16_t samples9[1000];
+    uint16_t samples10[1000];
+    uint16_t samples11[1000];
+    uint16_t samples12[1000];
+    uint16_t samples13[1000];
+
     char* sample;
-    char filename[] = "test02.txt";
+    char filename[] = "sineWaveOctave.txt";
     spi_inst_t *spi = spi0;
 
     stdio_init_all();
@@ -292,14 +305,158 @@ int main(void){
                     //printf(buf2);
                     sample = strtok(buf2, ",");
                         while (sample != NULL) {
-                            samples[count++] = atoi(sample);
+                            samples1[count++] = atoi(sample);
                             sample = strtok(NULL, ",");
                         }
                 }
-                
-                for (uint16_t i = 0; i < count; i++){
-                    printf("%d\n", samples[i]);
+                while (f_gets(buf2, sizeof(buf2), &fil)) {
+                    //printf(buf2);
+                    sample = strtok(buf2, ",");
+                        while (sample != NULL) {
+                            samples2[count++] = atoi(sample);
+                            sample = strtok(NULL, ",");
+                        }
                 }
+                while (f_gets(buf2, sizeof(buf2), &fil)) {
+                    //printf(buf2);
+                    sample = strtok(buf2, ",");
+                        while (sample != NULL) {
+                            samples3[count++] = atoi(sample);
+                            sample = strtok(NULL, ",");
+                        }
+                }
+                while (f_gets(buf2, sizeof(buf2), &fil)) {
+                    //printf(buf2);
+                    sample = strtok(buf2, ",");
+                        while (sample != NULL) {
+                            samples4[count++] = atoi(sample);
+                            sample = strtok(NULL, ",");
+                        }
+                }
+                while (f_gets(buf2, sizeof(buf2), &fil)) {
+                    //printf(buf2);
+                    sample = strtok(buf2, ",");
+                        while (sample != NULL) {
+                            samples5[count++] = atoi(sample);
+                            sample = strtok(NULL, ",");
+                        }
+                }
+                while (f_gets(buf2, sizeof(buf2), &fil)) {
+                    //printf(buf2);
+                    sample = strtok(buf2, ",");
+                        while (sample != NULL) {
+                            samples6[count++] = atoi(sample);
+                            sample = strtok(NULL, ",");
+                        }
+                }
+                while (f_gets(buf2, sizeof(buf2), &fil)) {
+                    //printf(buf2);
+                    sample = strtok(buf2, ",");
+                        while (sample != NULL) {
+                            samples7[count++] = atoi(sample);
+                            sample = strtok(NULL, ",");
+                        }
+                }
+                while (f_gets(buf2, sizeof(buf2), &fil)) {
+                    //printf(buf2);
+                    sample = strtok(buf2, ",");
+                        while (sample != NULL) {
+                            samples8[count++] = atoi(sample);
+                            sample = strtok(NULL, ",");
+                        }
+                }
+                while (f_gets(buf2, sizeof(buf2), &fil)) {
+                    //printf(buf2);
+                    sample = strtok(buf2, ",");
+                        while (sample != NULL) {
+                            samples9[count++] = atoi(sample);
+                            sample = strtok(NULL, ",");
+                        }
+                }
+                while (f_gets(buf2, sizeof(buf2), &fil)) {
+                    //printf(buf2);
+                    sample = strtok(buf2, ",");
+                        while (sample != NULL) {
+                            samples10[count++] = atoi(sample);
+                            sample = strtok(NULL, ",");
+                        }
+                }
+                while (f_gets(buf2, sizeof(buf2), &fil)) {
+                    //printf(buf2);
+                    sample = strtok(buf2, ",");
+                        while (sample != NULL) {
+                            samples11[count++] = atoi(sample);
+                            sample = strtok(NULL, ",");
+                        }
+                }
+                while (f_gets(buf2, sizeof(buf2), &fil)) {
+                    //printf(buf2);
+                    sample = strtok(buf2, ",");
+                        while (sample != NULL) {
+                            samples12[count++] = atoi(sample);
+                            sample = strtok(NULL, ",");
+                        }
+                }
+                while (f_gets(buf2, sizeof(buf2), &fil)) {
+                    //printf(buf2);
+                    sample = strtok(buf2, ",");
+                        while (sample != NULL) {
+                            samples13[count++] = atoi(sample);
+                            sample = strtok(NULL, ",");
+                        }
+                }
+                for (uint16_t i = 0; i < count; i++){
+                    printf("%d, ", samples1[i]);
+                }
+                printf("\n");
+                for (uint16_t i = 0; i < count; i++){
+                    printf("%d, ", samples2[i]);
+                }
+                printf("\n");
+                for (uint16_t i = 0; i < count; i++){
+                    printf("%d, ", samples3[i]);
+                }
+                printf("\n");
+                for (uint16_t i = 0; i < count; i++){
+                    printf("%d, ", samples4[i]);
+                }
+                printf("\n");
+                for (uint16_t i = 0; i < count; i++){
+                    printf("%d, ", samples5[i]);
+                }
+                printf("\n");
+                for (uint16_t i = 0; i < count; i++){
+                    printf("%d, ", samples6[i]);
+                }
+                printf("\n");
+                for (uint16_t i = 0; i < count; i++){
+                    printf("%d, ", samples7[i]);
+                }
+                printf("\n");
+                for (uint16_t i = 0; i < count; i++){
+                    printf("%d, ", samples8[i]);
+                }
+                printf("\n");
+                for (uint16_t i = 0; i < count; i++){
+                    printf("%d, ", samples9[i]);
+                }
+                printf("\n");
+                for (uint16_t i = 0; i < count; i++){
+                    printf("%d, ", samples10[i]);
+                }
+                printf("\n");
+                for (uint16_t i = 0; i < count; i++){
+                    printf("%d, ", samples11[i]);
+                }
+                printf("\n");
+                for (uint16_t i = 0; i < count; i++){
+                    printf("%d, ", samples12[i]);
+                }
+                printf("\n");
+                for (uint16_t i = 0; i < count; i++){
+                    printf("%d, ", samples13[i]);
+                }
+
 
                 printf("\r\n---\r\n");
                 f_close(&fil);

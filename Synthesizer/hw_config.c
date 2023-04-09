@@ -41,7 +41,7 @@ socket, which SPI it is driven by, and how it is wired.
 static spi_t spis[] = {  // One for each SPI.
     {
         .hw_inst = spi0,  // SPI component
-        .miso_gpio = 16,  // GPIO number (not Pico pin number)
+        .miso_gpio = 20,  // GPIO number (not Pico pin number)
         .mosi_gpio = 19,
         .sck_gpio = 18,
         .set_drive_strength = true,
@@ -60,7 +60,7 @@ static sd_card_t sd_cards[] = {  // One for each SD card
     {
         .pcName = "0:",   // Name used to mount device
         .spi = &spis[0],  // Pointer to the SPI driving this card
-        .ss_gpio = 22,     // The SPI slave select GPIO for this SD card
+        .ss_gpio = 21,     // The SPI slave select GPIO for this SD card
         .set_drive_strength = true,
         .ss_gpio_drive_strength = GPIO_DRIVE_STRENGTH_2MA,
         .use_card_detect = true,

@@ -1,13 +1,13 @@
 # Target labels
  PioasmBuild
 # Source files and their labels
-/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild
-/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild.rule
-/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild-complete.rule
-/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-build.rule
-/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-configure.rule
-/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-download.rule
-/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-install.rule
-/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-mkdir.rule
-/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-patch.rule
-/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-update.rule
+Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild
+Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild.rule
+Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild-complete.rule
+Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-build.rule
+Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-configure.rule
+Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-download.rule
+Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-install.rule
+Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-mkdir.rule
+Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-patch.rule
+Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2_common/cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-update.rule
