@@ -1,13 +1,13 @@
 # Target labels
  ELF2UF2Build
 # Source files and their labels
-/Users/landonburk/Documents/G171-Capstone/LCD/build/CMakeFiles/ELF2UF2Build
-/Users/landonburk/Documents/G171-Capstone/LCD/build/CMakeFiles/ELF2UF2Build.rule
-/Users/landonburk/Documents/G171-Capstone/LCD/build/CMakeFiles/ELF2UF2Build-complete.rule
-/Users/landonburk/Documents/G171-Capstone/LCD/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-build.rule
-/Users/landonburk/Documents/G171-Capstone/LCD/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-configure.rule
-/Users/landonburk/Documents/G171-Capstone/LCD/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-download.rule
-/Users/landonburk/Documents/G171-Capstone/LCD/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-install.rule
-/Users/landonburk/Documents/G171-Capstone/LCD/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-mkdir.rule
-/Users/landonburk/Documents/G171-Capstone/LCD/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-patch.rule
-/Users/landonburk/Documents/G171-Capstone/LCD/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-update.rule
+Z:/Semester8/Capstone II/Code/G171-Capstone/LCD/build/CMakeFiles/ELF2UF2Build
+Z:/Semester8/Capstone II/Code/G171-Capstone/LCD/build/CMakeFiles/ELF2UF2Build.rule
+Z:/Semester8/Capstone II/Code/G171-Capstone/LCD/build/CMakeFiles/ELF2UF2Build-complete.rule
+Z:/Semester8/Capstone II/Code/G171-Capstone/LCD/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-build.rule
+Z:/Semester8/Capstone II/Code/G171-Capstone/LCD/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-configure.rule
+Z:/Semester8/Capstone II/Code/G171-Capstone/LCD/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-download.rule
+Z:/Semester8/Capstone II/Code/G171-Capstone/LCD/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-install.rule
+Z:/Semester8/Capstone II/Code/G171-Capstone/LCD/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-mkdir.rule
+Z:/Semester8/Capstone II/Code/G171-Capstone/LCD/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-patch.rule
+Z:/Semester8/Capstone II/Code/G171-Capstone/LCD/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-update.rule

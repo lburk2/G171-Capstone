@@ -13,8 +13,8 @@ static const uint8_t REG_DEVID = 0x00;
 
 uint8_t cs_pin = 5;
 uint8_t sck_pin = 6;
-uint8_t mosi_pin = 4;
-uint8_t miso_pin = 0;
+uint8_t mosi_pin = 3;
+uint8_t miso_pin = 4;
 uint8_t DC_pin = 8;
 uint8_t RST_pin = 7;
 
@@ -77,7 +77,7 @@ int reg_read(spi_inst_t *spi,
     // Read from register
     gpio_put(cs, 0);
     spi_write_blocking(spi, &msg, 1);
-    num_bytes_read = spi_read_blocking(spi, 0, buf, nbytes);
+    num_bytes_read = spi_read_blocking(spi0, 0, buf, nbytes);
     gpio_put(cs, 1);
 
     return num_bytes_read;
@@ -97,21 +97,21 @@ void LCD_init(void)
     // Initialize CS pin high
     gpio_init(cs_pin);
     gpio_set_dir(cs_pin, GPIO_OUT);
-     gpio_pull_up(cs_pin);
+    gpio_put(cs_pin, 1);
     // Initialize DC pin LOW for command mode
     gpio_init(RST_pin);
     gpio_set_dir(RST_pin, GPIO_OUT);
-    gpio_pull_up(RST_pin);
+    gpio_put(RST_pin, 1);
     // Initialize RST pin HIGH
     gpio_init(DC_pin);
     gpio_set_dir(DC_pin, GPIO_OUT);
-    gpio_pull_down(DC_pin);
+    gpio_put(RST_pin, 0);
 
     // Initialize SPI port at 125 MHz
-    spi_init(spi, 12500000);
+    spi_init(spi, 1250000);
 
     // Set SPI format
-    spi_set_format(spi,        // SPI instance
+    spi_set_format(spi0,        // SPI instance
                    8,          // Number of bits per transfer
                    SPI_CPOL_0, // Polarity (CPOL)
                    SPI_CPHA_0, // Phase (CPHA)

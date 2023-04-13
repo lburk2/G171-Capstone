@@ -13,7 +13,7 @@ static const uint8_t REG_DEVID = 0x00;
 uint8_t cs_pin = 5;
 uint8_t sck_pin = 6;
 uint8_t mosi_pin = 4;
-uint8_t miso_pin = 16;
+uint8_t miso_pin = 9;
 uint8_t DC_pin = 8;
 uint8_t RST_pin = 7;
 
