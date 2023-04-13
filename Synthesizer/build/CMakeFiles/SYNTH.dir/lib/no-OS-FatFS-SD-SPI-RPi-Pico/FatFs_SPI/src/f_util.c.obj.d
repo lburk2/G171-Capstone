@@ -1,11 +1,11 @@
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.obj: \
- Z:\Semester8\Capstone\ II\Code\G171-Capstone\Synthesizer\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\src\f_util.c \
- Z:\SC5W9U~D\CC0CMN~O\Code\GUMGNH~T\SSR8NI~L\lib\NFWFD3~L\F4Z0T4~8\ff15\source/ff.h \
- Z:\SC5W9U~D\CC0CMN~O\Code\GUMGNH~T\SSR8NI~L\lib\NFWFD3~L\F4Z0T4~8\ff15\source/ffconf.h \
- c:\vsarm\armcc\1213fb~1.2mp\lib\gcc\arm-none-eabi\12.2.0\include\stdint.h \
- c:\vsarm\armcc\1213fb~1.2mp\arm-none-eabi\include\stdint.h \
- c:\vsarm\armcc\1213fb~1.2mp\arm-none-eabi\include\machine\_default_types.h \
- c:\vsarm\armcc\1213fb~1.2mp\arm-none-eabi\include\sys\features.h \
- c:\vsarm\armcc\1213fb~1.2mp\arm-none-eabi\include\_newlib_version.h \
- c:\vsarm\armcc\1213fb~1.2mp\arm-none-eabi\include\sys\_intsup.h \
- c:\vsarm\armcc\1213fb~1.2mp\arm-none-eabi\include\sys\_stdint.h
+ /Users/landonburk/Documents/G171-Capstone/Synthesizer/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c \
+ /Users/landonburk/Documents/G171-Capstone/Synthesizer/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.h \
+ /Users/landonburk/Documents/G171-Capstone/Synthesizer/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffconf.h \
+ /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
+ /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/stdint.h \
+ /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/machine/_default_types.h \
+ /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/features.h \
+ /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/_newlib_version.h \
+ /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/_intsup.h \
+ /usr/local/Cellar/arm-none-eabi-gcc/10.3-2021.07/gcc/arm-none-eabi/include/sys/_stdint.h
