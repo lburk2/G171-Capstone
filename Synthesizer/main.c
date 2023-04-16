@@ -59,7 +59,7 @@ int main(void){
     Paint_DrawRectangle(32,182,96,198,RED,2,1);  
     
     sleep_ms(500);
-    menuButtons_init();
+    //menuButtons_init();
     Paint_DrawRectangle(32,182,160,198,RED,2,1);
     
     sleep_ms(500);

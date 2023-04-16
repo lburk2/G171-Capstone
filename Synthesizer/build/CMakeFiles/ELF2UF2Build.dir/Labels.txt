@@ -1,0 +1,13 @@
+# Target labels
+ ELF2UF2Build
+# Source files and their labels
+/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/CMakeFiles/ELF2UF2Build
+/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/CMakeFiles/ELF2UF2Build.rule
+/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/CMakeFiles/ELF2UF2Build-complete.rule
+/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-build.rule
+/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-configure.rule
+/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-download.rule
+/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-install.rule
+/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-mkdir.rule
+/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-patch.rule
+/Users/landonburk/Documents/G171-Capstone/Synthesizer/build/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-update.rule
