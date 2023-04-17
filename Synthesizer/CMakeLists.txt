@@ -14,7 +14,6 @@ add_executable(SYNTH
         main.c
         LCD.c
         LCD.h
-        menuButtons.c
         menuButtons.h
         font24.h
         imageN.h

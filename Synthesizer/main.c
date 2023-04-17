@@ -13,9 +13,11 @@
 #include "ff.h"
 #include "MCP23017.h"
 #include "pwm_audio_setup.h"
-#include "pico_button_matrix.h"
+// #include "pico_button_matrix.h"
 
 uint8_t g_buttonPress = -1; 
+uint columns[5] = { 22, 23, 24, 25, 12 };
+uint rows[6] = { 26, 27, 28, 29, 11, 13 };
 
 void printMenuOptions();
 void menuButtons_init(void);
@@ -112,8 +114,7 @@ int main(void){
     oled_fill(buf,0x00);
 
     //button init
-    uint columns[5] = { 22, 23, 24, 25, 12 };
-    uint rows[6] = { 26, 27, 28, 29, 11, 13 };
+    
     uint matrix[30] = 
     {
         1, 2, 3, 4, 0, 
@@ -123,8 +124,8 @@ int main(void){
         14, 15, 16, 17, 18,
         19, 20, 21, 22, 23,
     };
-    pico_keypad_init(columns, rows, matrix);
-    int key = pico_keypad_get_key();
+    // pico_keypad_init(columns, rows, matrix);
+    // int key = pico_keypad_get_key();
 
     while (true)
     {
@@ -487,39 +488,20 @@ Paint_DrawString_EN(5, 130,"- Boinks ", MAGENTA, WHITE);
 
 void menuButtons_init(void)
 {
-    // Initialize the buttons for the user controlls
-    gpio_init(RE);
-    gpio_set_dir(RE, GPIO_IN);
-    gpio_pull_up(RE);
-
-    gpio_init(UP);
-    gpio_set_dir(UP, GPIO_IN);
-    gpio_pull_up(UP);
-
-    gpio_init(LEFT);
-    gpio_set_dir(LEFT, GPIO_IN);
-    gpio_pull_up(LEFT);
-
-    gpio_init(CENTER);
-    gpio_set_dir(CENTER, GPIO_IN);
-    gpio_pull_up(CENTER);
-
-    gpio_init(DOWN);
-    gpio_set_dir(DOWN, GPIO_IN);
-    gpio_pull_up(DOWN);
-
-    gpio_init(RIGHT);
-    gpio_set_dir(RIGHT, GPIO_IN);
-    gpio_pull_up(RIGHT);
-
-    gpio_init(RERIGHT);
-    gpio_set_dir(RERIGHT, GPIO_IN);
-    gpio_pull_down(RERIGHT);
-
-    gpio_init(RELEFT);
-    gpio_set_dir(RELEFT, GPIO_IN);
-    gpio_pull_down(RELEFT);
-
+    // Initialize rows of button matrix
+   
+    for(int i = 0; i < 6; i++)
+    {
+    gpio_init(rows[i]);
+    gpio_set_dir(rows[i], GPIO_IN);
+    gpio_pull_down(rows[i]);
+    }
+    for(int i = 0; i < 5; i++)
+    {
+    gpio_init(columns[i]);
+    gpio_set_dir(columns[i], GPIO_IN);
+    gpio_pull_up(columns[i]);
+    }
     //enable interrupts
     irq_en(true);
 }
@@ -531,66 +513,52 @@ void gpio_callback(uint gpio, uint32_t events)
     for(volatile uint32_t i = 0;i<10000;i++){}
     uint8_t pin_state_2 = gpio_get(gpio);
 
-    if (pin_state_1 == pin_state_2)
+    if( pin_state_1 == pin_state_2)
     {
-        if (gpio == RE)
+        for (int i = 0; i<6 ; i++)
         {
-            g_buttonPress = RE;  
+            if(gpio == rows[i])
+            {
+                for(int j = 0; j < 5 ; j++)
+                {
+                    if (gpio_get(columns[j]) == 0)
+                    {
+                        g_buttonPress = i*5 + j;
+                    }
+                }
+            }
+
         }
-        if (gpio == UP)
+        for (int i = 0; i < 5 ; i++)
         {
-            g_buttonPress = UP;
+            if(gpio == columns[i])
+            {
+              for(int j = 0; j < 6 ; j++)
+                {
+                    if (gpio_get(rows[j]) == 0)
+                    {
+                        g_buttonPress = j*5 + i;
+                    }
+                }   
+            }
+
         }
-        if (gpio == DOWN)
-        {
-            g_buttonPress = DOWN;
-        }
-        if (gpio == LEFT)
-        {
-             g_buttonPress = LEFT;        
-        }
-        if (gpio == RIGHT)
-        {
-            g_buttonPress = RIGHT;
-        }
-        if (gpio == CENTER)
-        {
-            g_buttonPress = CENTER;
-        }
-        if (gpio == RERIGHT)
-        {
-            g_buttonPress = RERIGHT;
-        }
-        if (gpio == RELEFT)
-        {
-            g_buttonPress = RELEFT;
-        }
+
+
+
     }
 }
 
 void irq_en(bool en)
 {   
-    if(en)
+    // enable interrupts
+    for (int i = 0; i < 5; i++)
     {
-        // enable interrupts
-        gpio_set_irq_enabled_with_callback(RE, GPIO_IRQ_EDGE_FALL, true, &gpio_callback);
-        gpio_set_irq_enabled(UP, GPIO_IRQ_EDGE_FALL, true);
-        gpio_set_irq_enabled(LEFT, GPIO_IRQ_EDGE_FALL, true);
-        gpio_set_irq_enabled(CENTER, GPIO_IRQ_EDGE_FALL, true);
-        gpio_set_irq_enabled(DOWN, GPIO_IRQ_EDGE_FALL, true);
-        gpio_set_irq_enabled(RIGHT, GPIO_IRQ_EDGE_FALL, true);
-        gpio_set_irq_enabled(RELEFT, GPIO_IRQ_EDGE_FALL, true);
-        gpio_set_irq_enabled(RERIGHT, GPIO_IRQ_EDGE_FALL, true);
-    }else{
-        // disable interrupts
-        gpio_set_irq_enabled_with_callback(RE, GPIO_IRQ_EDGE_FALL, false, &gpio_callback);
-        gpio_set_irq_enabled(UP, GPIO_IRQ_EDGE_FALL, false);
-        gpio_set_irq_enabled(LEFT, GPIO_IRQ_EDGE_FALL, false);
-        gpio_set_irq_enabled(CENTER, GPIO_IRQ_EDGE_FALL, false);
-        gpio_set_irq_enabled(DOWN, GPIO_IRQ_EDGE_FALL, false);
-        gpio_set_irq_enabled(RIGHT, GPIO_IRQ_EDGE_FALL, false); 
-        gpio_set_irq_enabled(RELEFT, GPIO_IRQ_EDGE_FALL, false);
-        gpio_set_irq_enabled(RERIGHT, GPIO_IRQ_EDGE_FALL, false);
+        gpio_set_irq_enabled_with_callback(columns[i], GPIO_IRQ_EDGE_FALL, en, &gpio_callback);
     }
- 
+            // enable interrupts
+    for (int i = 0; i < 6; i++)
+    {
+        gpio_set_irq_enabled_with_callback(rows[i], GPIO_IRQ_EDGE_RISE, en, &gpio_callback);
+    }
 }
