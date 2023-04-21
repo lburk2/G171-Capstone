@@ -22,14 +22,6 @@ add_executable(SYNTH
         OLED.c
         OLED.h
         hw_config.c
-        MCP23017.c
-        MCP23017.h
-        pico_button_matrix.c
-        pico_button_matrix.h
-        myNCO.c #TAKE OUT IF NOT USE
-        myNCO.h
-        pwm_audio_setup.c
-        pwm_audio_setup.h
         )
 #
 # pull in common dependencies

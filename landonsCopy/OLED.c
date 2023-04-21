@@ -19,11 +19,11 @@ void oled_init() {
     struct render_area frame_area = {start_col: 0, end_col : OLED_WIDTH - 1, start_page : 0, end_page : OLED_NUM_PAGES -
                                                                                                         1};
 
-    i2c_init(i2c_default, 400 * 1000);
-    gpio_set_function(PICO_DEFAULT_I2C_SDA_PIN, GPIO_FUNC_I2C);
-    gpio_set_function(PICO_DEFAULT_I2C_SCL_PIN, GPIO_FUNC_I2C);
-    gpio_pull_up(PICO_DEFAULT_I2C_SDA_PIN);
-    gpio_pull_up(PICO_DEFAULT_I2C_SCL_PIN);
+    i2c_init(i2c1, 400 * 1000);
+    gpio_set_function(2, GPIO_FUNC_I2C);
+    gpio_set_function(3, GPIO_FUNC_I2C);
+    gpio_pull_up(2);
+    gpio_pull_up(3);
 
     oled_send_cmd(OLED_SET_DISP | 0x00); // set display off
 
@@ -109,7 +109,7 @@ void oled_send_cmd(uint8_t cmd) {
 
     // Co = 1, D/C = 0 => the driver expects a command
     uint8_t buf[2] = {0x80, cmd};
-    i2c_write_blocking(i2c_default, (OLED_ADDR & OLED_WRITE_MODE), buf, 2, false);
+    i2c_write_blocking(i2c1, (OLED_ADDR & OLED_WRITE_MODE), buf, 2, false);
 }
 void oled_send_buf(uint8_t buf[], int buflen) {
     // in horizontal addressing mode, the column address pointer auto-increments
@@ -123,7 +123,7 @@ void oled_send_buf(uint8_t buf[], int buflen) {
     }
     // Co = 0, D/C = 1 => the driver expects data to be written to RAM
     temp_buf[0] = 0x40;
-    i2c_write_blocking(i2c_default, (OLED_ADDR & OLED_WRITE_MODE), temp_buf, buflen + 1, false);
+    i2c_write_blocking(i2c1, (OLED_ADDR & OLED_WRITE_MODE), temp_buf, buflen + 1, false);
 
     free(temp_buf);
 }
@@ -142,7 +142,7 @@ void oled_setCursor(uint8_t x, uint8_t y){
     oled_send_cmd(7);
     // set start line to 0
     uint8_t buf[1] = {0x40};
-    i2c_write_blocking(i2c_default, (OLED_ADDR & OLED_WRITE_MODE), buf, 1, false);
+    i2c_write_blocking(i2c1, (OLED_ADDR & OLED_WRITE_MODE), buf, 1, false);
 
     g_lineNum = x;
     g_cursorLocation = y;
@@ -164,7 +164,7 @@ void oled_WriteCharacter(char character)
             i++;
         }
 
-        i2c_write_blocking(i2c_default, (OLED_ADDR & OLED_WRITE_MODE), buf, 9, false);
+        i2c_write_blocking(i2c1, (OLED_ADDR & OLED_WRITE_MODE), buf, 9, false);
     }
 }
 void oled_WriteString(char *msg)

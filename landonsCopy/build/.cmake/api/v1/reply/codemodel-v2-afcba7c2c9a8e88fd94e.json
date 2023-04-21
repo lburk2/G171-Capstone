@@ -1056,7 +1056,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ELF2UF2Build::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ELF2UF2Build-Debug-45d4e138e129150e9969.json",
+					"jsonFile" : "target-ELF2UF2Build-Debug-e373c9b8127390e73b26.json",
 					"name" : "ELF2UF2Build",
 					"projectIndex" : 0
 				},
@@ -1070,7 +1070,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "SYNTH::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SYNTH-Debug-e58a60745baaf7bf9fe8.json",
+					"jsonFile" : "target-SYNTH-Debug-acd59f0e6d54280d0d15.json",
 					"name" : "SYNTH",
 					"projectIndex" : 0
 				},

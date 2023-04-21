@@ -83,13 +83,4 @@ CMakeFiles/SYNTH.dir/main.c.obj: \
  C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_dma\include/hardware/dma.h \
  C:\VSARM\sdk\pico\pico-sdk\src\rp2040\hardware_structs\include/hardware/structs/dma.h \
  C:\VSARM\sdk\pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/dma.h \
- C:\VSARM\sdk\pico\pico-sdk\src\common\pico_sync\include/pico/sem.h \
- Z:\Semester8\Capstone\ II\Code\G171-Capstone\landonsCopy\MCP23017.h \
- Z:\Semester8\Capstone\ II\Code\G171-Capstone\landonsCopy\pwm_audio_setup.h \
- C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_pwm\include/hardware/pwm.h \
- C:\VSARM\sdk\pico\pico-sdk\src\rp2040\hardware_structs\include/hardware/structs/pwm.h \
- C:\VSARM\sdk\pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/pwm.h \
- C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_adc\include/hardware/adc.h \
- C:\VSARM\sdk\pico\pico-sdk\src\rp2040\hardware_structs\include/hardware/structs/adc.h \
- C:\VSARM\sdk\pico\pico-sdk\src\rp2040\hardware_regs\include/hardware/regs/adc.h \
- Z:\Semester8\Capstone\ II\Code\G171-Capstone\landonsCopy\pico_button_matrix.h
+ C:\VSARM\sdk\pico\pico-sdk\src\common\pico_sync\include/pico/sem.h

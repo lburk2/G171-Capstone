@@ -52,55 +52,17 @@ C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addres
 hardware/platform_defs.h
 C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/hardware/platform_defs.h
 
-C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h
-
 C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/m0plus.h
 
 C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h
 
 C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
 
-C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h
-pico.h
-C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/pico.h
-hardware/regs/addressmap.h
-C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_base/include/hardware/hardware/regs/addressmap.h
-
-C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S
-pico/asm_helper.S
-C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_divider/pico/asm_helper.S
-hardware/regs/addressmap.h
-C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_divider/hardware/regs/addressmap.h
-hardware/regs/sio.h
-C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_divider/hardware/regs/sio.h
-
 C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_divider/include/hardware/divider_helper.S
 hardware/regs/addressmap.h
 C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_divider/include/hardware/hardware/regs/addressmap.h
 hardware/regs/sio.h
 C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_divider/include/hardware/hardware/regs/sio.h
-
-C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/include/hardware/irq.h
-pico.h
-C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/include/hardware/pico.h
-hardware/address_mapped.h
-C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/include/hardware/hardware/address_mapped.h
-hardware/regs/intctrl.h
-C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/include/hardware/hardware/regs/intctrl.h
-hardware/regs/m0plus.h
-C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/include/hardware/hardware/regs/m0plus.h
-
-C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S
-pico.h
-C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/pico.h
-hardware/irq.h
-C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/hardware/irq.h
-
-C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
-pico/asm_helper.S
-C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bit_ops/pico/asm_helper.S
-pico/bootrom.h
-C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bit_ops/pico/bootrom.h
 
 C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom.h
 pico.h
