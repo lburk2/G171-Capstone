@@ -190,7 +190,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c" "CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj" "gcc" "CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj.d"
   "C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c" "CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj" "gcc" "CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj.d"
   "Z:/Semester8/Capstone II/Code/G171-Capstone/landonsCopy/LCD.c" "CMakeFiles/SYNTH.dir/LCD.c.obj" "gcc" "CMakeFiles/SYNTH.dir/LCD.c.obj.d"
-  "Z:/Semester8/Capstone II/Code/G171-Capstone/landonsCopy/MCP23017.c" "CMakeFiles/SYNTH.dir/MCP23017.c.obj" "gcc" "CMakeFiles/SYNTH.dir/MCP23017.c.obj.d"
   "Z:/Semester8/Capstone II/Code/G171-Capstone/landonsCopy/OLED.c" "CMakeFiles/SYNTH.dir/OLED.c.obj" "gcc" "CMakeFiles/SYNTH.dir/OLED.c.obj.d"
   "Z:/Semester8/Capstone II/Code/G171-Capstone/landonsCopy/hw_config.c" "CMakeFiles/SYNTH.dir/hw_config.c.obj" "gcc" "CMakeFiles/SYNTH.dir/hw_config.c.obj.d"
   "Z:/Semester8/Capstone II/Code/G171-Capstone/landonsCopy/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c" "CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj" "gcc" "CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj.d"
@@ -208,9 +207,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "Z:/Semester8/Capstone II/Code/G171-Capstone/landonsCopy/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c" "CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj" "gcc" "CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj.d"
   "Z:/Semester8/Capstone II/Code/G171-Capstone/landonsCopy/main.c" "CMakeFiles/SYNTH.dir/main.c.obj" "gcc" "CMakeFiles/SYNTH.dir/main.c.obj.d"
   "Z:/Semester8/Capstone II/Code/G171-Capstone/landonsCopy/menuButtons.c" "CMakeFiles/SYNTH.dir/menuButtons.c.obj" "gcc" "CMakeFiles/SYNTH.dir/menuButtons.c.obj.d"
-  "Z:/Semester8/Capstone II/Code/G171-Capstone/landonsCopy/myNCO.c" "CMakeFiles/SYNTH.dir/myNCO.c.obj" "gcc" "CMakeFiles/SYNTH.dir/myNCO.c.obj.d"
-  "Z:/Semester8/Capstone II/Code/G171-Capstone/landonsCopy/pico_button_matrix.c" "CMakeFiles/SYNTH.dir/pico_button_matrix.c.obj" "gcc" "CMakeFiles/SYNTH.dir/pico_button_matrix.c.obj.d"
-  "Z:/Semester8/Capstone II/Code/G171-Capstone/landonsCopy/pwm_audio_setup.c" "CMakeFiles/SYNTH.dir/pwm_audio_setup.c.obj" "gcc" "CMakeFiles/SYNTH.dir/pwm_audio_setup.c.obj.d"
   "C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp" "CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj" "gcc" "CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj.d"
   )
 

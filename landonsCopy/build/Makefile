@@ -1819,30 +1819,6 @@ LCD.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/LCD.c.s
 .PHONY : LCD.c.s
 
-MCP23017.obj: MCP23017.c.obj
-.PHONY : MCP23017.obj
-
-# target to build an object file
-MCP23017.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/MCP23017.c.obj
-.PHONY : MCP23017.c.obj
-
-MCP23017.i: MCP23017.c.i
-.PHONY : MCP23017.i
-
-# target to preprocess a source file
-MCP23017.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/MCP23017.c.i
-.PHONY : MCP23017.c.i
-
-MCP23017.s: MCP23017.c.s
-.PHONY : MCP23017.s
-
-# target to generate assembly for a file
-MCP23017.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/MCP23017.c.s
-.PHONY : MCP23017.c.s
-
 OLED.obj: OLED.c.obj
 .PHONY : OLED.obj
 
@@ -2251,78 +2227,6 @@ menuButtons.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/menuButtons.c.s
 .PHONY : menuButtons.c.s
 
-myNCO.obj: myNCO.c.obj
-.PHONY : myNCO.obj
-
-# target to build an object file
-myNCO.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/myNCO.c.obj
-.PHONY : myNCO.c.obj
-
-myNCO.i: myNCO.c.i
-.PHONY : myNCO.i
-
-# target to preprocess a source file
-myNCO.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/myNCO.c.i
-.PHONY : myNCO.c.i
-
-myNCO.s: myNCO.c.s
-.PHONY : myNCO.s
-
-# target to generate assembly for a file
-myNCO.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/myNCO.c.s
-.PHONY : myNCO.c.s
-
-pico_button_matrix.obj: pico_button_matrix.c.obj
-.PHONY : pico_button_matrix.obj
-
-# target to build an object file
-pico_button_matrix.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/pico_button_matrix.c.obj
-.PHONY : pico_button_matrix.c.obj
-
-pico_button_matrix.i: pico_button_matrix.c.i
-.PHONY : pico_button_matrix.i
-
-# target to preprocess a source file
-pico_button_matrix.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/pico_button_matrix.c.i
-.PHONY : pico_button_matrix.c.i
-
-pico_button_matrix.s: pico_button_matrix.c.s
-.PHONY : pico_button_matrix.s
-
-# target to generate assembly for a file
-pico_button_matrix.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/pico_button_matrix.c.s
-.PHONY : pico_button_matrix.c.s
-
-pwm_audio_setup.obj: pwm_audio_setup.c.obj
-.PHONY : pwm_audio_setup.obj
-
-# target to build an object file
-pwm_audio_setup.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/pwm_audio_setup.c.obj
-.PHONY : pwm_audio_setup.c.obj
-
-pwm_audio_setup.i: pwm_audio_setup.c.i
-.PHONY : pwm_audio_setup.i
-
-# target to preprocess a source file
-pwm_audio_setup.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/pwm_audio_setup.c.i
-.PHONY : pwm_audio_setup.c.i
-
-pwm_audio_setup.s: pwm_audio_setup.c.s
-.PHONY : pwm_audio_setup.s
-
-# target to generate assembly for a file
-pwm_audio_setup.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SYNTH.dir\build.make CMakeFiles/SYNTH.dir/pwm_audio_setup.c.s
-.PHONY : pwm_audio_setup.c.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -2539,9 +2443,6 @@ help:
 	@echo ... LCD.obj
 	@echo ... LCD.i
 	@echo ... LCD.s
-	@echo ... MCP23017.obj
-	@echo ... MCP23017.i
-	@echo ... MCP23017.s
 	@echo ... OLED.obj
 	@echo ... OLED.i
 	@echo ... OLED.s
@@ -2593,15 +2494,6 @@ help:
 	@echo ... menuButtons.obj
 	@echo ... menuButtons.i
 	@echo ... menuButtons.s
-	@echo ... myNCO.obj
-	@echo ... myNCO.i
-	@echo ... myNCO.s
-	@echo ... pico_button_matrix.obj
-	@echo ... pico_button_matrix.i
-	@echo ... pico_button_matrix.s
-	@echo ... pwm_audio_setup.obj
-	@echo ... pwm_audio_setup.i
-	@echo ... pwm_audio_setup.s
 .PHONY : help
 
 

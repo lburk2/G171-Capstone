@@ -11,9 +11,8 @@
 #include "OLED.h"
 #include "sd_card.h"
 #include "ff.h"
-#include "MCP23017.h"
-#include "pwm_audio_setup.h"
-#include "pico_button_matrix.h"
+
+
 
 uint8_t g_buttonPress = -1; 
 
@@ -25,17 +24,17 @@ void irq_en(bool en);
 
 int main(void){
 
-    FRESULT fr;
-    FATFS fs;
-    FIL fil;
-    //int ret;
-    char buf2[10000];
-    uint16_t samples[13][200] ={0};
+    // FRESULT fr;
+    // FATFS fs;
+    // FIL fil;
+    // //int ret;
+    // char buf2[10000];
+    // uint16_t samples[13][200] ={0};
 
 
-    char* sample;
-    char filename[] = "sineWaveOctave.txt";
-    spi_inst_t *spi = spi0;
+    // char* sample;
+    // char filename[] = "sineWaveOctave.txt";
+    // spi_inst_t *spi = spi0;
 
     stdio_init_all();
 
@@ -47,31 +46,31 @@ int main(void){
     Paint_DrawRectangle(30,180,290,200,BLACK,2,0);
     Paint_DrawRectangle(32,182,96,198,RED,2,1);  
     
-    sleep_ms(500);
-    menuButtons_init();
-    Paint_DrawRectangle(32,182,160,198,RED,2,1);
+    // sleep_ms(500);
+    // menuButtons_init();
+    // Paint_DrawRectangle(32,182,160,198,RED,2,1);
     
     sleep_ms(500);
     oled_init();
-    Paint_DrawRectangle(32,182,224,198,RED,2,1);
+    // Paint_DrawRectangle(32,182,224,198,RED,2,1);
 
     sleep_ms(500);
-    Paint_DrawRectangle(32,182,288,198,RED,2,1);
+    // Paint_DrawRectangle(32,182,288,198,RED,2,1);
 
-    // Initialize SD card
-    if (!sd_init_driver()) {
-        printf("ERROR: Could not initialize SD card\r\n");
-        while (true);
-    }
+    // // Initialize SD card
+    // if (!sd_init_driver()) {
+    //     printf("ERROR: Could not initialize SD card\r\n");
+    //     while (true);
+    // }
 
-    // Mount drive
-    fr = f_mount(&fs, "0:", 1);
-    if (fr != FR_OK) {
-        printf("ERROR: Could not mount filesystem (%d)\r\n", fr);
-        while (true);
-    }
+    // // Mount drive
+    // fr = f_mount(&fs, "0:", 1);
+    // if (fr != FR_OK) {
+    //     printf("ERROR: Could not mount filesystem (%d)\r\n", fr);
+    //     while (true);
+    // }
     
-    spi_init(spi, 125000000);
+    // spi_init(spi, 125000000);
     
     sleep_ms(500);
     LCD_clear(MAGENTA);
@@ -83,22 +82,22 @@ int main(void){
     // oled_WriteCharacter16('N');
     oled_WriteString16("***Nebraska!***\n");
 
-    uint16_t squareY = 0;
-    // uint16_t color[] = {WHITE, GREEN, BLUE, MAGENTA};
-    // uint8_t colorIndex = 0;
+    // uint16_t squareY = 0;
+    // // uint16_t color[] = {WHITE, GREEN, BLUE, MAGENTA};
+    // // uint8_t colorIndex = 0;
 
-    uint8_t menuLocation = 5;
-    uint8_t prevMenuLocation = 5;
-    uint8_t prevY = 1;
+    // uint8_t menuLocation = 5;
+    // uint8_t prevMenuLocation = 5;
+    // uint8_t prevY = 1;
 
-    Paint_DrawRectangle(39,prevY*20+51,200,prevY*20+51+19,MAGENTA,2,0);
-    Paint_DrawRectangle(39,squareY*20+51,200,squareY*20+51+19,BLACK,2,0);
+    // Paint_DrawRectangle(39,prevY*20+51,200,prevY*20+51+19,MAGENTA,2,0);
+    // Paint_DrawRectangle(39,squareY*20+51,200,squareY*20+51+19,BLACK,2,0);
 
-    struct render_area frame_area = {start_col: 0, end_col : OLED_WIDTH - 1, start_page : 0, end_page : OLED_NUM_PAGES -
-                                                                                                        1};
-    calc_render_area_buflen(&frame_area);
-    uint8_t buf[OLED_BUF_LEN];
-    oled_fill(buf,0x00);
+    // struct render_area frame_area = {start_col: 0, end_col : OLED_WIDTH - 1, start_page : 0, end_page : OLED_NUM_PAGES -
+    //                                                                                                     1};
+    // calc_render_area_buflen(&frame_area);
+    // uint8_t buf[OLED_BUF_LEN];
+    // oled_fill(buf,0x00);
 
     // //button init
     // uint columns[5] = { 22, 23, 24, 25, 12 };
@@ -131,215 +130,215 @@ int main(void){
 
     while (true)
     {
-        prevMenuLocation = menuLocation;
+        // prevMenuLocation = menuLocation;
 
-        switch (g_buttonPress)
-        {
-            case RIGHT:/* code */
-                switch (menuLocation)
-                {
-                    case MainMenu:
+        // switch (g_buttonPress)
+        // {
+        //     case RIGHT:/* code */
+        //         switch (menuLocation)
+        //         {
+        //             case MainMenu:
                         
-                        break;
-                    case SD:
+        //                 break;
+        //             case SD:
                         
-                        break;
-                    case SPECTRUM:
+        //                 break;
+        //             case SPECTRUM:
                         
-                        break;
-                    case BEEPS:
+        //                 break;
+        //             case BEEPS:
                         
-                        break;
-                    case BOOPS:
+        //                 break;
+        //             case BOOPS:
                         
-                        break;
-                    case BOINKS:
+        //                 break;
+        //             case BOINKS:
                         
-                        break;
+        //                 break;
                     
-                    default:
-                        break;
-                }
-                g_buttonPress = -1;
-            break;
-            case LEFT:/* code */
-                switch (menuLocation)
-                {
-                    case MainMenu:
+        //             default:
+        //                 break;
+        //         }
+        //         g_buttonPress = -1;
+        //     break;
+        //     case LEFT:/* code */
+        //         switch (menuLocation)
+        //         {
+        //             case MainMenu:
                         
-                        break;
-                    case SD:
-                        menuLocation = 5;
-                        break;
-                    case SPECTRUM:
-                        menuLocation = 5;
-                        break;
-                    case BEEPS:
-                        menuLocation = 5;
-                        break;
-                    case BOOPS:
-                        menuLocation = 5;
-                        break;
-                    case BOINKS:
-                        menuLocation = 5;
-                        break;
+        //                 break;
+        //             case SD:
+        //                 menuLocation = 5;
+        //                 break;
+        //             case SPECTRUM:
+        //                 menuLocation = 5;
+        //                 break;
+        //             case BEEPS:
+        //                 menuLocation = 5;
+        //                 break;
+        //             case BOOPS:
+        //                 menuLocation = 5;
+        //                 break;
+        //             case BOINKS:
+        //                 menuLocation = 5;
+        //                 break;
                     
-                    default:
-                        break;
-                }
-            g_buttonPress = -1;
-            break;
-            case UP:/* code */
-                switch (menuLocation)
-                {
-                case MainMenu:
-                    if(squareY > 0 )
-                    {
-                        prevY = squareY;
-                        squareY--;
-                        irq_en(false);
-                        Paint_DrawRectangle(39,prevY*20+51,200,prevY*20+51+19,MAGENTA,2,0);
-                        Paint_DrawRectangle(39,squareY*20+51,200,squareY*20+51+19,BLACK,2,0);
-                        irq_en(true);
-                    }
-                break;
+        //             default:
+        //                 break;
+        //         }
+        //     g_buttonPress = -1;
+        //     break;
+        //     case UP:/* code */
+        //         switch (menuLocation)
+        //         {
+        //         case MainMenu:
+        //             if(squareY > 0 )
+        //             {
+        //                 prevY = squareY;
+        //                 squareY--;
+        //                 irq_en(false);
+        //                 Paint_DrawRectangle(39,prevY*20+51,200,prevY*20+51+19,MAGENTA,2,0);
+        //                 Paint_DrawRectangle(39,squareY*20+51,200,squareY*20+51+19,BLACK,2,0);
+        //                 irq_en(true);
+        //             }
+        //         break;
                 
-                default:
-                    break;
-                }
-            g_buttonPress = -1;
-            break;
-            case DOWN:/* code */
-                switch (menuLocation)
-                {
-                case MainMenu:
-                    if(squareY < 4)
-                    {
-                        prevY = squareY;
-                        squareY++;
-                        irq_en(false);
-                        Paint_DrawRectangle(39,prevY*20+51,200,prevY*20+51+19,MAGENTA,2,0);
-                        Paint_DrawRectangle(39,squareY*20+51,200,squareY*20+51+19,BLACK,2,0);
-                        irq_en(true);
-                    }
-                    break;
+        //         default:
+        //             break;
+        //         }
+        //     g_buttonPress = -1;
+        //     break;
+        //     case DOWN:/* code */
+        //         switch (menuLocation)
+        //         {
+        //         case MainMenu:
+        //             if(squareY < 4)
+        //             {
+        //                 prevY = squareY;
+        //                 squareY++;
+        //                 irq_en(false);
+        //                 Paint_DrawRectangle(39,prevY*20+51,200,prevY*20+51+19,MAGENTA,2,0);
+        //                 Paint_DrawRectangle(39,squareY*20+51,200,squareY*20+51+19,BLACK,2,0);
+        //                 irq_en(true);
+        //             }
+        //             break;
                 
-                default:
-                    break;
-                }
-            g_buttonPress = -1;
-            break;
-            case CENTER:/* code */
-                switch (menuLocation)
-                {
-                case MainMenu:
-                    menuLocation = squareY;
-                    break;
+        //         default:
+        //             break;
+        //         }
+        //     g_buttonPress = -1;
+        //     break;
+        //     case CENTER:/* code */
+        //         switch (menuLocation)
+        //         {
+        //         case MainMenu:
+        //             menuLocation = squareY;
+        //             break;
                 
-                default:
-                    break;
-                }
-            g_buttonPress = -1;
-            break;
-            case RE:/* code */
-                oled_render(buf, &frame_area);
-                oled_setCursor(0,2);
-                oled_WriteString16("***Nebraska?***\n");
-                g_buttonPress = -1;
-            break;
-            case RERIGHT:/* code */
-                oled_render(buf, &frame_area);
-                oled_setCursor(0,2);
-                oled_WriteString16("ADSR RIGHT\n");
-                g_buttonPress = -1;
-            break;
-            case RELEFT:/* code */
-                oled_render(buf, &frame_area);
-                oled_setCursor(0,2);
-                oled_WriteString16("ADSR LEFT\n");
-                g_buttonPress = -1;
-            break;
-            default:
+        //         default:
+        //             break;
+        //         }
+        //     g_buttonPress = -1;
+        //     break;
+        //     case RE:/* code */
+        //         oled_render(buf, &frame_area);
+        //         oled_setCursor(0,2);
+        //         oled_WriteString16("***Nebraska?***\n");
+        //         g_buttonPress = -1;
+        //     break;
+        //     case RERIGHT:/* code */
+        //         oled_render(buf, &frame_area);
+        //         oled_setCursor(0,2);
+        //         oled_WriteString16("ADSR RIGHT\n");
+        //         g_buttonPress = -1;
+        //     break;
+        //     case RELEFT:/* code */
+        //         oled_render(buf, &frame_area);
+        //         oled_setCursor(0,2);
+        //         oled_WriteString16("ADSR LEFT\n");
+        //         g_buttonPress = -1;
+        //     break;
+        //     default:
 
-            break;
-        }
+        //     break;
+        // }
 
-        if(prevMenuLocation != menuLocation){
-            switch (menuLocation)
-            {
-            case MainMenu:
-                printMenuOptions();
-                irq_en(false);
-                Paint_DrawRectangle(39,prevY*20+51,200,prevY*20+51+19,MAGENTA,2,0);
-                Paint_DrawRectangle(39,squareY*20+51,200,squareY*20+51+19,BLACK,2,0);
-                irq_en(true);
-                break;
-            case SD:
-                LCD_clear(RED);
-                Paint_DrawString_EN(20, 30, "SD Card Stuff Here", RED, WHITE);
+        // if(prevMenuLocation != menuLocation){
+        //     switch (menuLocation)
+        //     {
+        //     case MainMenu:
+        //         printMenuOptions();
+        //         irq_en(false);
+        //         Paint_DrawRectangle(39,prevY*20+51,200,prevY*20+51+19,MAGENTA,2,0);
+        //         Paint_DrawRectangle(39,squareY*20+51,200,squareY*20+51+19,BLACK,2,0);
+        //         irq_en(true);
+        //         break;
+        //     case SD:
+        //         LCD_clear(RED);
+        //         Paint_DrawString_EN(20, 30, "SD Card Stuff Here", RED, WHITE);
 
-                spi_init(spi, 25 * 1000 * 1000);
+        //         spi_init(spi, 25 * 1000 * 1000);
                 
-                // Open file for reading
-                fr = f_open(&fil, filename, FA_READ);
-                if (fr != FR_OK) {
-                    printf("ERROR: Could not open file (%d)\r\n", fr);
-                    while (true);
-                }
-                // Print every buf2 in file over serial
-                printf("Reading from file '%s':\r\n", filename);
-                printf("---\r\n");
-                int count = 0,  semicolon_count = 0;
-                while (f_gets(buf2, sizeof(buf2), &fil) != NULL) {
-                    //printf(buf2);
-                    sample = strtok(buf2, ";");
-                     while (sample != NULL) {
-                         char *subsample = strtok(sample, ",");
-                        while (subsample != NULL) {
-                            samples[semicolon_count][count++] = atoi(subsample);
-                            subsample = strtok(NULL, ",");
-                        }
-                        sample = strtok(NULL, ";");
-                        semicolon_count++;
-                        count = 0;
-                    }
-                }
+        //         // Open file for reading
+        //         fr = f_open(&fil, filename, FA_READ);
+        //         if (fr != FR_OK) {
+        //             printf("ERROR: Could not open file (%d)\r\n", fr);
+        //             while (true);
+        //         }
+        //         // Print every buf2 in file over serial
+        //         printf("Reading from file '%s':\r\n", filename);
+        //         printf("---\r\n");
+        //         int count = 0,  semicolon_count = 0;
+        //         while (f_gets(buf2, sizeof(buf2), &fil) != NULL) {
+        //             //printf(buf2);
+        //             sample = strtok(buf2, ";");
+        //              while (sample != NULL) {
+        //                  char *subsample = strtok(sample, ",");
+        //                 while (subsample != NULL) {
+        //                     samples[semicolon_count][count++] = atoi(subsample);
+        //                     subsample = strtok(NULL, ",");
+        //                 }
+        //                 sample = strtok(NULL, ";");
+        //                 semicolon_count++;
+        //                 count = 0;
+        //             }
+        //         }
 
-                for(int16_t i = 0; i < 13; i++)
-                {
-                    for (uint j = 0; j < (sizeof(samples[i]) / sizeof(samples[i][0])) && samples[i][j] != 0; j++)
-                    {
-                        printf("%d, ", samples[i][j]);
-                    }
-                    printf("\n\n");
-                }
+        //         for(int16_t i = 0; i < 13; i++)
+        //         {
+        //             for (uint j = 0; j < (sizeof(samples[i]) / sizeof(samples[i][0])) && samples[i][j] != 0; j++)
+        //             {
+        //                 printf("%d, ", samples[i][j]);
+        //             }
+        //             printf("\n\n");
+        //         }
 
-                printf("\r\n---\r\n");
-                f_close(&fil);
-                //f_unmount("0:");
-                spi_init(spi, 125000000);
-                break;
-            case SPECTRUM:
-                LCD_clear(BLUE);
-                Paint_DrawString_EN(20, 30, "Spectrum Stuff Here", BLUE, WHITE);
-                break;
-            case BEEPS:
-                LCD_clear(GREEN);
-                Paint_DrawString_EN(20, 30, "BEEPS Stuff Here", GREEN, WHITE);
-                break;
-            case BOOPS:
-                LCD_clear(BLACK);
-                Paint_DrawString_EN(20, 30, "BOOPS Stuff Here", BLACK, WHITE);
-                break;
-            case BOINKS:
-                LCD_clear(GRAY);
-                Paint_DrawString_EN(20, 30, "SD Card Stuff Here", GRAY, WHITE);
-                break;
+        //         printf("\r\n---\r\n");
+        //         f_close(&fil);
+        //         //f_unmount("0:");
+        //         spi_init(spi, 125000000);
+        //         break;
+        //     case SPECTRUM:
+        //         LCD_clear(BLUE);
+        //         Paint_DrawString_EN(20, 30, "Spectrum Stuff Here", BLUE, WHITE);
+        //         break;
+        //     case BEEPS:
+        //         LCD_clear(GREEN);
+        //         Paint_DrawString_EN(20, 30, "BEEPS Stuff Here", GREEN, WHITE);
+        //         break;
+        //     case BOOPS:
+        //         LCD_clear(BLACK);
+        //         Paint_DrawString_EN(20, 30, "BOOPS Stuff Here", BLACK, WHITE);
+        //         break;
+        //     case BOINKS:
+        //         LCD_clear(GRAY);
+        //         Paint_DrawString_EN(20, 30, "SD Card Stuff Here", GRAY, WHITE);
+        //         break;
             
-            default:
-                break;
-            }
-        }
+        //     default:
+        //         break;
+        //     }
+        // }
     }
 }
 

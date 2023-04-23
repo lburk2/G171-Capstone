@@ -138,66 +138,10 @@ CMakeFiles/SYNTH.dir/hw_config.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SYNTH.dir/hw_config.c.s"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\hw_config.c" -o CMakeFiles\SYNTH.dir\hw_config.c.s
 
-CMakeFiles/SYNTH.dir/MCP23017.c.obj: CMakeFiles/SYNTH.dir/flags.make
-CMakeFiles/SYNTH.dir/MCP23017.c.obj: ../MCP23017.c
-CMakeFiles/SYNTH.dir/MCP23017.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/SYNTH.dir/MCP23017.c.obj"
-	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/MCP23017.c.obj -MF CMakeFiles\SYNTH.dir\MCP23017.c.obj.d -o CMakeFiles\SYNTH.dir\MCP23017.c.obj -c "Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\MCP23017.c"
-
-CMakeFiles/SYNTH.dir/MCP23017.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SYNTH.dir/MCP23017.c.i"
-	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\MCP23017.c" > CMakeFiles\SYNTH.dir\MCP23017.c.i
-
-CMakeFiles/SYNTH.dir/MCP23017.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SYNTH.dir/MCP23017.c.s"
-	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\MCP23017.c" -o CMakeFiles\SYNTH.dir\MCP23017.c.s
-
-CMakeFiles/SYNTH.dir/pico_button_matrix.c.obj: CMakeFiles/SYNTH.dir/flags.make
-CMakeFiles/SYNTH.dir/pico_button_matrix.c.obj: ../pico_button_matrix.c
-CMakeFiles/SYNTH.dir/pico_button_matrix.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/SYNTH.dir/pico_button_matrix.c.obj"
-	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/pico_button_matrix.c.obj -MF CMakeFiles\SYNTH.dir\pico_button_matrix.c.obj.d -o CMakeFiles\SYNTH.dir\pico_button_matrix.c.obj -c "Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\pico_button_matrix.c"
-
-CMakeFiles/SYNTH.dir/pico_button_matrix.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SYNTH.dir/pico_button_matrix.c.i"
-	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\pico_button_matrix.c" > CMakeFiles\SYNTH.dir\pico_button_matrix.c.i
-
-CMakeFiles/SYNTH.dir/pico_button_matrix.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SYNTH.dir/pico_button_matrix.c.s"
-	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\pico_button_matrix.c" -o CMakeFiles\SYNTH.dir\pico_button_matrix.c.s
-
-CMakeFiles/SYNTH.dir/myNCO.c.obj: CMakeFiles/SYNTH.dir/flags.make
-CMakeFiles/SYNTH.dir/myNCO.c.obj: ../myNCO.c
-CMakeFiles/SYNTH.dir/myNCO.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/SYNTH.dir/myNCO.c.obj"
-	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/myNCO.c.obj -MF CMakeFiles\SYNTH.dir\myNCO.c.obj.d -o CMakeFiles\SYNTH.dir\myNCO.c.obj -c "Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\myNCO.c"
-
-CMakeFiles/SYNTH.dir/myNCO.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SYNTH.dir/myNCO.c.i"
-	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\myNCO.c" > CMakeFiles\SYNTH.dir\myNCO.c.i
-
-CMakeFiles/SYNTH.dir/myNCO.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SYNTH.dir/myNCO.c.s"
-	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\myNCO.c" -o CMakeFiles\SYNTH.dir\myNCO.c.s
-
-CMakeFiles/SYNTH.dir/pwm_audio_setup.c.obj: CMakeFiles/SYNTH.dir/flags.make
-CMakeFiles/SYNTH.dir/pwm_audio_setup.c.obj: ../pwm_audio_setup.c
-CMakeFiles/SYNTH.dir/pwm_audio_setup.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/SYNTH.dir/pwm_audio_setup.c.obj"
-	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/pwm_audio_setup.c.obj -MF CMakeFiles\SYNTH.dir\pwm_audio_setup.c.obj.d -o CMakeFiles\SYNTH.dir\pwm_audio_setup.c.obj -c "Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\pwm_audio_setup.c"
-
-CMakeFiles/SYNTH.dir/pwm_audio_setup.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SYNTH.dir/pwm_audio_setup.c.i"
-	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\pwm_audio_setup.c" > CMakeFiles\SYNTH.dir\pwm_audio_setup.c.i
-
-CMakeFiles/SYNTH.dir/pwm_audio_setup.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SYNTH.dir/pwm_audio_setup.c.s"
-	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\pwm_audio_setup.c" -o CMakeFiles\SYNTH.dir\pwm_audio_setup.c.s
-
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_stdlib\stdlib.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_stdlib\stdlib.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_stdlib\stdlib.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i: cmake_force
@@ -211,7 +155,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdli
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_gpio\gpio.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_gpio\gpio.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_gpio\gpio.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i: cmake_force
@@ -225,7 +169,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpi
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_claim\claim.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_claim\claim.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_claim\claim.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i: cmake_force
@@ -239,7 +183,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/cl
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_platform\platform.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_platform\platform.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_platform\platform.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i: cmake_force
@@ -253,7 +197,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_platform/pla
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_sync\sync.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_sync\sync.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_sync\sync.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i: cmake_force
@@ -267,7 +211,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/syn
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_irq\irq.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_irq\irq.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_irq\irq.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i: cmake_force
@@ -280,7 +224,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building ASM object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building ASM object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj"
 	C:\PROGRA~4\VSARM\armcc\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_irq\irq_handler_chain.S.obj   -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_irq\irq_handler_chain.S
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.i: cmake_force
@@ -294,7 +238,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq_
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\common\pico_sync\sem.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\common\pico_sync\sem.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\common\pico_sync\sem.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.c.i: cmake_force
@@ -308,7 +252,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/sem.c.s: cm
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\common\pico_sync\lock_core.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\common\pico_sync\lock_core.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\common\pico_sync\lock_core.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.c.i: cmake_force
@@ -322,7 +266,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/lock_core.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\common\pico_time\time.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\common\pico_time\time.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\common\pico_time\time.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.c.i: cmake_force
@@ -336,7 +280,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/time.c.s: c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\common\pico_time\timeout_helper.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\common\pico_time\timeout_helper.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\common\pico_time\timeout_helper.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i: cmake_force
@@ -350,7 +294,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_time/timeout_hel
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_timer\timer.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_timer\timer.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_timer\timer.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i: cmake_force
@@ -364,7 +308,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_timer/ti
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\common\pico_util\datetime.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\common\pico_util\datetime.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\common\pico_util\datetime.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.c.i: cmake_force
@@ -378,7 +322,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/datetime.c.
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\common\pico_util\pheap.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\common\pico_util\pheap.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\common\pico_util\pheap.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.i: cmake_force
@@ -392,7 +336,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c.s: 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\common\pico_util\queue.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\common\pico_util\queue.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\common\pico_util\queue.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.c.i: cmake_force
@@ -406,7 +350,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.c.s: 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\common\pico_sync\mutex.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\common\pico_sync\mutex.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\common\pico_sync\mutex.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.i: cmake_force
@@ -420,7 +364,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/mutex.c.s: 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\common\pico_sync\critical_section.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\common\pico_sync\critical_section.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\common\pico_sync\critical_section.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_section.c.i: cmake_force
@@ -434,7 +378,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/common/pico_sync/critical_se
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_uart\uart.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_uart\uart.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_uart\uart.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i: cmake_force
@@ -447,7 +391,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_uart/uar
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_28) "Building ASM object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_24) "Building ASM object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj"
 	C:\PROGRA~4\VSARM\armcc\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_divider\divider.S.obj   -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_divider\divider.S
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.i: cmake_force
@@ -461,7 +405,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_divider/
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_runtime\runtime.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_runtime\runtime.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_runtime\runtime.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i: cmake_force
@@ -475,7 +419,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_runtime/runt
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_clocks\clocks.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_clocks\clocks.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_clocks\clocks.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i: cmake_force
@@ -489,7 +433,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_pll\pll.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_pll\pll.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_pll\pll.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i: cmake_force
@@ -503,7 +447,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_pll/pll.
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_vreg\vreg.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_vreg\vreg.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_vreg\vreg.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i: cmake_force
@@ -517,7 +461,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_vreg/vre
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_watchdog\watchdog.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_watchdog\watchdog.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_watchdog\watchdog.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i: cmake_force
@@ -531,7 +475,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_watchdog
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_xosc\xosc.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_xosc\xosc.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_xosc\xosc.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i: cmake_force
@@ -545,7 +489,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_xosc/xos
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_printf\printf.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_printf\printf.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_printf\printf.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i: cmake_force
@@ -558,7 +502,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_printf/print
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_36) "Building ASM object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_32) "Building ASM object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj"
 	C:\PROGRA~4\VSARM\armcc\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_bit_ops\bit_ops_aeabi.S.obj   -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_bit_ops\bit_ops_aeabi.S
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.i: cmake_force
@@ -572,7 +516,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_bootrom\bootrom.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_bootrom\bootrom.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_bootrom\bootrom.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i: cmake_force
@@ -585,7 +529,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_bootrom/boot
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_divider/divider.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_38) "Building ASM object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_34) "Building ASM object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj"
 	C:\PROGRA~4\VSARM\armcc\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_divider\divider.S.obj   -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_divider\divider.S
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.i: cmake_force
@@ -598,7 +542,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_divider/divi
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_39) "Building ASM object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_35) "Building ASM object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj"
 	C:\PROGRA~4\VSARM\armcc\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_double\double_aeabi.S.obj   -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_double\double_aeabi.S
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.i: cmake_force
@@ -612,7 +556,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/doubl
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_double\double_init_rom.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_double\double_init_rom.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_double\double_init_rom.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i: cmake_force
@@ -626,7 +570,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/doubl
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_double\double_math.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_double\double_math.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_double\double_math.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i: cmake_force
@@ -639,7 +583,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/doubl
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_42) "Building ASM object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_38) "Building ASM object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj"
 	C:\PROGRA~4\VSARM\armcc\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_double\double_v1_rom_shim.S.obj   -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_double\double_v1_rom_shim.S
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.i: cmake_force
@@ -652,7 +596,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_double/doubl
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_43) "Building ASM object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_39) "Building ASM object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj"
 	C:\PROGRA~4\VSARM\armcc\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_int64_ops\pico_int64_ops_aeabi.S.obj   -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_int64_ops\pico_int64_ops_aeabi.S
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.i: cmake_force
@@ -665,7 +609,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_int64_ops/pi
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_44) "Building ASM object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_40) "Building ASM object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj"
 	C:\PROGRA~4\VSARM\armcc\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_float\float_aeabi.S.obj   -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_float\float_aeabi.S
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.i: cmake_force
@@ -679,7 +623,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_float\float_init_rom.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_float\float_init_rom.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_float\float_init_rom.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i: cmake_force
@@ -693,7 +637,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_float\float_math.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_float\float_math.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_float\float_math.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i: cmake_force
@@ -706,7 +650,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_47) "Building ASM object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_43) "Building ASM object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj"
 	C:\PROGRA~4\VSARM\armcc\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_float\float_v1_rom_shim.S.obj   -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_float\float_v1_rom_shim.S
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.i: cmake_force
@@ -720,7 +664,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_float/float_
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_malloc\pico_malloc.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_malloc\pico_malloc.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_malloc\pico_malloc.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i: cmake_force
@@ -733,7 +677,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_malloc/pico_
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_49) "Building ASM object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_45) "Building ASM object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj"
 	C:\PROGRA~4\VSARM\armcc\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_mem_ops\mem_ops_aeabi.S.obj   -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_mem_ops\mem_ops_aeabi.S
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.i: cmake_force
@@ -746,7 +690,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_50) "Building ASM object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_46) "Building ASM object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj"
 	C:\PROGRA~4\VSARM\armcc\bin\AR19DD~1.EXE $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_standard_link\crt0.S.obj   -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_standard_link\crt0.S
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.i: cmake_force
@@ -760,7 +704,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_lin
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR10B2~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_standard_link\new_delete.cpp.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_standard_link\new_delete.cpp.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_standard_link\new_delete.cpp
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i: cmake_force
@@ -774,7 +718,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_lin
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_standard_link\binary_info.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_standard_link\binary_info.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_standard_link\binary_info.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i: cmake_force
@@ -788,7 +732,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_standard_lin
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_stdio\stdio.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_stdio\stdio.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_stdio\stdio.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i: cmake_force
@@ -802,7 +746,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_stdio_usb\reset_interface.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_stdio_usb\reset_interface.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_stdio_usb\reset_interface.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i: cmake_force
@@ -816,7 +760,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/re
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_stdio_usb\stdio_usb.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_stdio_usb\stdio_usb.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_stdio_usb\stdio_usb.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i: cmake_force
@@ -830,7 +774,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/st
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_stdio_usb\stdio_usb_descriptors.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_stdio_usb\stdio_usb_descriptors.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_stdio_usb\stdio_usb_descriptors.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i: cmake_force
@@ -844,7 +788,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/st
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj: C:/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\portable\raspberrypi\rp2040\dcd_rp2040.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\portable\raspberrypi\rp2040\dcd_rp2040.c.obj -c C:\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\portable\raspberrypi\rp2040\dcd_rp2040.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i: cmake_force
@@ -858,7 +802,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspber
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj: C:/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\portable\raspberrypi\rp2040\rp2040_usb.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\portable\raspberrypi\rp2040\rp2040_usb.c.obj -c C:\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\portable\raspberrypi\rp2040\rp2040_usb.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i: cmake_force
@@ -872,7 +816,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/portable/raspber
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj: C:/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\device\usbd.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\device\usbd.c.obj -c C:\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\device\usbd.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i: cmake_force
@@ -886,7 +830,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s:
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj: C:/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\device\usbd_control.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\device\usbd_control.c.obj -c C:\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\device\usbd_control.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i: cmake_force
@@ -900,7 +844,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_cont
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj: C:/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\audio\audio_device.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\audio\audio_device.c.obj -c C:\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\audio\audio_device.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i: cmake_force
@@ -914,7 +858,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/audio/audi
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj: C:/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\cdc\cdc_device.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\cdc\cdc_device.c.obj -c C:\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\cdc\cdc_device.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i: cmake_force
@@ -928,7 +872,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_de
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj: C:/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\dfu\dfu_device.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\dfu\dfu_device.c.obj -c C:\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\dfu\dfu_device.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i: cmake_force
@@ -942,7 +886,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_de
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj: C:/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\dfu\dfu_rt_device.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\dfu\dfu_rt_device.c.obj -c C:\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\dfu\dfu_rt_device.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i: cmake_force
@@ -956,7 +900,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj: C:/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\hid\hid_device.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\hid\hid_device.c.obj -c C:\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\hid\hid_device.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i: cmake_force
@@ -970,7 +914,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_de
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj: C:/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\midi\midi_device.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\midi\midi_device.c.obj -c C:\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\midi\midi_device.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i: cmake_force
@@ -984,7 +928,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj: C:/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\msc\msc_device.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\msc\msc_device.c.obj -c C:\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\msc\msc_device.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i: cmake_force
@@ -998,7 +942,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_de
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj: C:/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\net\ecm_rndis_device.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\net\ecm_rndis_device.c.obj -c C:\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\net\ecm_rndis_device.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i: cmake_force
@@ -1012,7 +956,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rn
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj: C:/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\net\ncm_device.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\net\ncm_device.c.obj -c C:\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\net\ncm_device.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i: cmake_force
@@ -1026,7 +970,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_de
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj: C:/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\usbtmc\usbtmc_device.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\usbtmc\usbtmc_device.c.obj -c C:\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\usbtmc\usbtmc_device.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i: cmake_force
@@ -1040,7 +984,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usb
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj: C:/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\vendor\vendor_device.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\vendor\vendor_device.c.obj -c C:\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\vendor\vendor_device.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i: cmake_force
@@ -1054,7 +998,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/vendor/ven
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj: C:/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\video\video_device.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\video\video_device.c.obj -c C:\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\class\video\video_device.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i: cmake_force
@@ -1068,7 +1012,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/class/video/vide
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj: C:/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\tusb.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\tusb.c.obj -c C:\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\tusb.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.c.i: cmake_force
@@ -1082,7 +1026,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/tusb.c.s: cmake_
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj: C:/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\common\tusb_fifo.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\common\tusb_fifo.c.obj -c C:\VSARM\sdk\pico\pico-sdk\lib\tinyusb\src\common\tusb_fifo.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i: cmake_force
@@ -1096,7 +1040,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_fix\rp2040_usb_device_enumeration\rp2040_usb_device_enumeration.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_fix\rp2040_usb_device_enumeration\rp2040_usb_device_enumeration.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_fix\rp2040_usb_device_enumeration\rp2040_usb_device_enumeration.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i: cmake_force
@@ -1110,7 +1054,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_u
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_unique_id\unique_id.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_unique_id\unique_id.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_unique_id\unique_id.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i: cmake_force
@@ -1124,7 +1068,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/un
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_flash\flash.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_flash\flash.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_flash\flash.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i: cmake_force
@@ -1138,7 +1082,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/fl
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_spi\spi.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_spi\spi.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i: cmake_force
@@ -1152,7 +1096,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_spi/spi.
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_i2c\i2c.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_i2c\i2c.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_i2c\i2c.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i: cmake_force
@@ -1166,7 +1110,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj: ../lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.obj -MF CMakeFiles\SYNTH.dir\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\ff15\source\ffsystem.c.obj.d -o CMakeFiles\SYNTH.dir\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\ff15\source\ffsystem.c.obj -c "Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\ff15\source\ffsystem.c"
 
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsystem.c.i: cmake_force
@@ -1180,7 +1124,7 @@ CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffsys
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj: ../lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.obj -MF CMakeFiles\SYNTH.dir\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\ff15\source\ffunicode.c.obj.d -o CMakeFiles\SYNTH.dir\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\ff15\source\ffunicode.c.obj -c "Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\ff15\source\ffunicode.c"
 
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffunicode.c.i: cmake_force
@@ -1194,7 +1138,7 @@ CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ffuni
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj: ../lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.obj -MF CMakeFiles\SYNTH.dir\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\ff15\source\ff.c.obj.d -o CMakeFiles\SYNTH.dir\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\ff15\source\ff.c.obj -c "Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\ff15\source\ff.c"
 
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.i: cmake_force
@@ -1208,7 +1152,7 @@ CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/ff15/source/ff.c.
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.obj: ../lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.obj -MF CMakeFiles\SYNTH.dir\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\sd_driver\sd_spi.c.obj.d -o CMakeFiles\SYNTH.dir\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\sd_driver\sd_spi.c.obj -c "Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\sd_driver\sd_spi.c"
 
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.c.i: cmake_force
@@ -1222,7 +1166,7 @@ CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_spi.
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.obj: ../lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.obj -MF CMakeFiles\SYNTH.dir\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\sd_driver\demo_logging.c.obj.d -o CMakeFiles\SYNTH.dir\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\sd_driver\demo_logging.c.obj -c "Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\sd_driver\demo_logging.c"
 
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_logging.c.i: cmake_force
@@ -1236,7 +1180,7 @@ CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/demo_lo
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.obj: ../lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.obj -MF CMakeFiles\SYNTH.dir\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\sd_driver\spi.c.obj.d -o CMakeFiles\SYNTH.dir\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\sd_driver\spi.c.obj -c "Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\sd_driver\spi.c"
 
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.i: cmake_force
@@ -1250,7 +1194,7 @@ CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/spi.c.s
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.obj: ../lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.obj -MF CMakeFiles\SYNTH.dir\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\sd_driver\sd_card.c.obj.d -o CMakeFiles\SYNTH.dir\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\sd_driver\sd_card.c.obj -c "Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\sd_driver\sd_card.c"
 
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card.c.i: cmake_force
@@ -1264,7 +1208,7 @@ CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/sd_card
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.obj: ../lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.obj -MF CMakeFiles\SYNTH.dir\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\sd_driver\crc.c.obj.d -o CMakeFiles\SYNTH.dir\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\sd_driver\crc.c.obj -c "Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\sd_driver\crc.c"
 
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.i: cmake_force
@@ -1278,7 +1222,7 @@ CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd_driver/crc.c.s
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.obj: ../lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.obj -MF CMakeFiles\SYNTH.dir\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\src\glue.c.obj.d -o CMakeFiles\SYNTH.dir\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\src\glue.c.obj -c "Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\src\glue.c"
 
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.i: cmake_force
@@ -1292,7 +1236,7 @@ CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/glue.c.s: cma
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.obj: ../lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.obj -MF CMakeFiles\SYNTH.dir\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\src\f_util.c.obj.d -o CMakeFiles\SYNTH.dir\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\src\f_util.c.obj -c "Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\src\f_util.c"
 
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.i: cmake_force
@@ -1306,7 +1250,7 @@ CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/f_util.c.s: c
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.obj: ../lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.obj -MF CMakeFiles\SYNTH.dir\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\src\ff_stdio.c.obj.d -o CMakeFiles\SYNTH.dir\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\src\ff_stdio.c.obj -c "Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\src\ff_stdio.c"
 
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.i: cmake_force
@@ -1320,7 +1264,7 @@ CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/ff_stdio.c.s:
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.obj: ../lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_91) "Building C object CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.obj -MF CMakeFiles\SYNTH.dir\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\src\my_debug.c.obj.d -o CMakeFiles\SYNTH.dir\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\src\my_debug.c.obj -c "Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\src\my_debug.c"
 
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.i: cmake_force
@@ -1334,7 +1278,7 @@ CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/my_debug.c.s:
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj: ../lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.obj -MF CMakeFiles\SYNTH.dir\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\src\rtc.c.obj.d -o CMakeFiles\SYNTH.dir\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\src\rtc.c.obj -c "Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\lib\no-OS-FatFS-SD-SPI-RPi-Pico\FatFs_SPI\src\rtc.c"
 
 CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.i: cmake_force
@@ -1348,7 +1292,7 @@ CMakeFiles/SYNTH.dir/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/src/rtc.c.s: cmak
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_93) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_dma\dma.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_dma\dma.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_dma\dma.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.c.i: cmake_force
@@ -1362,7 +1306,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_dma/dma.
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_94) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_rtc\rtc.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_rtc\rtc.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_rtc\rtc.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.i: cmake_force
@@ -1376,7 +1320,7 @@ CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_rtc/rtc.
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: CMakeFiles/SYNTH.dir/flags.make
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj: CMakeFiles/SYNTH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_95) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_91) "Building C object CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj"
 	C:\VSARM\armcc\1213FB~1.2MP\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj -MF CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj.d -o CMakeFiles\SYNTH.dir\C_\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_adc\adc.c.obj -c C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_adc\adc.c
 
 CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_adc/adc.c.i: cmake_force
@@ -1394,10 +1338,6 @@ SYNTH_OBJECTS = \
 "CMakeFiles/SYNTH.dir/menuButtons.c.obj" \
 "CMakeFiles/SYNTH.dir/OLED.c.obj" \
 "CMakeFiles/SYNTH.dir/hw_config.c.obj" \
-"CMakeFiles/SYNTH.dir/MCP23017.c.obj" \
-"CMakeFiles/SYNTH.dir/pico_button_matrix.c.obj" \
-"CMakeFiles/SYNTH.dir/myNCO.c.obj" \
-"CMakeFiles/SYNTH.dir/pwm_audio_setup.c.obj" \
 "CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj" \
 "CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj" \
 "CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj" \
@@ -1493,10 +1433,6 @@ SYNTH.elf: CMakeFiles/SYNTH.dir/LCD.c.obj
 SYNTH.elf: CMakeFiles/SYNTH.dir/menuButtons.c.obj
 SYNTH.elf: CMakeFiles/SYNTH.dir/OLED.c.obj
 SYNTH.elf: CMakeFiles/SYNTH.dir/hw_config.c.obj
-SYNTH.elf: CMakeFiles/SYNTH.dir/MCP23017.c.obj
-SYNTH.elf: CMakeFiles/SYNTH.dir/pico_button_matrix.c.obj
-SYNTH.elf: CMakeFiles/SYNTH.dir/myNCO.c.obj
-SYNTH.elf: CMakeFiles/SYNTH.dir/pwm_audio_setup.c.obj
 SYNTH.elf: CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 SYNTH.elf: CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 SYNTH.elf: CMakeFiles/SYNTH.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
@@ -1587,7 +1523,7 @@ SYNTH.elf: CMakeFiles/SYNTH.dir/build.make
 SYNTH.elf: pico-sdk/src/rp2_common/boot_stage2/bs2_default_padded_checksummed.S
 SYNTH.elf: CMakeFiles/SYNTH.dir/objects1.rsp
 SYNTH.elf: CMakeFiles/SYNTH.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_96) "Linking CXX executable SYNTH.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="Z:\Semester8\Capstone II\Code\G171-Capstone\landonsCopy\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_92) "Linking CXX executable SYNTH.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\SYNTH.dir\link.txt --verbose=$(VERBOSE)
 	"C:\Program FiC\VSARM\armcc\bin\arm-none-eabi-objcopy.exe" -Oihex "Z:/Semester8/Capstone II/Code/G171-Capstone/landonsCopy/build/SYNTH.elf" SYNTH.hex
 	"C:\Program FiC\VSARM\armcc\bin\arm-none-eabi-objcopy.exe" -Obinary "Z:/Semester8/Capstone II/Code/G171-Capstone/landonsCopy/build/SYNTH.elf" SYNTH.bin

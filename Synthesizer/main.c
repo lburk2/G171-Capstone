@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 #include "LCD.h"
 #include "pico/stdlib.h"
@@ -12,16 +13,22 @@
 #include "sd_card.h"
 #include "ff.h"
 #include "MCP23017.h"
-#include "pwm_audio_setup.h"
+//#include "pwm_audio_setup.h"
 // #include "pico_button_matrix.h"
 
-uint8_t g_buttonPress = -1; 
+#define ROWS 6
+#define COLS 5
+#define GPIO_INPUT false
+#define GPIO_OUTPUT true
+uint8_t g_buttonPress = 0; 
+uint row_pin;
 uint columns[5] = { 22, 23, 24, 25, 12 };
 uint rows[6] = { 26, 27, 28, 29, 11, 13 };
 
+
 void printMenuOptions();
 void menuButtons_init(void);
-void gpio_callback(uint gpio, uint32_t events);
+void buttonHandler(uint gpio, uint32_t events);
 void irq_en(bool en);
 
 
@@ -112,20 +119,6 @@ int main(void){
     calc_render_area_buflen(&frame_area);
     uint8_t buf[OLED_BUF_LEN];
     oled_fill(buf,0x00);
-
-    //button init
-    
-    uint matrix[30] = 
-    {
-        1, 2, 3, 4, 0, 
-        5, 6, 7, 8, 0, 
-        9, 10, 11, 12 , 0, 
-        13, 0, 0, 0, 0,
-        14, 15, 16, 17, 18,
-        19, 20, 21, 22, 23,
-    };
-    // pico_keypad_init(columns, rows, matrix);
-    // int key = pico_keypad_get_key();
 
     while (true)
     {
@@ -239,24 +232,24 @@ int main(void){
                 }
             g_buttonPress = -1;
             break;
-            case RE:/* code */
-                oled_render(buf, &frame_area);
-                oled_setCursor(0,2);
-                oled_WriteString16("***Nebraska?***\n");
-                g_buttonPress = -1;
-            break;
-            case RERIGHT:/* code */
-                oled_render(buf, &frame_area);
-                oled_setCursor(0,2);
-                oled_WriteString16("ADSR RIGHT\n");
-                g_buttonPress = -1;
-            break;
-            case RELEFT:/* code */
-                oled_render(buf, &frame_area);
-                oled_setCursor(0,2);
-                oled_WriteString16("ADSR LEFT\n");
-                g_buttonPress = -1;
-            break;
+            // case RE:/* code */
+            //     oled_render(buf, &frame_area);
+            //     oled_setCursor(0,2);
+            //     oled_WriteString16("***Nebraska?***\n");
+            //     g_buttonPress = -1;
+            // break;
+            // case RERIGHT:/* code */
+            //     oled_render(buf, &frame_area);
+            //     oled_setCursor(0,2);
+            //     oled_WriteString16("ADSR RIGHT\n");
+            //     g_buttonPress = -1;
+            // break;
+            // case RELEFT:/* code */
+            //     oled_render(buf, &frame_area);
+            //     oled_setCursor(0,2);
+            //     oled_WriteString16("ADSR LEFT\n");
+            //     g_buttonPress = -1;
+            // break;
             default:
 
             break;
@@ -489,76 +482,100 @@ Paint_DrawString_EN(5, 130,"- Boinks ", MAGENTA, WHITE);
 void menuButtons_init(void)
 {
     // Initialize rows of button matrix
-   
-    for(int i = 0; i < 6; i++)
-    {
-    gpio_init(rows[i]);
-    gpio_set_dir(rows[i], GPIO_IN);
-    gpio_pull_down(rows[i]);
+    for (int i = 0; i < COLS; i++) {
+        gpio_init(columns[i]);
+
+        gpio_set_dir(columns[i], GPIO_OUTPUT);
+        gpio_put(columns[i], 1);
     }
-    for(int i = 0; i < 5; i++)
+    
+    for (int i = 0; i < ROWS; i++) 
     {
-    gpio_init(columns[i]);
-    gpio_set_dir(columns[i], GPIO_IN);
-    gpio_pull_up(columns[i]);
+        gpio_init(rows[i]);
+
+        gpio_set_dir(rows[i], GPIO_INPUT);
+        gpio_pull_down(rows[i]);
     }
     //enable interrupts
     irq_en(true);
 }
 
 // ISR for buttons. 
-void gpio_callback(uint gpio, uint32_t events)
+void buttonHandler(uint gpio, uint32_t events)
 {
-    uint8_t pin_state_1 = gpio_get(gpio);
-    for(volatile uint32_t i = 0;i<10000;i++){}
-    uint8_t pin_state_2 = gpio_get(gpio);
-
-    if( pin_state_1 == pin_state_2)
+    for (int i = 0; i < ROWS; i++) 
     {
-        for (int i = 0; i<6 ; i++)
+        if (rows[i] == gpio) 
         {
-            if(gpio == rows[i])
-            {
-                for(int j = 0; j < 5 ; j++)
-                {
-                    if (gpio_get(columns[j]) == 0)
-                    {
-                        g_buttonPress = i*5 + j;
-                    }
-                }
-            }
-
+            row_pin = i;
+            break;
         }
-        for (int i = 0; i < 5 ; i++)
-        {
-            if(gpio == columns[i])
-            {
-              for(int j = 0; j < 6 ; j++)
-                {
-                    if (gpio_get(rows[j]) == 0)
-                    {
-                        g_buttonPress = j*5 + i;
-                    }
-                }   
-            }
-
-        }
-
-
+    }
+    gpio_put(columns[0],1);
+    gpio_put(columns[1],0);
+    gpio_put(columns[2],0);
+    gpio_put(columns[3],0);
+    gpio_put(columns[4],0);
+    for(volatile uint32_t i = 0;i<1000;i++){}
+    if(gpio_get(gpio)==1)
+    {
+        g_buttonPress=row_pin*5;
+        
+    }
+    gpio_put(columns[0],0);
+    gpio_put(columns[1],1);
+    gpio_put(columns[2],0);
+    gpio_put(columns[3],0);
+    gpio_put(columns[4],0);
+    for(volatile uint32_t i = 0;i<1000;i++){}
+    if(gpio_get(gpio)==1)
+    {
+        g_buttonPress=row_pin*5+1;
+        
+    }
+    gpio_put(columns[0],0);
+    gpio_put(columns[1],0);
+    gpio_put(columns[2],1);
+    gpio_put(columns[3],0);
+    gpio_put(columns[4],0);
+    for(volatile uint32_t i = 0;i<1000;i++){}
+    if(gpio_get(gpio)==1)
+    {
+        g_buttonPress=row_pin*5+2;
+        
+    }
+    gpio_put(columns[0],0);
+    gpio_put(columns[1],0);
+    gpio_put(columns[2],0);
+    gpio_put(columns[3],1);
+    gpio_put(columns[4],0);
+    for(volatile uint32_t i = 0;i<1000;i++){}
+    if(gpio_get(gpio)==1)
+    {
+        g_buttonPress=row_pin*5+3;
 
     }
+    gpio_put(columns[0],0);
+    gpio_put(columns[1],0);
+    gpio_put(columns[2],0);
+    gpio_put(columns[3],0);
+    gpio_put(columns[4],1);
+    for(volatile uint32_t i = 0;i<1000;i++){}
+    if(gpio_get(gpio)==1)
+    {
+        g_buttonPress=row_pin*5+4;
+    }
+    gpio_put(columns[0],1);
+    gpio_put(columns[1],1);
+    gpio_put(columns[2],1);
+    gpio_put(columns[3],1);
+    gpio_put(columns[4],1);
+    for(volatile uint32_t i = 0;i<10000;i++){}
 }
-
 void irq_en(bool en)
 {   
-    // enable interrupts
-    for (int i = 0; i < 5; i++)
-    {
-        gpio_set_irq_enabled_with_callback(columns[i], GPIO_IRQ_EDGE_FALL, en, &gpio_callback);
-    }
-            // enable interrupts
     for (int i = 0; i < 6; i++)
     {
-        gpio_set_irq_enabled_with_callback(rows[i], GPIO_IRQ_EDGE_RISE, en, &gpio_callback);
+        gpio_set_irq_enabled_with_callback(rows[i],GPIO_IRQ_EDGE_RISE,en,&buttonHandler);
     }
 }

@@ -34,13 +34,13 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Program FiC/VSARM/armcc/bin/arm-none-eabi-objdump.exe")
+  set(CMAKE_OBJDUMP "C:/VSARM/armcc/12.2 mpacbti-bet1/bin/arm-none-eabi-objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2040/hardware_regs/cmake_install.cmake")
-  include("Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2040/hardware_structs/cmake_install.cmake")
+  include("C:/Users/jisat/OneDrive/Documents/GitHub/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2040/hardware_regs/cmake_install.cmake")
+  include("C:/Users/jisat/OneDrive/Documents/GitHub/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2040/hardware_structs/cmake_install.cmake")
 
 endif()
 

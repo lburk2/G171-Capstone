@@ -23,9 +23,7 @@ add_executable(SYNTH
         hw_config.c
         MCP23017.c
         MCP23017.h
-        pico_button_matrix.c
-        pico_button_matrix.h
-        pwm_audio_interrupt.c
+        #pwm_audio_interrupt.c
         )
 #
 # pull in common dependencies

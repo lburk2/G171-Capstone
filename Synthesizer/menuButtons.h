@@ -1,13 +1,14 @@
 #include "stdio.h"
 
-#define RE      0
-#define UP      1
-#define LEFT    2
-#define CENTER  3
-#define DOWN    6
-#define RIGHT   7
-#define RERIGHT 8
-#define RELEFT  9
+#define RE      25
+#define UP      20
+#define LEFT    22
+#define CENTER  21
+#define DOWN    24
+#define RIGHT   23
+#define RERIGHT //change later
+#define RELEFT  -2
+
 
 
 #define MainMenu 5
