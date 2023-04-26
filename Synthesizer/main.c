@@ -114,8 +114,7 @@ int main(void){
     Paint_DrawRectangle(39,prevY*20+51,200,prevY*20+51+19,MAGENTA,2,0);
     Paint_DrawRectangle(39,squareY*20+51,200,squareY*20+51+19,BLACK,2,0);
 
-    struct render_area frame_area = {start_col: 0, end_col : OLED_WIDTH - 1, start_page : 0, end_page : OLED_NUM_PAGES -
-                                                                                                        1};
+    struct render_area frame_area = {start_col: 0, end_col : OLED_WIDTH - 1, start_page : 0, end_page : OLED_NUM_PAGES -1};
     calc_render_area_buflen(&frame_area);
     uint8_t buf[OLED_BUF_LEN];
     oled_fill(buf,0x00);
@@ -124,9 +123,18 @@ int main(void){
     {
         prevMenuLocation = menuLocation;
 
+        /*
+        *   Button input switch statement 
+        *   
+        *   uses the global variable for the buttonpress
+        *   to determine what menu action to perfrom based on the 
+        *   button press from the user. There is a case for each UI
+        *   input, and nested switch statements to determine the 
+        *   action based on the input. 
+        */
         switch (g_buttonPress)
         {
-            case RIGHT:/* code */
+            case RIGHT:/* code */  //Right UI button
                 switch (menuLocation)
                 {
                     case MainMenu:
@@ -153,7 +161,7 @@ int main(void){
                 }
                 g_buttonPress = -1;
             break;
-            case LEFT:/* code */
+            case LEFT:/* code */    //left AKA back button
                 switch (menuLocation)
                 {
                     case MainMenu:
@@ -180,10 +188,10 @@ int main(void){
                 }
             g_buttonPress = -1;
             break;
-            case UP:/* code */
+            case UP:/* code */ // UP 
                 switch (menuLocation)
                 {
-                case MainMenu:
+                case MainMenu: //raise the box 
                     if(squareY > 0 )
                     {
                         prevY = squareY;
@@ -204,7 +212,7 @@ int main(void){
                 switch (menuLocation)
                 {
                 case MainMenu:
-                    if(squareY < 4)
+                    if(squareY < 4)//lower the box
                     {
                         prevY = squareY;
                         squareY++;
@@ -254,18 +262,24 @@ int main(void){
 
             break;
         }
-
-        if(prevMenuLocation != menuLocation){
+        /*
+        *   Menu action switch
+        *   
+        *   based on the menu locaiton action from the previous statement,
+        *   this switch statement will actually perform the action. 
+        * 
+        */
+        if(prevMenuLocation != menuLocation){ //check that we're in a new menu location
             switch (menuLocation)
             {
-            case MainMenu:
+            case MainMenu: //print menu options with the box at prev location.
                 printMenuOptions();
                 irq_en(false);
                 Paint_DrawRectangle(39,prevY*20+51,200,prevY*20+51+19,MAGENTA,2,0);
                 Paint_DrawRectangle(39,squareY*20+51,200,squareY*20+51+19,BLACK,2,0);
                 irq_en(true);
                 break;
-            case SD:
+            case SD: //open the file on the SD card and store samples in arrays
                 LCD_clear(RED);
                 Paint_DrawString_EN(20, 30, "SD Card Stuff Here", RED, WHITE);
 
@@ -443,7 +457,7 @@ int main(void){
                 //f_unmount("0:");
                 spi_init(spi, 125000000);
                 break;
-            case SPECTRUM:
+            case SPECTRUM: 
                 LCD_clear(BLUE);
                 Paint_DrawString_EN(20, 30, "Spectrum Stuff Here", BLUE, WHITE);
                 break;
@@ -467,7 +481,7 @@ int main(void){
     }
 }
 
-void printMenuOptions()
+void printMenuOptions() // prints menu options
 {
 LCD_clear(MAGENTA);
 Paint_DrawString_EN(5, 10, "Welcome to Synth", MAGENTA, WHITE);
@@ -479,7 +493,7 @@ Paint_DrawString_EN(5, 110, "- Boops ", MAGENTA, WHITE);
 Paint_DrawString_EN(5, 130,"- Boinks ", MAGENTA, WHITE);
 }
 
-void menuButtons_init(void)
+void menuButtons_init(void) 
 {
     // Initialize rows of button matrix
     for (int i = 0; i < COLS; i++) {

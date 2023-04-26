@@ -1,4 +1,4 @@
-// Padded and checksummed version of: C:/Users/jisat/OneDrive/Documents/GitHub/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin
+// Padded and checksummed version of: Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/build/pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin
 
 .cpu cortex-m0plus
 .thumb
