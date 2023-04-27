@@ -27,7 +27,7 @@
 // main code: do SWITCH statement 
 
 
-
+#include <stdio.h>
 #include "ADSR_c.h"
 #include <math.h>
 
@@ -38,10 +38,10 @@ void initADSR(ADSR* ptr){
   
     // Make a set of vars in main code, that are affected by the knobs
     // Using global variables!
-    setAttackRate(ptr,1);
-    setDecayRate(ptr,0);
-    setReleaseRate(ptr,0);
-    setSustainLevel(ptr,1.0);
+    setAttackRate(ptr,1.0);
+    setDecayRate(ptr,1.0);
+    setReleaseRate(ptr,1.0);
+    setSustainLevel(ptr,0.5);
 
     setTargetRatioA(ptr,0.3);
     setTargetRatioDR(ptr,0.0001);
@@ -96,15 +96,21 @@ void setTargetRatioDR(ADSR* ptr, float targetRatio) {
 }
 
 // in main code:
-// take ptr->output and add it to the sound[] array
-
+// take ptr->output and multiply it to the sound[] array
+// puts out a zero to 100% zero to 255 for system efficiency
+// shift right 8 to divide.
+// 
 
 float process(ADSR* ptr) {
-	switch (ptr->state) {
+    // printf("entered process\n");
+    printf("state is: %d\n", ptr->state);
+    switch (ptr->state) {
         case env_idle:
+            printf("IDLE\n");
             break;
         case env_attack:
             ptr->output = ptr->attackBase + ptr->output * ptr->attackCoef;
+            printf("ATTACK PHASE\n");
             if (ptr->output >= 1.0) {
                 ptr->output = 1.0;
                 ptr->state = env_decay;
@@ -112,20 +118,24 @@ float process(ADSR* ptr) {
             break;
         case env_decay:
             ptr->output = ptr->decayBase + ptr->output * ptr->decayCoef;
+            printf("DECAY\n");
             if (ptr->output <= ptr->sustainLevel) {
                 ptr->output = ptr->sustainLevel;
                 ptr->state = env_sustain;
             }
             break;
         case env_sustain:
+            printf("SUSSY\n");
             break;
         case env_release:
             ptr->output = ptr->releaseBase + ptr->output * ptr->releaseCoef;
+            printf("release PHASE\n");
             if (ptr->output <= 0.0) {
                 ptr->output = 0.0;
                 ptr->state = env_idle;
             }
 	}
+    // printf("output (in ADSR func): %f", ptr->output);
 	return ptr->output;
 }
 

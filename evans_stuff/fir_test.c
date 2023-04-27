@@ -1,40 +1,66 @@
-#include <stdio.h>
-#include "pico/stdlib.h"   // stdlib 
+// From chatgpt on 4.18.23 at 4PM!!
+// It works!! 
+
+// TODO: put matlab coeffs in here and make this modular
+
+
+
+#include "pico/stdlib.h"
 #include "hardware/irq.h"  // interrupts
 #include "hardware/pwm.h"  // pwm 
 #include "hardware/sync.h" // wait for interrupt 
- 
-// Audio PIN is to match some of the design guide shields. 
-#define AUDIO_PIN  16  
+// #include "hardware/adc.h"
+#include "LUT.h"
+#include <stdio.h>
+
+// 4/24/24 update: testing matlab lowpass filters with 110 taps
+#include "FIR_lo_400_uint8_t.h"
+
+#define FILTER_TAP_NUM 110
+#define AUDIO_PIN 16
 #define BUTTON_PIN 2
 #define LED_PIN 3
 
-/* 
- * This include brings in static arrays which contain audio samples. 
- * if you want to know how to make these please see the python code
- * for converting audio samples into static arrays. 
- */
-#include "sample.h"
-#include "LUT.h"
-#include "ADSR_c.h"
 int wav_position = 0;
 
-/*
- * PWM Interrupt Handler which outputs PWM level and advances the 
- * current sample. 
- * 
- * We repeat the same value for 8 cycles this means sample rate etc
- * adjust by factor of 8   (this is what bitshifting <<3 is doing)
- * 
- */
+// static float filter_taps[FILTER_TAP_NUM] = {
+//     10, 10, 5, 1, 1
+// };
+
+static float filter_buf[FILTER_TAP_NUM] = {0};
+
+// h*x = y; its our output
+int y = 0;
+
+
+
+int fir_filter(int input)
+{
+    int output = 0;
+    int i;
+
+    // Shift the buffer
+    for (i = FILTER_TAP_NUM - 1; i >= 1; i--) {
+        filter_buf[i] = filter_buf[i - 1];
+    }
+
+    // Add new sample to buffer
+    filter_buf[0] = input;
+
+    // Compute output
+    for (i = 0; i < FILTER_TAP_NUM; i++) {
+        output += FIR_stop_400[i] * filter_buf[i];
+    }
+
+    return output;
+}
+
 void pwm_interrupt_handler() {
     pwm_clear_irq(pwm_gpio_to_slice_num(AUDIO_PIN));    
     if (wav_position < (SIN_LENGTH) - 1) { 
-        
-        // LET'S test out an IIR with this bad boy: 4/23/23
-        
-
-        pwm_set_gpio_level(AUDIO_PIN, triangle[wav_position]);  
+        // filtering 
+        y = fir_filter(triangle[wav_position]);
+        pwm_set_gpio_level(AUDIO_PIN, y);  
         wav_position++;
     } else {
         // reset to start
@@ -54,28 +80,18 @@ void button_callback(uint gpio, uint32_t events) {
 
 }
 
-int main(void) {
-    /* Overclocking for fun but then also so the system clock is a 
-     * multiple of typical audio sampling rates.
-     */
+int main()
+{
+    // Initialize ADC
+    // adc_init();
+    // adc_gpio_init(26); // Use GPIO26 as ADC input
+    // adc_select_input(0);
+
     stdio_init_all();
     set_sys_clock_khz(176000, true); 
     gpio_set_function(AUDIO_PIN, GPIO_FUNC_PWM);
-
     int audio_pin_slice = pwm_gpio_to_slice_num(AUDIO_PIN);
 
-
-    /*
-        THIS CODE MAKES THE SOUND RUN AUTOMATICALLY
-    */
-    // Setup PWM interrupt to fire when PWM cycle is complete
-    // pwm_clear_irq(audio_pin_slice);
-    // pwm_set_irq_enabled(audio_pin_slice, true);
-    // set the handle function above
-    // irq_set_exclusive_handler(PWM_IRQ_WRAP, pwm_interrupt_handler); 
-    // irq_set_enabled(PWM_IRQ_WRAP, true);
-
-    // Setup PWM for audio output
     pwm_config config = pwm_get_default_config();
     /* Base clock 176,000,000 Hz divide by wrap 250 then the clock divider further divides
      * to set the interrupt rate. 
@@ -88,12 +104,9 @@ int main(void) {
      *  4.0f for 22 KHz
      *  2.0f for 44 KHz etc
      */
-    pwm_config_set_clkdiv(&config, 8.0f); 
+    pwm_config_set_clkdiv(&config, 4.0f); 
     pwm_config_set_wrap(&config, 10); 
     pwm_init(audio_pin_slice, &config, true);
-
-
-    // stuff from crispy's code **************** //
 
     pwm_set_gpio_level(AUDIO_PIN, 0);
 
@@ -107,9 +120,15 @@ int main(void) {
     gpio_set_irq_enabled_with_callback(BUTTON_PIN, GPIO_IRQ_LEVEL_HIGH | GPIO_IRQ_EDGE_FALL,
                                        true, button_callback);
 
-    // ***************************************** //
+    // Initialize filter
+    // ...
 
-    while(1) {
-        __wfi(); // Wait for Interrupt
+    // Read input samples and apply filter
+    while (1) {
+        // float input = adc_read() / 4095.0; // Convert ADC reading to range [0, 1]
+        
+        // Do something with the filtered output
+        
+
     }
 }

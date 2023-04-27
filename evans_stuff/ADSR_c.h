@@ -63,6 +63,7 @@
  
     float calcCoef(float rate, float targetRatio);
 	
+    void initADSR(ADSR* ptr);
 	float process(ADSR* ptr);
     float getOutput(ADSR* ptr);
     int getState(ADSR* ptr);

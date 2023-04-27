@@ -28,7 +28,7 @@
 #include "hardware/pwm.h"  // pwm 
 #include "hardware/sync.h"
 #include "ADSR_c.h"
-#include "hardware/uart.h"
+// #include "hardware/uart.h"
 
 #include "sample.h"
 
