@@ -139,6 +139,7 @@ float process(ADSR* ptr) {
 	return ptr->output;
 }
 
+// this function triggers the ADSR
 void gate(ADSR* ptr) {
 	if (ptr->gate == 0){
 		ptr->state = env_attack;

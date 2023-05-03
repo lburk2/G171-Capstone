@@ -4,14 +4,14 @@ set(CMAKE_TRY_COMPILE_TARGET_TYPE "STATIC_LIBRARY")
 
 include($ENV{PICO_SDK_PATH}/external/pico_sdk_import.cmake)
 
-project(evan_button_test C CXX ASM)
+project(evan_ADSR_test C CXX ASM)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 
 pico_sdk_init()
 
 add_executable(${PROJECT_NAME}
-    button_test.c
+    fir_test.c
 )
 
 pico_add_extra_outputs(${PROJECT_NAME})
@@ -22,6 +22,7 @@ target_link_libraries(${PROJECT_NAME}
     hardware_pwm
     hardware_sync
     hardware_gpio
+    hardware_adc
 )
 
 pico_enable_stdio_usb(${PROJECT_NAME} 1)

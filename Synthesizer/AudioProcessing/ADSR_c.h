@@ -22,6 +22,7 @@
 #define ADRS_h
 
 // if the pins are pulled low, there is a twist on the encoder
+// change if needed, this was just for testing
 #define ARER 9  
 #define AREL 10
 #define DRER 11
