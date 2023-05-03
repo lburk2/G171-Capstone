@@ -24,7 +24,7 @@ uint8_t g_buttonPress = 0;
 uint row_pin;
 uint columns[5] = { 22, 23, 24, 25, 12 };
 uint rows[6] = { 26, 27, 28, 29, 11, 13 };
-
+MCP23017 gpio_expander;
 
 void printMenuOptions();
 void menuButtons_init(void);
@@ -68,7 +68,8 @@ int main(void){
     Paint_DrawRectangle(32,182,96,198,RED,2,1);  
     
     sleep_ms(500);
-    //menuButtons_init();
+    //menuButtons_init(); 
+    mcp23017_init(&gpio_expander, 0b00000111);
     Paint_DrawRectangle(32,182,160,198,RED,2,1);
     
     sleep_ms(500);
