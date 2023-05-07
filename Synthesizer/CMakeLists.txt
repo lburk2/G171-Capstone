@@ -14,7 +14,6 @@ add_executable(SYNTH
         main.c
         LCD.c
         LCD.h
-        menuButtons.h
         font24.h
         imageN.h
         font.h
@@ -23,7 +22,7 @@ add_executable(SYNTH
         hw_config.c
         MCP23017.c
         MCP23017.h
-        #pwm_audio_interrupt.c
+        c4.h
         )
 #
 # pull in common dependencies
