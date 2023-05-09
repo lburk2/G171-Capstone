@@ -96,9 +96,8 @@ bool repeating_timer_callback(struct repeating_timer *t)
 { 
     //printf("line 664   ");
     //check button states
-    for (col_index = 0; col_index < COLS; col_index++) //loop through rows
+    for (col_index = 0; col_index < COLS; col_index++) //loop through columns
     {
-       
         gpio_put(columns[col_index], 1);
         
         //printf("\n    225\n\n    ");
@@ -117,8 +116,9 @@ bool repeating_timer_callback(struct repeating_timer *t)
                 if(prevButtonValues[row_index*5+col_index]==0)
                 {
                     ring_buffer[writeIndex] =row_index*5+col_index; //store this value into ring buffer sequentially
-                    printf("\n    row state 1 %d\n\n    ", ring_buffer[writeIndex]);
-                   
+                    printf("\n    row state high %d, %d\n\n    ", ring_buffer[writeIndex],col_index);
+                    
+                    writeIndex++;
                      //bufferLength++;
                 }
             }
@@ -129,14 +129,13 @@ bool repeating_timer_callback(struct repeating_timer *t)
                 if(prevButtonValues[row_index*5+col_index]==1)
                 {
                     ring_buffer[writeIndex]=row_index*5+col_index;
-                     printf("\n    row state 0 %d\n\n    ", ring_buffer[writeIndex]);
-                    
+                     printf("\n    row state low %d, %d\n\n    ", ring_buffer[writeIndex],col_index);
+                    writeIndex++;
                      //bufferLength++;
                 }
             }
             prevButtonValues[row_index*5+col_index]=buttonValues[row_index*5+col_index];
-           
-            writeIndex++;
+            
             // If at last index in buffer, set writeIndex back to 0
             if (writeIndex == SIZE_OF_BUFFER) 
             {
@@ -146,7 +145,7 @@ bool repeating_timer_callback(struct repeating_timer *t)
         gpio_put(columns[col_index], 0);
         //printf("\n    267\n\n    ");
     }
-    //return false;
+    return true;
 }
 
 int main(void){
@@ -403,7 +402,7 @@ int main(void){
 
             case SW1:  //c4
                 audioTable=samples1;
-                AUDIO_SAMPLES=sizeof(samples1/sizeof(samples1[1]));
+                //AUDIO_SAMPLES=sizeof(samples1/sizeof(samples1[1]));
                 break;
             case SW2: //c#
                 /* code */
