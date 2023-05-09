@@ -51,7 +51,7 @@
 #define RE3 26
 #define RE4 28
 #define USER_INTERFACE 25
-#define AUDIO_PIN 2
+#define AUDIO_PIN 16
 #define ADC_CHANNEL 2
 int g_buttonPress = 0; 
 uint columns[5] = { 25, 24, 23, 22, 12 };
@@ -270,7 +270,7 @@ int main(void){
     while (true)
     {
         prevMenuLocation = menuLocation;
-
+    
         /*
         *   Button input switch statement 
         *   
@@ -402,7 +402,8 @@ int main(void){
 
             case SW1:  //c4
                 audioTable=samples1;
-                //AUDIO_SAMPLES=sizeof(samples1/sizeof(samples1[1]));
+                AUDIO_SAMPLES=sizeof(samples1)/sizeof(samples1[0]);
+                //AUDIO_SAMPLES=84;
                 break;
             case SW2: //c#
                 /* code */
@@ -457,14 +458,19 @@ int main(void){
                 break;
             default:
             //printf("in default, key is %d\n", g_buttonPress);
+            AUDIO_SAMPLES=0;
                 break;
             }
             g_buttonPress=-1;
             }
         }
+        if(buttonValues[g_buttonPress])
+        {
+            AUDIO_SAMPLES=0;
+        }
         bufferLength--;	 //	Decrease buffer size after reading
         readIndex++;	 //	Increase readIndex position to prepare for next read
-
+        
         // If at last index in buffer, set readIndex back to 0
         if (readIndex == SIZE_OF_BUFFER) {
             readIndex = 0;
@@ -720,8 +726,6 @@ void menuButtons_init(void)
     //enable interrupts
     irq_en(true);
 }
-
-
 
 void pwm_irh() {
     pwm_clear_irq(pwm_gpio_to_slice_num(AUDIO_PIN));
