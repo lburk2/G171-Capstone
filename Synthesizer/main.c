@@ -284,7 +284,8 @@ int main(void){
         g_buttonPress=ring_buffer[readIndex];
         //printf("line 228 %d\n", g_buttonPress);
         if(buttonValues[g_buttonPress])
-        {   
+        {
+            
             if(g_buttonPress!=-1)
             {
             switch (g_buttonPress)
@@ -460,57 +461,6 @@ int main(void){
                 break;
             }
             g_buttonPress=-1;
-            }
-        }
-        if(buttonValues[g_buttonPress])
-        {
-            switch (changedKey)
-                {
-                case SW1:  //c4
-                    AUDIO_SAMPLES=0;
-                    break;
-                case SW2: //c#
-                    AUDIO_SAMPLES=0;
-                    break;
-                case SW3: //d
-                    AUDIO_SAMPLES=0;
-                    break;
-                case SW4: //d#
-                    AUDIO_SAMPLES=0;
-                    break;
-                case SW5: //e
-                    AUDIO_SAMPLES=0;
-                    break;
-                case SW6: //f
-                    AUDIO_SAMPLES=0;
-                    break;
-                case SW7: //f#
-                    /* code */
-                    break;
-                case SW8: //g
-                    /* code */
-                    break;
-                case SW9: //g#
-                    /* code */
-                    break;
-                case SW10: //a
-                    /* code */
-                    break; //a#
-                case SW11: //b
-                    /* code */
-                    break;
-                case SW12: //b#
-                    /* code */
-                    break;
-                case SW13: //c5
-                    /* code */
-                    break;
-                default:
-                //printf("in default, key is %d\n", g_buttonPress);
-                    break;
-                }
-                g_buttonPress=-1;
-                }
             }
         }
         bufferLength--;	 //	Decrease buffer size after reading
