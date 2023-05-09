@@ -18,18 +18,18 @@ int main(void){
     stdio_init_all();
 
     LCD_init();
-    // Paint_DrawImage(gImage_imageN, 0,0,LCD_WIDTH,LCD_HEIGHT);
-    // LCD_Write_Command(0x10);
-    // Paint_DrawRectangle(0,180,320,240,WHITE,2,1);
-    // LCD_Write_Command(0x11);
-    // Paint_DrawRectangle(30,180,290,200,BLACK,2,0);
-    // Paint_DrawRectangle(32,182,96,198,RED,2,1); 
+    Paint_DrawImage(gImage_imageN, 0,0,LCD_WIDTH,LCD_HEIGHT);
+    LCD_Write_Command(0x10);
+    Paint_DrawRectangle(0,180,320,240,WHITE,2,1);
+    LCD_Write_Command(0x11);
+    Paint_DrawRectangle(30,180,290,200,BLACK,2,0);
+    Paint_DrawRectangle(32,182,96,198,RED,2,1); 
      
 
-    // oled_init();
-    // oled_setCursor(0,0);
+    oled_init();
+    oled_setCursor(0,0);
 
-    // oled_WriteString16("***Nebraska!***\n");
+    oled_WriteString16("***Nebraska!***\n");
     
     gpio_init(1);
     gpio_set_dir(1,GPIO_OUT);
@@ -37,11 +37,11 @@ int main(void){
 
     while (true)
     {
-        gpio_put(1,0);
-        sleep_ms(100);
-        gpio_put(1,1);
-        sleep_ms(100);
-        LCD_clear(MAGENTA);
+        // gpio_put(1,0);
+        // sleep_ms(100);
+        // gpio_put(1,1);
+        // sleep_ms(100);
+        // LCD_clear(MAGENTA);
     }
 }
 

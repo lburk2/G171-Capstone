@@ -81,6 +81,7 @@ uint16_t * audioTable;
 uint16_t AUDIO_SAMPLES = 0;
 uint16_t outputVal[10000]={0}; //check sizes for if this will output, check also the highest possible combo between the sound lengths
 
+uint16_t delay_line[84]={0};
 
 MCP23017 gpio_expander;
 
@@ -89,6 +90,7 @@ void menuButtons_init(void);
 void irq_en(bool en);
 //bool repeating_timer_callback(struct repeating_timer *t); 
 void *memset(void *str, int c, size_t n);
+void fir_delay_line(uint8_t *input, uint16_t *output, int nx, int nh, uint8_t *filter);
 void pwm_irh();
 
 // ISR for buttons. 
@@ -116,7 +118,7 @@ bool repeating_timer_callback(struct repeating_timer *t)
                 if(prevButtonValues[row_index*5+col_index]==0)
                 {
                     ring_buffer[writeIndex] =row_index*5+col_index; //store this value into ring buffer sequentially
-                    printf("\n    row state high %d, %d\n\n    ", ring_buffer[writeIndex],col_index);
+                    //printf("\n    row state high %d, %d\n\n    ", ring_buffer[writeIndex],col_index);
                     
                     writeIndex++;
                      //bufferLength++;
@@ -129,7 +131,7 @@ bool repeating_timer_callback(struct repeating_timer *t)
                 if(prevButtonValues[row_index*5+col_index]==1)
                 {
                     ring_buffer[writeIndex]=row_index*5+col_index;
-                     printf("\n    row state low %d, %d\n\n    ", ring_buffer[writeIndex],col_index);
+                    // printf("\n    row state low %d, %d\n\n    ", ring_buffer[writeIndex],col_index);
                     writeIndex++;
                      //bufferLength++;
                 }
@@ -155,32 +157,38 @@ int main(void){
     FIL fil;
     //int ret;
     char buf2[10000];
-    uint16_t samples1[84];
-    uint16_t samples2[80];
-    uint16_t samples3[76];
-    uint16_t samples4[73];
-    uint16_t samples5[70];
-    uint16_t samples6[68];
-    uint16_t samples7[65];
-    uint16_t samples8[63];
-    uint16_t samples9[60];
-    uint16_t samples10[59];
-    uint16_t samples11[57];
-    uint16_t samples12[55];
-    uint16_t samples13[54];
+    uint16_t samples1[84]={0};
+    uint16_t samples2[80]={0};
+    uint16_t samples3[76]={0};
+    uint16_t samples4[73]={0};
+    uint16_t samples5[70]={0};
+    uint16_t samples6[68]={0};
+    uint16_t samples7[65]={0};
+    uint16_t samples8[63]={0};
+    uint16_t samples9[60]={0};
+    uint16_t samples10[59]={0};
+    uint16_t samples11[57]={0};
+    uint16_t samples12[55]={0};
+    uint16_t samples13[54]={0};
+    uint16_t zeros[40]={127};
 
+    uint16_t samples[13][200] ={0};
     char* sample;
+    char* subsample;
     char filename[] = "sineWaveOctave.txt";
     spi_inst_t *spi = spi0;
 
+    int lowPassEnable=0;
+
     stdio_init_all();
 
-        //ISR for checking buttons
-    struct repeating_timer timer;
+       
+        struct repeating_timer timer;
     add_repeating_timer_ms(100, repeating_timer_callback, NULL, &timer);
     memset(buttonValues,0,30);
     memset(prevButtonValues,0,30);
     memset(ring_buffer,0,16*sizeof(ring_buffer[0]));
+    
 
     //PWM Set up
     gpio_set_function(AUDIO_PIN, GPIO_FUNC_PWM);
@@ -191,7 +199,7 @@ int main(void){
     pwm_clear_irq(audio_pin_slice);
     pwm_set_irq_enabled(audio_pin_slice, true);
     irq_set_exclusive_handler(PWM_IRQ_WRAP, pwm_irh);
-    irq_set_enabled(PWM_IRQ_WRAP, true);
+    irq_set_enabled(PWM_IRQ_WRAP, false);
 
     // Setup PWM for audio output
     pwm_config config = pwm_get_default_config();
@@ -266,6 +274,7 @@ int main(void){
     calc_render_area_buflen(&frame_area);
     uint8_t buf[OLED_BUF_LEN];
     oled_fill(buf,0x00);
+
 
     while (true)
     {
@@ -365,7 +374,6 @@ int main(void){
             g_buttonPress=-1;
             break;
             case DOWN:/* code */
-            printf("369\n");
                 switch (menuLocation)
                 {
                 case MainMenu:
@@ -403,43 +411,54 @@ int main(void){
             case SW1:  //c4
                 audioTable=samples1;
                 AUDIO_SAMPLES=sizeof(samples1)/sizeof(samples1[0]);
-                //AUDIO_SAMPLES=84;
                 break;
             case SW2: //c#
-                /* code */
+                audioTable=samples2;
+                AUDIO_SAMPLES=sizeof(samples2)/sizeof(samples2[0]);
                 break;
             case SW3: //d
-                /* code */
+                audioTable=samples3;
+                AUDIO_SAMPLES=sizeof(samples3)/sizeof(samples3[0]);
                 break;
             case SW4: //d#
-                /* code */
+                audioTable=samples4;
+                AUDIO_SAMPLES=sizeof(samples4)/sizeof(samples4[0]);
                 break;
             case SW5: //e
-                /* code */
+                audioTable=samples5;
+                AUDIO_SAMPLES=sizeof(samples5)/sizeof(samples5[0]);
                 break;
             case SW6: //f
-                /* code */
+                audioTable=samples6;
+                AUDIO_SAMPLES=sizeof(samples6)/sizeof(samples6[0]);
                 break;
             case SW7: //f#
-                /* code */
+                audioTable=samples7;
+                AUDIO_SAMPLES=sizeof(samples7)/sizeof(samples7[0]);
                 break;
             case SW8: //g
-                /* code */
+                audioTable=samples8;
+                AUDIO_SAMPLES=sizeof(samples8)/sizeof(samples8[0]);
                 break;
             case SW9: //g#
-                /* code */
+                audioTable=samples9;
+                AUDIO_SAMPLES=sizeof(samples9)/sizeof(samples9[0]);
                 break;
             case SW10: //a
-                /* code */
+                audioTable=samples10;
+                AUDIO_SAMPLES=sizeof(samples10)/sizeof(samples10[0]);
                 break; //a#
             case SW11: //b
-                /* code */
+                audioTable=samples11;
+                AUDIO_SAMPLES=sizeof(samples11)/sizeof(samples11[0]);
                 break;
             case SW12: //b#
-                /* code */
+                audioTable=samples12;
+                AUDIO_SAMPLES=sizeof(samples12)/sizeof(samples12[0]);
                 break;
             case SW13: //c5
-                /* code */
+                audioTable=samples13;
+                AUDIO_SAMPLES=sizeof(samples13)/sizeof(samples13[0]);
                 break;
             case RE1:
                 /* code */
@@ -459,14 +478,16 @@ int main(void){
             default:
             //printf("in default, key is %d\n", g_buttonPress);
             AUDIO_SAMPLES=0;
+            audioTable=zeros;
                 break;
             }
             g_buttonPress=-1;
             }
         }
-        if(buttonValues[g_buttonPress])
+        if(!buttonValues[g_buttonPress])
         {
             AUDIO_SAMPLES=0;
+            audioTable=zeros;
         }
         bufferLength--;	 //	Decrease buffer size after reading
         readIndex++;	 //	Increase readIndex position to prepare for next read
@@ -507,163 +528,83 @@ int main(void){
                 // Print every line in file over serial
                 printf("Reading from file '%s':\r\n", filename);
                 printf("---\r\n");
-                int count = 0;
-                while (f_gets(buf2, sizeof(buf2), &fil)) {
+                
+                int count = 0,  semicolon_count = 0;
+                while (f_gets(buf2, sizeof(buf2), &fil) != NULL) {
                     //printf(buf2);
-                    sample = strtok(buf2, ",");
-                        while (sample != NULL) {
-                            samples1[count++] = atoi(sample);
-                            sample = strtok(NULL, ",");
+                    sample = strtok(buf2, ";");
+                     while (sample != NULL) {
+                        subsample = strtok(sample, ",");
+                        while (subsample != NULL) {
+                            samples[semicolon_count][count++] = atoi(subsample);
+                            subsample = strtok(NULL, ",");
                         }
-                }
-                while (f_gets(buf2, sizeof(buf2), &fil)) {
-                    //printf(buf2);
-                    sample = strtok(buf2, ",");
-                        while (sample != NULL) {
-                            samples2[count++] = atoi(sample);
-                            sample = strtok(NULL, ",");
-                        }
-                }
-                while (f_gets(buf2, sizeof(buf2), &fil)) {
-                    //printf(buf2);
-                    sample = strtok(buf2, ",");
-                        while (sample != NULL) {
-                            samples3[count++] = atoi(sample);
-                            sample = strtok(NULL, ",");
-                        }
-                }
-                while (f_gets(buf2, sizeof(buf2), &fil)) {
-                    //printf(buf2);
-                    sample = strtok(buf2, ",");
-                        while (sample != NULL) {
-                            samples4[count++] = atoi(sample);
-                            sample = strtok(NULL, ",");
-                        }
-                }
-                while (f_gets(buf2, sizeof(buf2), &fil)) {
-                    //printf(buf2);
-                    sample = strtok(buf2, ",");
-                        while (sample != NULL) {
-                            samples5[count++] = atoi(sample);
-                            sample = strtok(NULL, ",");
-                        }
-                }
-                while (f_gets(buf2, sizeof(buf2), &fil)) {
-                    //printf(buf2);
-                    sample = strtok(buf2, ",");
-                        while (sample != NULL) {
-                            samples6[count++] = atoi(sample);
-                            sample = strtok(NULL, ",");
-                        }
-                }
-                while (f_gets(buf2, sizeof(buf2), &fil)) {
-                    //printf(buf2);
-                    sample = strtok(buf2, ",");
-                        while (sample != NULL) {
-                            samples7[count++] = atoi(sample);
-                            sample = strtok(NULL, ",");
-                        }
-                }
-                while (f_gets(buf2, sizeof(buf2), &fil)) {
-                    //printf(buf2);
-                    sample = strtok(buf2, ",");
-                        while (sample != NULL) {
-                            samples8[count++] = atoi(sample);
-                            sample = strtok(NULL, ",");
-                        }
-                }
-                while (f_gets(buf2, sizeof(buf2), &fil)) {
-                    //printf(buf2);
-                    sample = strtok(buf2, ",");
-                        while (sample != NULL) {
-                            samples9[count++] = atoi(sample);
-                            sample = strtok(NULL, ",");
-                        }
-                }
-                while (f_gets(buf2, sizeof(buf2), &fil)) {
-                    //printf(buf2);
-                    sample = strtok(buf2, ",");
-                        while (sample != NULL) {
-                            samples10[count++] = atoi(sample);
-                            sample = strtok(NULL, ",");
-                        }
-                }
-                while (f_gets(buf2, sizeof(buf2), &fil)) {
-                    //printf(buf2);
-                    sample = strtok(buf2, ",");
-                        while (sample != NULL) {
-                            samples11[count++] = atoi(sample);
-                            sample = strtok(NULL, ",");
-                        }
-                }
-                while (f_gets(buf2, sizeof(buf2), &fil)) {
-                    //printf(buf2);
-                    sample = strtok(buf2, ",");
-                        while (sample != NULL) {
-                            samples12[count++] = atoi(sample);
-                            sample = strtok(NULL, ",");
-                        }
-                }
-                while (f_gets(buf2, sizeof(buf2), &fil)) {
-                    //printf(buf2);
-                    sample = strtok(buf2, ",");
-                        while (sample != NULL) {
-                            samples13[count++] = atoi(sample);
-                            sample = strtok(NULL, ",");
-                        }
-                }
-                for (uint16_t i = 0; i < count; i++){
-                    printf("%d, ", samples1[i]);
-                }
-                printf("\n");
-                for (uint16_t i = 0; i < count; i++){
-                    printf("%d, ", samples2[i]);
-                }
-                printf("\n");
-                for (uint16_t i = 0; i < count; i++){
-                    printf("%d, ", samples3[i]);
-                }
-                printf("\n");
-                for (uint16_t i = 0; i < count; i++){
-                    printf("%d, ", samples4[i]);
-                }
-                printf("\n");
-                for (uint16_t i = 0; i < count; i++){
-                    printf("%d, ", samples5[i]);
-                }
-                printf("\n");
-                for (uint16_t i = 0; i < count; i++){
-                    printf("%d, ", samples6[i]);
-                }
-                printf("\n");
-                for (uint16_t i = 0; i < count; i++){
-                    printf("%d, ", samples7[i]);
-                }
-                printf("\n");
-                for (uint16_t i = 0; i < count; i++){
-                    printf("%d, ", samples8[i]);
-                }
-                printf("\n");
-                for (uint16_t i = 0; i < count; i++){
-                    printf("%d, ", samples9[i]);
-                }
-                printf("\n");
-                for (uint16_t i = 0; i < count; i++){
-                    printf("%d, ", samples10[i]);
-                }
-                printf("\n");
-                for (uint16_t i = 0; i < count; i++){
-                    printf("%d, ", samples11[i]);
-                }
-                printf("\n");
-                for (uint16_t i = 0; i < count; i++){
-                    printf("%d, ", samples12[i]);
-                }
-                printf("\n");
-                for (uint16_t i = 0; i < count; i++){
-                    printf("%d, ", samples13[i]);
+                        sample = strtok(NULL, ";");
+                        semicolon_count++;
+                        count = 0;
+                    }
                 }
 
+                // for(int16_t i = 0; i < 13; i++)
+                // {
+                //     for (uint j = 0; j < (sizeof(samples[i]) / sizeof(samples[i][0])) && samples[i][j] != 0; j++)
+                //     {
+                //         printf("%d, ", samples[i][j]);
+                //     }
+                //     printf("\n\n");
+                // }
+                for(int i=0; i<84; i++)
+                {
+                    samples1[i]=samples[0][i];
+                }
+                for(int i=0; i<80; i++)
+                {
+                    samples2[i]=samples[1][i];
+                }
+                for(int i=0; i<76; i++)
+                {
+                    samples3[i]=samples[2][i];
+                }
+                for(int i=0; i<73; i++)
+                {
+                    samples4[i]=samples[3][i];
+                }
+                for(int i=0; i<70; i++)
+                {
+                    samples5[i]=samples[4][i];
+                }
+                for(int i=0; i<68; i++)
+                {
+                    samples6[i]=samples[5][i];
+                }
+                for(int i=0; i<65; i++)
+                {
+                    samples7[i]=samples[6][i];
+                }
+                for(int i=0; i<63; i++)
+                {
+                    samples8[i]=samples[7][i];
+                }
+                for(int i=0; i<60; i++)
+                {
+                    samples9[i]=samples[8][i];
+                }
+                for(int i=0; i<59; i++)
+                {
+                    samples10[i]=samples[9][i];
+                }
+                for(int i=0; i<57; i++)
+                {
+                    samples11[i]=samples[10][i];
+                }
+                for(int i=0; i<55; i++)
+                {
+                    samples12[i]=samples[11][i];
+                }
+                for(int i=0; i<54; i++)
+                {
+                    samples13[i]=samples[12][i];
+                }
 
                 printf("\r\n---\r\n");
                 f_close(&fil);
@@ -677,6 +618,11 @@ int main(void){
             case BEEPS:
                 LCD_clear(GREEN);
                 Paint_DrawString_EN(20, 30, "BEEPS Stuff Here", GREEN, WHITE);
+                lowPassEnable=1;
+                if(lowPassEnable)
+                {
+                    lowPassEnable=0;
+                }
                 break;
             case BOOPS:
                 LCD_clear(BLACK);
@@ -690,6 +636,11 @@ int main(void){
             default:
                 break;
             }
+        }
+        if(lowPassEnable)
+        {
+           // fir_delay_line();
+            
         }
     }
 }
@@ -739,6 +690,29 @@ void pwm_irh() {
         cur_sample = 0;
     }
 }
+void fir_delay_line(uint8_t *input, uint16_t *output, int nx, int nh, uint8_t *filter) {
+    
+    int i, j;
+    uint16_t sum;
+
+    for(i = 0; i < nx; i++) {
+
+        // shifting delay line 
+        for(j = nx - 1; j > 0; j--) {
+            delay_line[j] = delay_line[j - 1];
+        }
+        delay_line[0] = input[i];
+
+        // doing filtering
+        sum = 0;
+        for (j = 0; j < nh; j++) {
+            sum += filter[j] * delay_line[j];
+        }
+
+        output[i] = sum;
+    }
+}
+
 
 void irq_en(bool en)
 {   
