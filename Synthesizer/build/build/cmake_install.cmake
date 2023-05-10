@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/jisat/OneDrive/Documents/GitHub/G171-Capstone/Synthesizer/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI
+# Install script for directory: Z:/Semester8/Capstone II/Code/G171-Capstone/Synthesizer/lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,6 +34,6 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/VSARM/armcc/12.2 mpacbti-bet1/bin/arm-none-eabi-objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Program FiC/VSARM/armcc/bin/arm-none-eabi-objdump.exe")
 endif()
 

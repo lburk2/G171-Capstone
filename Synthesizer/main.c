@@ -171,11 +171,14 @@ int main(void){
     uint16_t samples12[55]={0};
     uint16_t samples13[54]={0};
     uint16_t zeros[40]={127};
+    int count = 0,  semicolon_count = 0;
 
     uint16_t samples[13][200] ={0};
     char* sample;
     char* subsample;
-    char filename[] = "sineWaveOctave.txt";
+    char filename1[] = "sineWaveOctave.txt";
+    char filename2[] = "squareWaveOctave.txt";
+    char filename3[] = "triangleWaveOctave.txt";
     spi_inst_t *spi = spi0;
 
     int lowPassEnable=0;
@@ -515,21 +518,21 @@ int main(void){
                 break;
             case SD: //open the file on the SD card and store samples in arrays
                 LCD_clear(RED);
-                Paint_DrawString_EN(20, 30, "SD Card Stuff Here", RED, WHITE);
+                Paint_DrawString_EN(20, 30, "Loading Sinusoids...", RED, WHITE);
 
                 spi_init(spi, 25 * 1000 * 1000);
                 
                 // Open file for reading
-                fr = f_open(&fil, filename, FA_READ);
+                fr = f_open(&fil, filename1, FA_READ);
                 if (fr != FR_OK) {
                     printf("ERROR: Could not open file (%d)\r\n", fr);
                     while (true);
                 }
                 // Print every line in file over serial
-                printf("Reading from file '%s':\r\n", filename);
+                printf("Reading from file '%s':\r\n", filename1);
                 printf("---\r\n");
                 
-                int count = 0,  semicolon_count = 0;
+                count = 0,  semicolon_count = 0;
                 while (f_gets(buf2, sizeof(buf2), &fil) != NULL) {
                     //printf(buf2);
                     sample = strtok(buf2, ";");
@@ -553,6 +556,8 @@ int main(void){
                 //     }
                 //     printf("\n\n");
                 // }
+
+                f_close(&fil);
                 for(int i=0; i<84; i++)
                 {
                     samples1[i]=samples[0][i];
@@ -607,32 +612,261 @@ int main(void){
                 }
 
                 printf("\r\n---\r\n");
+
                 f_close(&fil);
                 //f_unmount("0:");
                 spi_init(spi, 125000000);
+
+                sleep_ms(1000);
+
+                menuLocation = 5;
+
                 break;
             case SPECTRUM: 
+
                 LCD_clear(BLUE);
-                Paint_DrawString_EN(20, 30, "Spectrum Stuff Here", BLUE, WHITE);
+                Paint_DrawString_EN(20, 30, "Loading Square Waves...", BLUE, WHITE);
+
+                spi_init(spi, 25 * 1000 * 1000);
+                
+                // Open file for reading
+                fr = f_open(&fil, filename2, FA_READ);
+                if (fr != FR_OK) {
+                    printf("ERROR: Could not open file (%d)\r\n", fr);
+                    while (true);
+                }
+                // Print every line in file over serial
+                printf("Reading from file '%s':\r\n", filename2);
+                printf("---\r\n");
+                
+                count = 0,  semicolon_count = 0;
+                while (f_gets(buf2, sizeof(buf2), &fil) != NULL) {
+                    //printf(buf2);
+                    sample = strtok(buf2, ";");
+                     while (sample != NULL) {
+                        subsample = strtok(sample, ",");
+                        while (subsample != NULL) {
+                            samples[semicolon_count][count++] = atoi(subsample);
+                            subsample = strtok(NULL, ",");
+                        }
+                        sample = strtok(NULL, ";");
+                        semicolon_count++;
+                        count = 0;
+                    }
+                }
+
+                // for(int16_t i = 0; i < 13; i++)
+                // {
+                //     for (uint j = 0; j < (sizeof(samples[i]) / sizeof(samples[i][0])) && samples[i][j] != 0; j++)
+                //     {
+                //         printf("%d, ", samples[i][j]);
+                //     }
+                //     printf("\n\n");
+                // }
+
+                f_close(&fil);
+                for(int i=0; i<84; i++)
+                {
+                    samples1[i]=samples[0][i];
+                }
+                for(int i=0; i<80; i++)
+                {
+                    samples2[i]=samples[1][i];
+                }
+                for(int i=0; i<76; i++)
+                {
+                    samples3[i]=samples[2][i];
+                }
+                for(int i=0; i<73; i++)
+                {
+                    samples4[i]=samples[3][i];
+                }
+                for(int i=0; i<70; i++)
+                {
+                    samples5[i]=samples[4][i];
+                }
+                for(int i=0; i<68; i++)
+                {
+                    samples6[i]=samples[5][i];
+                }
+                for(int i=0; i<65; i++)
+                {
+                    samples7[i]=samples[6][i];
+                }
+                for(int i=0; i<63; i++)
+                {
+                    samples8[i]=samples[7][i];
+                }
+                for(int i=0; i<60; i++)
+                {
+                    samples9[i]=samples[8][i];
+                }
+                for(int i=0; i<59; i++)
+                {
+                    samples10[i]=samples[9][i];
+                }
+                for(int i=0; i<57; i++)
+                {
+                    samples11[i]=samples[10][i];
+                }
+                for(int i=0; i<55; i++)
+                {
+                    samples12[i]=samples[11][i];
+                }
+                for(int i=0; i<54; i++)
+                {
+                    samples13[i]=samples[12][i];
+                }
+
+                printf("\r\n---\r\n");
+
+                f_close(&fil);
+                //f_unmount("0:");
+                spi_init(spi, 125000000);
+
+                sleep_ms(1000);
+
+                menuLocation = 5;
+
                 break;
             case BEEPS:
+                LCD_clear(BLUE);
+                Paint_DrawString_EN(20, 30, "Loading Square Waves...", BLUE, WHITE);
+
+                spi_init(spi, 25 * 1000 * 1000);
+                
+                // Open file for reading
+                fr = f_open(&fil, filename3, FA_READ);
+                if (fr != FR_OK) {
+                    printf("ERROR: Could not open file (%d)\r\n", fr);
+                    while (true);
+                }
+                // Print every line in file over serial
+                printf("Reading from file '%s':\r\n", filename3);
+                printf("---\r\n");
+                
+                count = 0,  semicolon_count = 0;
+                while (f_gets(buf2, sizeof(buf2), &fil) != NULL) {
+                    //printf(buf2);
+                    sample = strtok(buf2, ";");
+                     while (sample != NULL) {
+                        subsample = strtok(sample, ",");
+                        while (subsample != NULL) {
+                            samples[semicolon_count][count++] = atoi(subsample);
+                            subsample = strtok(NULL, ",");
+                        }
+                        sample = strtok(NULL, ";");
+                        semicolon_count++;
+                        count = 0;
+                    }
+                }
+
+                // for(int16_t i = 0; i < 13; i++)
+                // {
+                //     for (uint j = 0; j < (sizeof(samples[i]) / sizeof(samples[i][0])) && samples[i][j] != 0; j++)
+                //     {
+                //         printf("%d, ", samples[i][j]);
+                //     }
+                //     printf("\n\n");
+                // }
+
+                f_close(&fil);
+                for(int i=0; i<84; i++)
+                {
+                    samples1[i]=samples[0][i];
+                }
+                for(int i=0; i<80; i++)
+                {
+                    samples2[i]=samples[1][i];
+                }
+                for(int i=0; i<76; i++)
+                {
+                    samples3[i]=samples[2][i];
+                }
+                for(int i=0; i<73; i++)
+                {
+                    samples4[i]=samples[3][i];
+                }
+                for(int i=0; i<70; i++)
+                {
+                    samples5[i]=samples[4][i];
+                }
+                for(int i=0; i<68; i++)
+                {
+                    samples6[i]=samples[5][i];
+                }
+                for(int i=0; i<65; i++)
+                {
+                    samples7[i]=samples[6][i];
+                }
+                for(int i=0; i<63; i++)
+                {
+                    samples8[i]=samples[7][i];
+                }
+                for(int i=0; i<60; i++)
+                {
+                    samples9[i]=samples[8][i];
+                }
+                for(int i=0; i<59; i++)
+                {
+                    samples10[i]=samples[9][i];
+                }
+                for(int i=0; i<57; i++)
+                {
+                    samples11[i]=samples[10][i];
+                }
+                for(int i=0; i<55; i++)
+                {
+                    samples12[i]=samples[11][i];
+                }
+                for(int i=0; i<54; i++)
+                {
+                    samples13[i]=samples[12][i];
+                }
+
+                printf("\r\n---\r\n");
+
+                f_close(&fil);
+                //f_unmount("0:");
+                spi_init(spi, 125000000);
+
+                sleep_ms(1000);
+
+                menuLocation = 5;
+                break;
+            case BOOPS:
                 LCD_clear(GREEN);
-                Paint_DrawString_EN(20, 30, "BEEPS Stuff Here", GREEN, WHITE);
                 lowPassEnable=1;
                 if(lowPassEnable)
                 {
                     lowPassEnable=0;
+                    Paint_DrawString_EN(60, 30, "Low Pass Disabled", GREEN, WHITE);
+
+                }else
+                {
+                    lowPassEnable=1;
+                    Paint_DrawString_EN(60, 30, "Low Pass Enabled", GREEN, WHITE);
                 }
-                break;
-            case BOOPS:
-                LCD_clear(BLACK);
-                Paint_DrawString_EN(20, 30, "BOOPS Stuff Here", BLACK, WHITE);
+                sleep_ms(1000);
+                menuLocation = 5;
                 break;
             case BOINKS:
                 LCD_clear(GRAY);
-                Paint_DrawString_EN(20, 30, "SD Card Stuff Here", GRAY, WHITE);
+                lowPassEnable=1;
+                if(lowPassEnable)
+                {
+                    lowPassEnable=0;
+                    Paint_DrawString_EN(60, 30, "High Pass Disabled", GRAY, WHITE);
+                    
+                }else
+                {
+                    lowPassEnable=1;
+                    Paint_DrawString_EN(60, 30, "High Pass Enabled", GRAY, WHITE);
+                }
+                
+                sleep_ms(1000);
+                menuLocation = 5;
                 break;
-            
             default:
                 break;
             }
@@ -648,13 +882,13 @@ int main(void){
 void printMenuOptions() // prints menu options
 {
 LCD_clear(MAGENTA);
-Paint_DrawString_EN(5, 10, "Welcome to Synth", MAGENTA, WHITE);
+Paint_DrawString_EN(5, 10, "Welcome to Dynth", MAGENTA, WHITE);
 Paint_DrawString_EN(5, 30, "------------------", MAGENTA, WHITE);
-Paint_DrawString_EN(5, 50, "- SD Card", MAGENTA, WHITE);
-Paint_DrawString_EN(5, 70, "- Spectrum", MAGENTA, WHITE);
-Paint_DrawString_EN(5, 90, "- Beeps ", MAGENTA, WHITE);
-Paint_DrawString_EN(5, 110, "- Boops ", MAGENTA, WHITE);
-Paint_DrawString_EN(5, 130,"- Boinks ", MAGENTA, WHITE);
+Paint_DrawString_EN(5, 50, "- Sinusoid", MAGENTA, WHITE);
+Paint_DrawString_EN(5, 70, "- Square Wave", MAGENTA, WHITE);
+Paint_DrawString_EN(5, 90, "- Triangle Wave", MAGENTA, WHITE);
+Paint_DrawString_EN(5, 110, "- Low-Pass Filter ", MAGENTA, WHITE);
+Paint_DrawString_EN(5, 130,"- High Pass Filter ", MAGENTA, WHITE);
 }
 
 void menuButtons_init(void) 
