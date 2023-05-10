@@ -669,6 +669,12 @@ int main(void){
 
                 menuLocation = 5;
 
+                printMenuOptions();
+                irq_en(false);
+                Paint_DrawRectangle(39,prevY*20+51,200,prevY*20+51+19,MAGENTA,2,0);
+                Paint_DrawRectangle(39,squareY*20+51,200,squareY*20+51+19,BLACK,2,0);
+                irq_en(true);
+
                 break;
             case SPECTRUM: 
 
@@ -776,6 +782,12 @@ int main(void){
 
                 menuLocation = 5;
 
+                printMenuOptions();
+                irq_en(false);
+                Paint_DrawRectangle(39,prevY*20+51,200,prevY*20+51+19,MAGENTA,2,0);
+                Paint_DrawRectangle(39,squareY*20+51,200,squareY*20+51+19,BLACK,2,0);
+                irq_en(true);
+
                 break;
             case BEEPS:
                 LCD_clear(BLUE);
@@ -881,6 +893,12 @@ int main(void){
                 sleep_ms(1000);
 
                 menuLocation = 5;
+
+                printMenuOptions();
+                irq_en(false);
+                Paint_DrawRectangle(39,prevY*20+51,200,prevY*20+51+19,MAGENTA,2,0);
+                Paint_DrawRectangle(39,squareY*20+51,200,squareY*20+51+19,BLACK,2,0);
+                irq_en(true);
                 break;
             case BOOPS:
                 LCD_clear(GREEN);
