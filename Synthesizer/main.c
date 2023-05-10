@@ -53,6 +53,19 @@
 #define USER_INTERFACE 25
 #define AUDIO_PIN 16
 #define ADC_CHANNEL 2
+#define ENCODER1_A  0
+#define ENCODER1_B  1
+#define ENCODER2_A  2
+#define ENCODER2_B  3
+#define ENCODER3_A  4
+#define ENCODER3_B  5
+#define ENCODER4_A  6
+#define ENCODER4_B  7
+
+int encoder1_count = 0;
+int encoder2_count = 0;
+int encoder3_count = 0;
+int encoder4_count = 0;
 int g_buttonPress = 0; 
 uint columns[5] = { 25, 24, 23, 22, 12 };
 uint rows[6] = { 29, 28, 27, 26, 11, 13 };
@@ -82,7 +95,8 @@ uint16_t AUDIO_SAMPLES = 0;
 uint16_t outputVal[10000]={0}; //check sizes for if this will output, check also the highest possible combo between the sound lengths
 
 uint16_t delay_line[84]={0};
-
+uint8_t regB = 0;
+uint8_t regBprev= 0;
 MCP23017 gpio_expander;
 
 void printMenuOptions();
@@ -146,6 +160,40 @@ bool repeating_timer_callback(struct repeating_timer *t)
         }
         gpio_put(columns[col_index], 0);
         //printf("\n    267\n\n    ");
+
+
+        // read rotary encoder pins
+        regB = mcp23017_read_register( &gpio_expander, MCP23017_GPIOB);
+        if (regB != regBprev)
+        {
+            printf("%d\n", regB);
+            regBprev = regB;
+        }
+         // Check the status of each encoder and update the counts accordingly
+        if (!(regBprev & (1 << ENCODER1_A)) && (regBprev & (1 << ENCODER1_B))) {
+            encoder1_count++;
+        } else if ((regBprev & (1 << ENCODER1_A)) && !(regBprev & (1 << ENCODER1_B))) {
+            encoder1_count--;
+        }
+        
+        if (!(regBprev & (1 << ENCODER2_A)) && (regBprev & (1 << ENCODER2_B))) {
+            encoder2_count++;
+        } else if ((regBprev & (1 << ENCODER2_A)) && !(regBprev & (1 << ENCODER2_B))) {
+            encoder2_count--;
+        }
+
+        if (!(regBprev & (1 << ENCODER3_A)) && (regBprev & (1 << ENCODER3_B))) {
+            encoder3_count++;
+        } else if ((regBprev & (1 << ENCODER3_A)) && !(regBprev & (1 << ENCODER3_B))) {
+            encoder3_count--;
+        }
+
+        if (!(regBprev & (1 << ENCODER4_A)) && (regBprev & (1 << ENCODER4_B))) {
+            encoder4_count++;
+        } else if ((regBprev & (1 << ENCODER4_A)) && !(regBprev & (1 << ENCODER4_B))) {
+            encoder4_count--;
+        }
+
     }
     return true;
 }
