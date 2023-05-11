@@ -23,11 +23,11 @@
 #define BEEPS 2
 #define BOOPS 3
 #define BOINKS 4
-#define ROWS 6
+#define ROWS 5
 #define COLS 5
 #define GPIO_INPUT false
 #define GPIO_OUTPUT true
-#define SIZE_OF_BUFFER 16
+#define SIZE_OF_BUFFER 32
 #define SW1 0
 #define SW2 5
 #define SW3 10
@@ -46,11 +46,11 @@
 #define LEFT 22
 #define RIGHT 23
 #define CENTER 21
-#define RE1 27
-#define RE2 29
-#define RE3 26
-#define RE4 28
-#define USER_INTERFACE 25
+// #define RE1 27
+// #define RE2 29
+// #define RE3 26
+// #define RE4 28
+// #define USER_INTERFACE 25
 #define AUDIO_PIN 16
 #define ADC_CHANNEL 2
 #define ENCODER1_A  0
@@ -66,9 +66,9 @@ int encoder1_count = 0;
 int encoder2_count = 0;
 int encoder3_count = 0;
 int encoder4_count = 0;
-int g_buttonPress = 0; 
+uint8_t g_buttonPress = 0; 
 uint columns[5] = { 25, 24, 23, 22, 12 };
-uint rows[6] = { 29, 28, 27, 26, 11, 13 };
+uint rows[6] = { 29, 28, 27, 26, 11}; //can add 13 back in for rotary encoders
 uint button_press=0;
 int rowState=0;
 int pinState=0;
@@ -77,7 +77,7 @@ uint8_t prevButtonValues[30]={0};
 //ring buffer
 int flag=1;
 uint8_t ring_buffer[SIZE_OF_BUFFER]={0};
-int bufferLength = 0;
+bool bufferLength = 0;
 int prevBufferLength=-1;
 int readIndex = 0;
 int writeIndex = 0;
@@ -85,8 +85,8 @@ int changedKey=-1;
 int index1=0;
 int index2=0;
 int mod0;
-int row_index=0;
-int col_index=0;
+uint8_t row_index=0;
+uint8_t col_index=0;
 int row_pin=-1;
 int col_pin=-1;
 int row_pressed;
@@ -100,16 +100,33 @@ uint8_t regB = 0;
 uint8_t regBprev= 0;
 MCP23017 gpio_expander;
 
+// Define the size of the ring buffer
+#define BUFFER_SIZE 32
+
+// Define the ring buffer structure
+typedef struct {
+    uint8_t buffer[BUFFER_SIZE]; // Buffer memory
+    uint32_t head; // Index of the next element to be added
+    uint32_t tail; // Index of the next element to be removed
+    uint32_t size; // Size of the buffer in bytes
+} ring_buffer_t;
+ring_buffer_t ringBuf;
+
+
 void printMenuOptions();
 void menuButtons_init(void);
 void irq_en(bool en);
 void *memset(void *str, int c, size_t n);
 void fir_delay_line(uint8_t *input, uint16_t *output, int nx, int nh, uint8_t *filter);
 void pwm_irh();
+void ring_buffer_write(ring_buffer_t * buffer, uint8_t data);
+uint8_t ring_buffer_read(ring_buffer_t * buffer);
+void ring_buffer_init(ring_buffer_t *buffer, uint32_t size);
 
 // ISR for buttons. 
 bool repeating_timer_callback(struct repeating_timer *t) 
 { 
+    uint8_t index=0;
     //check button states
     for (col_index = 0; col_index < COLS; col_index++) //loop through columns
     {
@@ -117,7 +134,6 @@ bool repeating_timer_callback(struct repeating_timer *t)
         for(row_index=0; row_index<ROWS; row_index++)//loop through rows
         {
             rowState=gpio_get(rows[row_index]);
-            //printf("\n    rowstate: %d\n\n    ",rowState);
             // if (bufferLength == SIZE_OF_BUFFER) {
 			// 	printf("\n    Buffer is full!\n\n    ");
 			// 	continue;
@@ -127,34 +143,35 @@ bool repeating_timer_callback(struct repeating_timer *t)
                 buttonValues[row_index*5+col_index]=1;
                 if(prevButtonValues[row_index*5+col_index]==0)
                 {
-                    ring_buffer[writeIndex] =row_index*5+col_index; //store this value into ring buffer sequentially
-                    //printf("\n    row state high %d, %d\n\n    ", ring_buffer[writeIndex],col_index);
-                    writeIndex++;
-                    prevBufferLength=bufferLength;
-                    bufferLength++;
-                    
+
+                    // ring_buffer[writeIndex] =row_index*5+col_index; //store this value into ring buffer sequentially
+                    // printf("\n    row state high %d\n\n    ", ring_buffer[writeIndex]);
+                    // writeIndex++;
+                    index = (row_index*5+col_index);
+                    ring_buffer_write(&ringBuf, index); 
+                    bufferLength=1;
                 }
             }
-            if(rowState ==0) //button released
+            else if(rowState ==0) //button released
             {
                 buttonValues[row_index*5+col_index]=0;
                 if(prevButtonValues[row_index*5+col_index]==1)
                 {
-                    ring_buffer[writeIndex]=row_index*5+col_index;
-                    //printf("\n    row state low %d, %d\n\n    ", ring_buffer[writeIndex],col_index);
-                    writeIndex++;
-                    prevBufferLength=bufferLength;
-                    bufferLength++;
+                    // ring_buffer[writeIndex]=row_index*5+col_index;
+                    // printf("\n    row state low %d\n\n    ", ring_buffer[writeIndex]);
+                    // writeIndex++;
+                    index = (row_index*5+col_index);
+                    ring_buffer_write(&ringBuf, index); 
                     
+                    bufferLength=1;
                 }
             }
             prevButtonValues[row_index*5+col_index]=buttonValues[row_index*5+col_index];
-            
             // If at last index in buffer, set writeIndex back to 0
-            if (writeIndex == SIZE_OF_BUFFER) 
-            {
-                writeIndex = 0;
-            }
+            // if (writeIndex == SIZE_OF_BUFFER) 
+            // {
+            //     writeIndex = 0;
+            // }
         }
         gpio_put(columns[col_index], 0);
         for(int i=0;i<100;i++){}
@@ -236,6 +253,7 @@ int main(void){
     memset(prevButtonValues,0,30);
     memset(ring_buffer,0,16*sizeof(ring_buffer[0]));
     
+    ring_buffer_init(&ringBuf, BUFFER_SIZE);
 
     //PWM Set up
     gpio_set_function(AUDIO_PIN, GPIO_FUNC_PWM);
@@ -337,9 +355,18 @@ int main(void){
         *   action based on the input. 
         */
         
-        if(bufferLength!=prevBufferLength)
-        {
-            g_buttonPress=ring_buffer[readIndex];
+        if (bufferLength) //ring_buffer_read(&ringBuf) !=0
+        { // Check if there is data available to read from the ring buffer
+            g_buttonPress = ring_buffer_read(&ringBuf); 
+        // if(bufferLength)
+        // {
+            //bufferLength=0;
+
+            //g_buttonPress=ring_buffer[readIndex];
+            // readIndex++;
+            // if (readIndex == SIZE_OF_BUFFER) {
+            //     readIndex = 0;
+            // }
             if(buttonValues[g_buttonPress])
             {
                 switch (g_buttonPress)
@@ -369,6 +396,7 @@ int main(void){
                         default:
                             break;
                     }
+                    ring_buffer_init(&ringBuf, 32);
                     g_buttonPress=-1;
                 break;
                 case LEFT:/* code */    //left AKA back button
@@ -396,6 +424,7 @@ int main(void){
                         default:
                             break;
                     }
+                ring_buffer_init(&ringBuf, 32);
                 g_buttonPress=-1;
                 break;
                 case UP:/* code */ // UP 
@@ -417,6 +446,7 @@ int main(void){
                     default:
                         break;
                     }
+                ring_buffer_init(&ringBuf, 32);
                 g_buttonPress=-1;
                 break;
                 case DOWN:/* code */
@@ -438,6 +468,7 @@ int main(void){
                     default:
                         break;
                     }
+                ring_buffer_init(&ringBuf, 32);
                 g_buttonPress=-1;
                 break;
                 case CENTER:/* code */
@@ -450,10 +481,9 @@ int main(void){
                     default:
                         break;
                     }
+                ring_buffer_init(&ringBuf, 32);
                 g_buttonPress=-1;
                 break;
-
-
                 case SW1:  //c4
                     irq_set_enabled(PWM_IRQ_WRAP, false);
                     audioTable=samples1;
@@ -482,7 +512,6 @@ int main(void){
                     irq_set_enabled(PWM_IRQ_WRAP, false);
                     AUDIO_SAMPLES=67;
                     audioTable=samples5;
-                    
                     irq_set_enabled(PWM_IRQ_WRAP, true);
                     break;
                 case SW6: //f
@@ -513,21 +542,18 @@ int main(void){
                     irq_set_enabled(PWM_IRQ_WRAP, false);
                     AUDIO_SAMPLES=51;
                     audioTable=samples10;
-                    printf("SW10:%d\n", g_buttonPress);
                     irq_set_enabled(PWM_IRQ_WRAP, true);
                     break; //a#
                 case SW11: //b
                     irq_set_enabled(PWM_IRQ_WRAP, false);
                     AUDIO_SAMPLES=48;
                     audioTable=samples11;
-                    printf("SW11:%d\n", g_buttonPress);
                     irq_set_enabled(PWM_IRQ_WRAP, true);
                     break;
                 case SW12: //b#
                     irq_set_enabled(PWM_IRQ_WRAP, false);
                     AUDIO_SAMPLES=45;
                     audioTable=samples12;
-                    printf("SW102:%d\n", g_buttonPress);
                     irq_set_enabled(PWM_IRQ_WRAP, true);
                     break;
                 case SW13: //c5
@@ -536,21 +562,21 @@ int main(void){
                     audioTable=samples13;
                     irq_set_enabled(PWM_IRQ_WRAP, true);
                     break;
-                case RE1:
-                    /* code */
-                    break;
-                case RE2:
-                    /* code */
-                    break;
-                case RE3:
-                    /* code */
-                    break;
-                case RE4:
-                    /* code */
-                    break;
-                case USER_INTERFACE:
-                    /* code */
-                    break;
+                // case RE1:
+                //     /* code */
+                //     break;
+                // case RE2:
+                //     /* code */
+                //     break;
+                // case RE3:
+                //     /* code */
+                //     break;
+                // case RE4:
+                //     /* code */
+                //     break;
+                // case USER_INTERFACE:
+                //     /* code */
+                //     break;
                 default:
                     irq_set_enabled(PWM_IRQ_WRAP, false);
                     audioTable = zeros; 
@@ -560,7 +586,7 @@ int main(void){
                 g_buttonPress=-1;
             
             }
-            if(!buttonValues[g_buttonPress])
+            else if(!buttonValues[g_buttonPress])
             {
                 switch (g_buttonPress)
                 {
@@ -621,15 +647,8 @@ int main(void){
                     break;
                 }
             }
-        
-            prevBufferLength=bufferLength;
-            //	Decrease buffer size after reading
-            readIndex++;	 //	Increase readIndex position to prepare for next read
-            
-            // If at last index in buffer, set readIndex back to 0
-            if (readIndex == SIZE_OF_BUFFER) {
-                readIndex = 0;
-            }
+
+            bufferLength=0;       
         }
         /*
         *   Menu action switch
@@ -1037,6 +1056,33 @@ int main(void){
             
         }
     }
+}
+
+void ring_buffer_init(ring_buffer_t *buffer, uint32_t size) {
+    buffer->head = 0; // Initialize the head index to 0
+    buffer->tail = 0; // Initialize the tail index to 0
+    buffer->size = size; // Set the size of the buffer
+}
+
+// Define the ring buffer write function
+void ring_buffer_write(ring_buffer_t * buffer, uint8_t data) {
+    uint32_t next_head = (buffer->head + 1) % buffer->size; // Calculate the index of the next head element
+    if (next_head != buffer->tail) { // Check if the buffer is full
+        printf("in write %d and head %ld\n",data,buffer->head);
+        buffer->buffer[buffer->head] = data; // Write the data to the buffer
+        buffer->head = next_head; // Update the head index
+    }
+}
+
+// Define the ring buffer read function
+uint8_t ring_buffer_read(ring_buffer_t * buffer) {
+    if (buffer->tail != buffer->head) { // Check if the buffer is not empty
+        uint8_t data = buffer->buffer[buffer->tail]; // Read the data from the buffer
+        buffer->tail = (buffer->tail + 1) % buffer->size; // Update the tail index
+        printf("in read %d and tail %ld\n",data,buffer->tail);
+        return data;
+    }
+    return 0; // Return 0 if the buffer is empty
 }
 
 void printMenuOptions() // prints menu options
