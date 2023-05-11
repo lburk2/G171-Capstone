@@ -78,6 +78,7 @@ uint8_t prevButtonValues[30]={0};
 int flag=1;
 uint8_t ring_buffer[SIZE_OF_BUFFER]={0};
 int bufferLength = 0;
+int prevBufferLength=-1;
 int readIndex = 0;
 int writeIndex = 0;
 int changedKey=-1;
@@ -102,7 +103,6 @@ MCP23017 gpio_expander;
 void printMenuOptions();
 void menuButtons_init(void);
 void irq_en(bool en);
-//bool repeating_timer_callback(struct repeating_timer *t); 
 void *memset(void *str, int c, size_t n);
 void fir_delay_line(uint8_t *input, uint16_t *output, int nx, int nh, uint8_t *filter);
 void pwm_irh();
@@ -110,13 +110,10 @@ void pwm_irh();
 // ISR for buttons. 
 bool repeating_timer_callback(struct repeating_timer *t) 
 { 
-    //printf("line 664   ");
     //check button states
     for (col_index = 0; col_index < COLS; col_index++) //loop through columns
     {
         gpio_put(columns[col_index], 1);
-        
-        //printf("\n    225\n\n    ");
         for(row_index=0; row_index<ROWS; row_index++)//loop through rows
         {
             rowState=gpio_get(rows[row_index]);
@@ -128,26 +125,27 @@ bool repeating_timer_callback(struct repeating_timer *t)
             if(rowState ==1) //button pressed
             {
                 buttonValues[row_index*5+col_index]=1;
-                //printf("\n    237\n\n    ");
                 if(prevButtonValues[row_index*5+col_index]==0)
                 {
                     ring_buffer[writeIndex] =row_index*5+col_index; //store this value into ring buffer sequentially
-                    printf("\n    row state high %d, %d\n\n    ", ring_buffer[writeIndex],col_index);
-                    
+                    //printf("\n    row state high %d, %d\n\n    ", ring_buffer[writeIndex],col_index);
                     writeIndex++;
-                     //bufferLength++;
+                    prevBufferLength=bufferLength;
+                    bufferLength++;
+                    
                 }
             }
             if(rowState ==0) //button released
             {
                 buttonValues[row_index*5+col_index]=0;
-                //printf("\n    249\n\n    ");
                 if(prevButtonValues[row_index*5+col_index]==1)
                 {
                     ring_buffer[writeIndex]=row_index*5+col_index;
-                    printf("\n    row state low %d, %d\n\n    ", ring_buffer[writeIndex],col_index);
+                    //printf("\n    row state low %d, %d\n\n    ", ring_buffer[writeIndex],col_index);
                     writeIndex++;
-                     //bufferLength++;
+                    prevBufferLength=bufferLength;
+                    bufferLength++;
+                    
                 }
             }
             prevButtonValues[row_index*5+col_index]=buttonValues[row_index*5+col_index];
@@ -159,40 +157,39 @@ bool repeating_timer_callback(struct repeating_timer *t)
             }
         }
         gpio_put(columns[col_index], 0);
-        //printf("\n    267\n\n    ");
-        //for(int i=0;i<100;i++){}
+        for(int i=0;i<100;i++){}
 
-        //read rotary encoder pins
-        regB = mcp23017_read_register( &gpio_expander, MCP23017_GPIOB);
-        if (regB != regBprev)
-        {
-            printf("%d\n", regB);
-            regBprev = regB;
-        }
-         // Check the status of each encoder and update the counts accordingly
-        if (!(regBprev & (1 << ENCODER1_A)) && (regBprev & (1 << ENCODER1_B))) {
-            encoder1_count++;
-        } else if ((regBprev & (1 << ENCODER1_A)) && !(regBprev & (1 << ENCODER1_B))) {
-            encoder1_count--;
-        }
+        // //read rotary encoder pins
+        // regB = mcp23017_read_register( &gpio_expander, MCP23017_GPIOB);
+        // if (regB != regBprev)
+        // {
+        //     printf("%d\n", regB);
+        //     regBprev = regB;
+        // }
+        //  // Check the status of each encoder and update the counts accordingly
+        // if (!(regBprev & (1 << ENCODER1_A)) && (regBprev & (1 << ENCODER1_B))) {
+        //     encoder1_count++;
+        // } else if ((regBprev & (1 << ENCODER1_A)) && !(regBprev & (1 << ENCODER1_B))) {
+        //     encoder1_count--;
+        // }
         
-        if (!(regBprev & (1 << ENCODER2_A)) && (regBprev & (1 << ENCODER2_B))) {
-            encoder2_count++;
-        } else if ((regBprev & (1 << ENCODER2_A)) && !(regBprev & (1 << ENCODER2_B))) {
-            encoder2_count--;
-        }
+        // if (!(regBprev & (1 << ENCODER2_A)) && (regBprev & (1 << ENCODER2_B))) {
+        //     encoder2_count++;
+        // } else if ((regBprev & (1 << ENCODER2_A)) && !(regBprev & (1 << ENCODER2_B))) {
+        //     encoder2_count--;
+        // }
 
-        if (!(regBprev & (1 << ENCODER3_A)) && (regBprev & (1 << ENCODER3_B))) {
-            encoder3_count++;
-        } else if ((regBprev & (1 << ENCODER3_A)) && !(regBprev & (1 << ENCODER3_B))) {
-            encoder3_count--;
-        }
+        // if (!(regBprev & (1 << ENCODER3_A)) && (regBprev & (1 << ENCODER3_B))) {
+        //     encoder3_count++;
+        // } else if ((regBprev & (1 << ENCODER3_A)) && !(regBprev & (1 << ENCODER3_B))) {
+        //     encoder3_count--;
+        // }
 
-        if (!(regBprev & (1 << ENCODER4_A)) && (regBprev & (1 << ENCODER4_B))) {
-            encoder4_count++;
-        } else if ((regBprev & (1 << ENCODER4_A)) && !(regBprev & (1 << ENCODER4_B))) {
-            encoder4_count--;
-        }
+        // if (!(regBprev & (1 << ENCODER4_A)) && (regBprev & (1 << ENCODER4_B))) {
+        //     encoder4_count++;
+        // } else if ((regBprev & (1 << ENCODER4_A)) && !(regBprev & (1 << ENCODER4_B))) {
+        //     encoder4_count--;
+        // }
 
     }
     return true;
@@ -205,36 +202,35 @@ int main(void){
     FIL fil;
     //int ret;
     char buf2[10000];
-    uint16_t samples1[84]={0};
+    uint16_t samples1[85]={0};
     uint16_t samples2[80]={0};
-    uint16_t samples3[76]={0};
-    uint16_t samples4[73]={0};
-    uint16_t samples5[70]={0};
-    uint16_t samples6[68]={0};
-    uint16_t samples7[65]={0};
-    uint16_t samples8[63]={0};
-    uint16_t samples9[60]={0};
-    uint16_t samples10[59]={0};
-    uint16_t samples11[57]={0};
-    uint16_t samples12[55]={0};
-    uint16_t samples13[54]={0};
-    uint16_t zeros[40]={1};
+    uint16_t samples3[75]={0};
+    uint16_t samples4[71]={0};
+    uint16_t samples5[67]={0};
+    uint16_t samples6[64]={0};
+    uint16_t samples7[60]={0};
+    uint16_t samples8[57]={0};
+    uint16_t samples9[53]={0};
+    uint16_t samples10[51]={0};
+    uint16_t samples11[48]={0};
+    uint16_t samples12[45]={0};
+    uint16_t samples13[43]={0};
+    uint16_t zeros[85]={0};
     int count = 0,  semicolon_count = 0;
 
-    uint16_t samples[13][200] ={0};
+    uint16_t samples[13][100] ={0};
     char* sample;
     char* subsample;
     char filename1[] = "sineWaveOctave.txt";
-    char filename2[] = "squareWaveOctave.txt";
-    char filename3[] = "triangleWaveOctave.txt";
+    char filename2[] = "squareOctave.txt";
+    char filename3[] = "sawtoothOctave.txt";
     spi_inst_t *spi = spi0;
 
     int lowPassEnable=0;
 
     stdio_init_all();
 
-       
-        struct repeating_timer timer;
+    struct repeating_timer timer;
     add_repeating_timer_ms(100, repeating_timer_callback, NULL, &timer);
     memset(buttonValues,0,30);
     memset(prevButtonValues,0,30);
@@ -340,283 +336,300 @@ int main(void){
         *   input, and nested switch statements to determine the 
         *   action based on the input. 
         */
-        g_buttonPress=ring_buffer[readIndex];
-        //printf("line 228 %d\n", g_buttonPress);
-        if(buttonValues[g_buttonPress])
+        
+        if(bufferLength!=prevBufferLength)
         {
-            
-            if(g_buttonPress!=-1)
+            g_buttonPress=ring_buffer[readIndex];
+            if(buttonValues[g_buttonPress])
             {
-            switch (g_buttonPress)
-            {
-            case RIGHT:/* code */  //Right UI button
-                switch (menuLocation)
+                switch (g_buttonPress)
                 {
+                case RIGHT:/* code */  //Right UI button
+                    switch (menuLocation)
+                    {
+                        case MainMenu:
+                            
+                            break;
+                        case SD:
+                            
+                            break;
+                        case SPECTRUM:
+                            
+                            break;
+                        case BEEPS:
+                            
+                            break;
+                        case BOOPS:
+                            
+                            break;
+                        case BOINKS:
+                            
+                            break;
+                        
+                        default:
+                            break;
+                    }
+                    g_buttonPress=-1;
+                break;
+                case LEFT:/* code */    //left AKA back button
+                    switch (menuLocation)
+                    {
+                        case MainMenu:
+                            
+                            break;
+                        case SD:
+                            menuLocation = 5;
+                            break;
+                        case SPECTRUM:
+                            menuLocation = 5;
+                            break;
+                        case BEEPS:
+                            menuLocation = 5;
+                            break;
+                        case BOOPS:
+                            menuLocation = 5;
+                            break;
+                        case BOINKS:
+                            menuLocation = 5;
+                            break;
+                        
+                        default:
+                            break;
+                    }
+                g_buttonPress=-1;
+                break;
+                case UP:/* code */ // UP 
+                    switch (menuLocation)
+                    {
+                    case MainMenu: //raise the box 
+                        if(squareY > 0 )
+                        {
+                            prevY = squareY;
+                            
+                            squareY--;
+                            irq_en(false);
+                            Paint_DrawRectangle(39,prevY*20+51,200,prevY*20+51+19,MAGENTA,2,0);
+                            Paint_DrawRectangle(39,squareY*20+51,200,squareY*20+51+19,BLACK,2,0);
+                            irq_en(true);
+                        }
+                    break;
+                    
+                    default:
+                        break;
+                    }
+                g_buttonPress=-1;
+                break;
+                case DOWN:/* code */
+                    switch (menuLocation)
+                    {
                     case MainMenu:
-                        
-                        break;
-                    case SD:
-                        
-                        break;
-                    case SPECTRUM:
-                        
-                        break;
-                    case BEEPS:
-                        
-                        break;
-                    case BOOPS:
-                        
-                        break;
-                    case BOINKS:
-                        
+                        if(squareY < 4)//lower the box
+                        {
+                            prevY = squareY;
+                            squareY++;
+                            printf("in down %d\n", squareY);
+                            irq_en(false);
+                            Paint_DrawRectangle(39,prevY*20+51,200,prevY*20+51+19,MAGENTA,2,0);
+                            Paint_DrawRectangle(39,squareY*20+51,200,squareY*20+51+19,BLACK,2,0);
+                            irq_en(true);
+                        }
                         break;
                     
                     default:
                         break;
+                    }
+                g_buttonPress=-1;
+                break;
+                case CENTER:/* code */
+                    switch (menuLocation)
+                    {
+                    case MainMenu:
+                        menuLocation = squareY;
+                        break;
+                    
+                    default:
+                        break;
+                    }
+                g_buttonPress=-1;
+                break;
+
+
+                case SW1:  //c4
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    audioTable=samples1;
+                    AUDIO_SAMPLES=85;
+                    irq_set_enabled(PWM_IRQ_WRAP, true);
+                    break;
+                case SW2: //c#
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    AUDIO_SAMPLES=80;
+                    audioTable=samples2;
+                    irq_set_enabled(PWM_IRQ_WRAP, true);
+                    break;
+                case SW3: //d
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    AUDIO_SAMPLES=75;
+                    audioTable=samples3;
+                    irq_set_enabled(PWM_IRQ_WRAP, true);
+                    break;
+                case SW4: //d#
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    AUDIO_SAMPLES=71;
+                    audioTable=samples4;
+                    irq_set_enabled(PWM_IRQ_WRAP, true);
+                    break;
+                case SW5: //e
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    AUDIO_SAMPLES=67;
+                    audioTable=samples5;
+                    
+                    irq_set_enabled(PWM_IRQ_WRAP, true);
+                    break;
+                case SW6: //f
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    AUDIO_SAMPLES=64;
+                    audioTable=samples6;
+                    irq_set_enabled(PWM_IRQ_WRAP, true);
+                    break;
+                case SW7: //f#
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    AUDIO_SAMPLES=60;
+                    audioTable=samples7;
+                    irq_set_enabled(PWM_IRQ_WRAP, true);
+                    break;
+                case SW8: //g
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    AUDIO_SAMPLES=57;
+                    audioTable=samples8;
+                    irq_set_enabled(PWM_IRQ_WRAP, true);
+                    break;
+                case SW9: //g#
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    AUDIO_SAMPLES=53;
+                    audioTable=samples9;
+                    irq_set_enabled(PWM_IRQ_WRAP, true);
+                    break;
+                case SW10: //a
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    AUDIO_SAMPLES=51;
+                    audioTable=samples10;
+                    printf("SW10:%d\n", g_buttonPress);
+                    irq_set_enabled(PWM_IRQ_WRAP, true);
+                    break; //a#
+                case SW11: //b
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    AUDIO_SAMPLES=48;
+                    audioTable=samples11;
+                    printf("SW11:%d\n", g_buttonPress);
+                    irq_set_enabled(PWM_IRQ_WRAP, true);
+                    break;
+                case SW12: //b#
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    AUDIO_SAMPLES=45;
+                    audioTable=samples12;
+                    printf("SW102:%d\n", g_buttonPress);
+                    irq_set_enabled(PWM_IRQ_WRAP, true);
+                    break;
+                case SW13: //c5
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    AUDIO_SAMPLES=43;
+                    audioTable=samples13;
+                    irq_set_enabled(PWM_IRQ_WRAP, true);
+                    break;
+                case RE1:
+                    /* code */
+                    break;
+                case RE2:
+                    /* code */
+                    break;
+                case RE3:
+                    /* code */
+                    break;
+                case RE4:
+                    /* code */
+                    break;
+                case USER_INTERFACE:
+                    /* code */
+                    break;
+                default:
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    audioTable = zeros; 
+                    AUDIO_SAMPLES=85;
+                    break;
                 }
                 g_buttonPress=-1;
-            break;
-            case LEFT:/* code */    //left AKA back button
-                switch (menuLocation)
-                {
-                    case MainMenu:
-                        
-                        break;
-                    case SD:
-                        menuLocation = 5;
-                        break;
-                    case SPECTRUM:
-                        menuLocation = 5;
-                        break;
-                    case BEEPS:
-                        menuLocation = 5;
-                        break;
-                    case BOOPS:
-                        menuLocation = 5;
-                        break;
-                    case BOINKS:
-                        menuLocation = 5;
-                        break;
-                    
-                    default:
-                        break;
-                }
-            g_buttonPress=-1;
-            break;
-            case UP:/* code */ // UP 
-                switch (menuLocation)
-                {
-                case MainMenu: //raise the box 
-                    if(squareY > 0 )
-                    {
-                        prevY = squareY;
-                        
-                        squareY--;
-                        irq_en(false);
-                        Paint_DrawRectangle(39,prevY*20+51,200,prevY*20+51+19,MAGENTA,2,0);
-                        Paint_DrawRectangle(39,squareY*20+51,200,squareY*20+51+19,BLACK,2,0);
-                        irq_en(true);
-                    }
-                break;
-                
-                default:
-                    break;
-                }
-            g_buttonPress=-1;
-            break;
-            case DOWN:/* code */
-                switch (menuLocation)
-                {
-                case MainMenu:
-                    if(squareY < 4)//lower the box
-                    {
-                        prevY = squareY;
-                        squareY++;
-                        printf("in down %d\n", squareY);
-                        irq_en(false);
-                        Paint_DrawRectangle(39,prevY*20+51,200,prevY*20+51+19,MAGENTA,2,0);
-                        Paint_DrawRectangle(39,squareY*20+51,200,squareY*20+51+19,BLACK,2,0);
-                        irq_en(true);
-                    }
-                    break;
-                
-                default:
-                    break;
-                }
-            g_buttonPress=-1;
-            break;
-            case CENTER:/* code */
-                switch (menuLocation)
-                {
-                case MainMenu:
-                    menuLocation = squareY;
-                    break;
-                
-                default:
-                    break;
-                }
-            g_buttonPress=-1;
-            break;
-
-
-            case SW1:  //c4
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                audioTable=samples1;
-                AUDIO_SAMPLES=sizeof(samples1)/sizeof(samples1[0]);
-                irq_set_enabled(PWM_IRQ_WRAP, true);
-                break;
-            case SW2: //c#
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                AUDIO_SAMPLES=sizeof(samples2)/sizeof(samples2[0]);
-                audioTable=samples2;
-                irq_set_enabled(PWM_IRQ_WRAP, true);
-                break;
-            case SW3: //d
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                AUDIO_SAMPLES=sizeof(samples3)/sizeof(samples3[0]);
-                audioTable=samples3;
-                
-                irq_set_enabled(PWM_IRQ_WRAP, true);
-                break;
-            case SW4: //d#
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                AUDIO_SAMPLES=sizeof(samples4)/sizeof(samples4[0]);
-                audioTable=samples4;
-                irq_set_enabled(PWM_IRQ_WRAP, true);
-                break;
-            case SW5: //e
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                audioTable=samples5;
-                AUDIO_SAMPLES=sizeof(samples5)/sizeof(samples5[0]);
-                irq_set_enabled(PWM_IRQ_WRAP, true);
-                break;
-            case SW6: //f
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                audioTable=samples6;
-                AUDIO_SAMPLES=sizeof(samples6)/sizeof(samples6[0]);
-                irq_set_enabled(PWM_IRQ_WRAP, true);
-                break;
-            case SW7: //f#
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                AUDIO_SAMPLES=sizeof(samples7)/sizeof(samples7[0]);
-                audioTable=samples7;
-                irq_set_enabled(PWM_IRQ_WRAP, true);
-                break;
-            case SW8: //g
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                audioTable=samples8;
-                AUDIO_SAMPLES=sizeof(samples8)/sizeof(samples8[0]);
-                irq_set_enabled(PWM_IRQ_WRAP, true);
-                break;
-            case SW9: //g#
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                audioTable=samples9;
-                AUDIO_SAMPLES=sizeof(samples9)/sizeof(samples9[0]);
-                irq_set_enabled(PWM_IRQ_WRAP, true);
-                break;
-            case SW10: //a
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                audioTable=samples10;
-                AUDIO_SAMPLES=sizeof(samples10)/sizeof(samples10[0]);
-                irq_set_enabled(PWM_IRQ_WRAP, true);
-                break; //a#
-            case SW11: //b
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                audioTable=samples11;
-                AUDIO_SAMPLES=sizeof(samples11)/sizeof(samples11[0]);
-                irq_set_enabled(PWM_IRQ_WRAP, true);
-                break;
-            case SW12: //b#
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                audioTable=samples12;
-                AUDIO_SAMPLES=sizeof(samples12)/sizeof(samples12[0]);
-                irq_set_enabled(PWM_IRQ_WRAP, true);
-                break;
-            case SW13: //c5
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                audioTable=samples13;
-                AUDIO_SAMPLES=sizeof(samples13)/sizeof(samples13[0]);
-                irq_set_enabled(PWM_IRQ_WRAP, true);
-                break;
-            case RE1:
-                /* code */
-                break;
-            case RE2:
-                /* code */
-                break;
-            case RE3:
-                /* code */
-                break;
-            case RE4:
-                /* code */
-                break;
-            case USER_INTERFACE:
-                /* code */
-                break;
-            default:
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                audioTable = NULL; 
-                break;
+            
             }
-            g_buttonPress=-1;
-            }
-        }
-        if(!buttonValues[g_buttonPress])
-        {
-            switch (g_buttonPress)
+            if(!buttonValues[g_buttonPress])
             {
-            case SW1:  //c4
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                audioTable = NULL; 
-                break;
-            case SW2: //c#
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                audioTable = NULL; 
-                break;
-            case SW3: //d
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                break;
-            case SW4: //d#
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                break;
-            case SW5: //e
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                break;
-            case SW6: //f
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                break;
-            case SW7: //f#
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                break;
-            case SW8: //g
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                break;
-            case SW9: //g#
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                break;
-            case SW10: //a
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                break; //a#
-            case SW11: //b
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                break;
-            case SW12: //b#
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                break;
-            case SW13: //c5
-                /* code */
-                break;
-            default:
-                irq_set_enabled(PWM_IRQ_WRAP, false);
-                break;
+                switch (g_buttonPress)
+                {
+                case SW1:  //c4
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    audioTable = zeros; 
+                    break;
+                case SW2: //c#
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    audioTable = zeros; 
+                    break;
+                case SW3: //d
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    audioTable = zeros;
+                    break;
+                case SW4: //d#
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    audioTable = zeros;
+                    break;
+                case SW5: //e
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    audioTable = zeros;
+                    break;
+                case SW6: //f
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    audioTable = zeros;
+                    break;
+                case SW7: //f#
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    audioTable = zeros;
+                    break;
+                case SW8: //g
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    audioTable = zeros;
+                    break;
+                case SW9: //g#
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    audioTable = zeros;
+                    break;
+                case SW10: //a
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    audioTable = zeros;
+                    break; //a#
+                case SW11: //b
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    audioTable = zeros;
+                    break;
+                case SW12: //b#
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    audioTable = zeros;
+                    break;
+                case SW13: //c5
+                    irq_set_enabled(PWM_IRQ_WRAP, false);
+                    audioTable = zeros; 
+                    break;
+                default:
+                    
+                    break;
+                }
             }
-        }
-        bufferLength--;	 //	Decrease buffer size after reading
-        readIndex++;	 //	Increase readIndex position to prepare for next read
         
-        // If at last index in buffer, set readIndex back to 0
-        if (readIndex == SIZE_OF_BUFFER) {
-            readIndex = 0;
+            prevBufferLength=bufferLength;
+            //	Decrease buffer size after reading
+            readIndex++;	 //	Increase readIndex position to prepare for next read
+            
+            // If at last index in buffer, set readIndex back to 0
+            if (readIndex == SIZE_OF_BUFFER) {
+                readIndex = 0;
+            }
         }
         /*
         *   Menu action switch
@@ -677,7 +690,7 @@ int main(void){
                 // }
 
                 f_close(&fil);
-                for(int i=0; i<84; i++)
+                for(int i=0; i<85; i++)
                 {
                     samples1[i]=samples[0][i];
                 }
@@ -685,52 +698,53 @@ int main(void){
                 {
                     samples2[i]=samples[1][i];
                 }
-                for(int i=0; i<76; i++)
+                for(int i=0; i<75; i++)
                 {
                     samples3[i]=samples[2][i];
                 }
-                for(int i=0; i<73; i++)
+                for(int i=0; i<71; i++)
                 {
                     samples4[i]=samples[3][i];
                 }
-                for(int i=0; i<70; i++)
+                for(int i=0; i<67; i++)
                 {
                     samples5[i]=samples[4][i];
                 }
-                for(int i=0; i<68; i++)
+                for(int i=0; i<64; i++)
                 {
                     samples6[i]=samples[5][i];
                 }
-                for(int i=0; i<65; i++)
+                for(int i=0; i<60; i++)
                 {
                     samples7[i]=samples[6][i];
                 }
-                for(int i=0; i<63; i++)
+                for(int i=0; i<57; i++)
                 {
                     samples8[i]=samples[7][i];
                 }
-                for(int i=0; i<60; i++)
+                for(int i=0; i<53; i++)
                 {
                     samples9[i]=samples[8][i];
                 }
-                for(int i=0; i<59; i++)
+                for(int i=0; i<51; i++)
                 {
                     samples10[i]=samples[9][i];
                 }
-                for(int i=0; i<57; i++)
+                for(int i=0; i<48; i++)
                 {
                     samples11[i]=samples[10][i];
                 }
-                for(int i=0; i<55; i++)
+                for(int i=0; i<45; i++)
                 {
                     samples12[i]=samples[11][i];
                 }
-                for(int i=0; i<54; i++)
+                for(int i=0; i<43; i++)
                 {
                     samples13[i]=samples[12][i];
                 }
 
                 printf("\r\n---\r\n");
+                //for(int i=0;i<1000000;i++){}
 
                 f_close(&fil);
                 //f_unmount("0:");
@@ -789,7 +803,7 @@ int main(void){
                 // }
 
                 f_close(&fil);
-                for(int i=0; i<84; i++)
+                for(int i=0; i<85; i++)
                 {
                     samples1[i]=samples[0][i];
                 }
@@ -797,47 +811,47 @@ int main(void){
                 {
                     samples2[i]=samples[1][i];
                 }
-                for(int i=0; i<76; i++)
+                for(int i=0; i<75; i++)
                 {
                     samples3[i]=samples[2][i];
                 }
-                for(int i=0; i<73; i++)
+                for(int i=0; i<71; i++)
                 {
                     samples4[i]=samples[3][i];
                 }
-                for(int i=0; i<70; i++)
+                for(int i=0; i<67; i++)
                 {
                     samples5[i]=samples[4][i];
                 }
-                for(int i=0; i<68; i++)
+                for(int i=0; i<64; i++)
                 {
                     samples6[i]=samples[5][i];
                 }
-                for(int i=0; i<65; i++)
+                for(int i=0; i<60; i++)
                 {
                     samples7[i]=samples[6][i];
                 }
-                for(int i=0; i<63; i++)
+                for(int i=0; i<57; i++)
                 {
                     samples8[i]=samples[7][i];
                 }
-                for(int i=0; i<60; i++)
+                for(int i=0; i<53; i++)
                 {
                     samples9[i]=samples[8][i];
                 }
-                for(int i=0; i<59; i++)
+                for(int i=0; i<51; i++)
                 {
                     samples10[i]=samples[9][i];
                 }
-                for(int i=0; i<57; i++)
+                for(int i=0; i<48; i++)
                 {
                     samples11[i]=samples[10][i];
                 }
-                for(int i=0; i<55; i++)
+                for(int i=0; i<45; i++)
                 {
                     samples12[i]=samples[11][i];
                 }
-                for(int i=0; i<54; i++)
+                for(int i=0; i<43; i++)
                 {
                     samples13[i]=samples[12][i];
                 }
@@ -901,7 +915,7 @@ int main(void){
                 // }
 
                 f_close(&fil);
-                for(int i=0; i<84; i++)
+                for(int i=0; i<85; i++)
                 {
                     samples1[i]=samples[0][i];
                 }
@@ -909,47 +923,47 @@ int main(void){
                 {
                     samples2[i]=samples[1][i];
                 }
-                for(int i=0; i<76; i++)
+                for(int i=0; i<75; i++)
                 {
                     samples3[i]=samples[2][i];
                 }
-                for(int i=0; i<73; i++)
+                for(int i=0; i<71; i++)
                 {
                     samples4[i]=samples[3][i];
                 }
-                for(int i=0; i<70; i++)
+                for(int i=0; i<67; i++)
                 {
                     samples5[i]=samples[4][i];
                 }
-                for(int i=0; i<68; i++)
+                for(int i=0; i<64; i++)
                 {
                     samples6[i]=samples[5][i];
                 }
-                for(int i=0; i<65; i++)
+                for(int i=0; i<60; i++)
                 {
                     samples7[i]=samples[6][i];
                 }
-                for(int i=0; i<63; i++)
+                for(int i=0; i<57; i++)
                 {
                     samples8[i]=samples[7][i];
                 }
-                for(int i=0; i<60; i++)
+                for(int i=0; i<53; i++)
                 {
                     samples9[i]=samples[8][i];
                 }
-                for(int i=0; i<59; i++)
+                for(int i=0; i<51; i++)
                 {
                     samples10[i]=samples[9][i];
                 }
-                for(int i=0; i<57; i++)
+                for(int i=0; i<48; i++)
                 {
                     samples11[i]=samples[10][i];
                 }
-                for(int i=0; i<55; i++)
+                for(int i=0; i<45; i++)
                 {
                     samples12[i]=samples[11][i];
                 }
-                for(int i=0; i<54; i++)
+                for(int i=0; i<43; i++)
                 {
                     samples13[i]=samples[12][i];
                 }
@@ -1096,9 +1110,9 @@ void fir_delay_line(uint8_t *input, uint16_t *output, int nx, int nh, uint8_t *f
 
 void irq_en(bool en)
 {   
-    // irq_set_enabled (PWM_IRQ_WRAP, en);
-    // irq_set_enabled (TIMER_IRQ_0, en);
-    // irq_set_enabled (TIMER_IRQ_1, en);
-    // irq_set_enabled (TIMER_IRQ_2, en);
-    // irq_set_enabled (TIMER_IRQ_3, en);
+    irq_set_enabled (PWM_IRQ_WRAP, en);
+    irq_set_enabled (TIMER_IRQ_0, en);
+    irq_set_enabled (TIMER_IRQ_1, en);
+    irq_set_enabled (TIMER_IRQ_2, en);
+    irq_set_enabled (TIMER_IRQ_3, en);
 }
