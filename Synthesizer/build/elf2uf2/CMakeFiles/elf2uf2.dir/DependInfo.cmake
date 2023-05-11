@@ -1,14 +1,16 @@
-
-# Consider dependencies only in project.
-set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
-
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
   )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/VSARM/sdk/pico/pico-sdk/tools/elf2uf2/main.cpp" "C:/Users/jisat/OneDrive/Documents/GitHub/G171-Capstone/Synthesizer/build/elf2uf2/CMakeFiles/elf2uf2.dir/main.cpp.obj"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The set of dependency files which are needed:
-set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/landonburk/pico/pico-sdk/tools/elf2uf2/main.cpp" "CMakeFiles/elf2uf2.dir/main.cpp.o" "gcc" "CMakeFiles/elf2uf2.dir/main.cpp.o.d"
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "C:/VSARM/sdk/pico/pico-sdk/src/common/boot_uf2/include"
   )
 
 # Targets to which this target links.

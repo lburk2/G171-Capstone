@@ -160,39 +160,39 @@ bool repeating_timer_callback(struct repeating_timer *t)
         }
         gpio_put(columns[col_index], 0);
         //printf("\n    267\n\n    ");
-        for(int i=0;i<100;i++){}
+        //for(int i=0;i<100;i++){}
 
-        // read rotary encoder pins
-        // regB = mcp23017_read_register( &gpio_expander, MCP23017_GPIOB);
-        // if (regB != regBprev)
-        // {
-        //     printf("%d\n", regB);
-        //     regBprev = regB;
-        // }
-        //  // Check the status of each encoder and update the counts accordingly
-        // if (!(regBprev & (1 << ENCODER1_A)) && (regBprev & (1 << ENCODER1_B))) {
-        //     encoder1_count++;
-        // } else if ((regBprev & (1 << ENCODER1_A)) && !(regBprev & (1 << ENCODER1_B))) {
-        //     encoder1_count--;
-        // }
+        //read rotary encoder pins
+        regB = mcp23017_read_register( &gpio_expander, MCP23017_GPIOB);
+        if (regB != regBprev)
+        {
+            printf("%d\n", regB);
+            regBprev = regB;
+        }
+         // Check the status of each encoder and update the counts accordingly
+        if (!(regBprev & (1 << ENCODER1_A)) && (regBprev & (1 << ENCODER1_B))) {
+            encoder1_count++;
+        } else if ((regBprev & (1 << ENCODER1_A)) && !(regBprev & (1 << ENCODER1_B))) {
+            encoder1_count--;
+        }
         
-        // if (!(regBprev & (1 << ENCODER2_A)) && (regBprev & (1 << ENCODER2_B))) {
-        //     encoder2_count++;
-        // } else if ((regBprev & (1 << ENCODER2_A)) && !(regBprev & (1 << ENCODER2_B))) {
-        //     encoder2_count--;
-        // }
+        if (!(regBprev & (1 << ENCODER2_A)) && (regBprev & (1 << ENCODER2_B))) {
+            encoder2_count++;
+        } else if ((regBprev & (1 << ENCODER2_A)) && !(regBprev & (1 << ENCODER2_B))) {
+            encoder2_count--;
+        }
 
-        // if (!(regBprev & (1 << ENCODER3_A)) && (regBprev & (1 << ENCODER3_B))) {
-        //     encoder3_count++;
-        // } else if ((regBprev & (1 << ENCODER3_A)) && !(regBprev & (1 << ENCODER3_B))) {
-        //     encoder3_count--;
-        // }
+        if (!(regBprev & (1 << ENCODER3_A)) && (regBprev & (1 << ENCODER3_B))) {
+            encoder3_count++;
+        } else if ((regBprev & (1 << ENCODER3_A)) && !(regBprev & (1 << ENCODER3_B))) {
+            encoder3_count--;
+        }
 
-        // if (!(regBprev & (1 << ENCODER4_A)) && (regBprev & (1 << ENCODER4_B))) {
-        //     encoder4_count++;
-        // } else if ((regBprev & (1 << ENCODER4_A)) && !(regBprev & (1 << ENCODER4_B))) {
-        //     encoder4_count--;
-        // }
+        if (!(regBprev & (1 << ENCODER4_A)) && (regBprev & (1 << ENCODER4_B))) {
+            encoder4_count++;
+        } else if ((regBprev & (1 << ENCODER4_A)) && !(regBprev & (1 << ENCODER4_B))) {
+            encoder4_count--;
+        }
 
     }
     return true;
@@ -218,7 +218,7 @@ int main(void){
     uint16_t samples11[57]={0};
     uint16_t samples12[55]={0};
     uint16_t samples13[54]={0};
-    uint16_t zeros[40]={127};
+    uint16_t zeros[40]={1};
     int count = 0,  semicolon_count = 0;
 
     uint16_t samples[13][200] ={0};
@@ -460,66 +460,83 @@ int main(void){
 
 
             case SW1:  //c4
-                AUDIO_SAMPLES=sizeof(samples1)/sizeof(samples1[0]);
+                irq_set_enabled(PWM_IRQ_WRAP, false);
                 audioTable=samples1;
-                
+                AUDIO_SAMPLES=sizeof(samples1)/sizeof(samples1[0]);
+                irq_set_enabled(PWM_IRQ_WRAP, true);
                 break;
             case SW2: //c#
+                irq_set_enabled(PWM_IRQ_WRAP, false);
                 AUDIO_SAMPLES=sizeof(samples2)/sizeof(samples2[0]);
                 audioTable=samples2;
-                
+                irq_set_enabled(PWM_IRQ_WRAP, true);
                 break;
             case SW3: //d
-            irq_set_enabled(PWM_IRQ_WRAP, false);
-                audioTable=samples3;
+                irq_set_enabled(PWM_IRQ_WRAP, false);
                 AUDIO_SAMPLES=sizeof(samples3)/sizeof(samples3[0]);
+                audioTable=samples3;
+                
                 irq_set_enabled(PWM_IRQ_WRAP, true);
                 break;
             case SW4: //d#
-            irq_set_enabled(PWM_IRQ_WRAP, false);
-                audioTable=samples4;
+                irq_set_enabled(PWM_IRQ_WRAP, false);
                 AUDIO_SAMPLES=sizeof(samples4)/sizeof(samples4[0]);
+                audioTable=samples4;
                 irq_set_enabled(PWM_IRQ_WRAP, true);
                 break;
             case SW5: //e
-            pwm_set_enabled(audio_pin_slice, false);
+                irq_set_enabled(PWM_IRQ_WRAP, false);
                 audioTable=samples5;
                 AUDIO_SAMPLES=sizeof(samples5)/sizeof(samples5[0]);
-                pwm_set_enabled(audio_pin_slice, true);
+                irq_set_enabled(PWM_IRQ_WRAP, true);
                 break;
             case SW6: //f
-            pwm_set_enabled(audio_pin_slice, false);
+                irq_set_enabled(PWM_IRQ_WRAP, false);
                 audioTable=samples6;
                 AUDIO_SAMPLES=sizeof(samples6)/sizeof(samples6[0]);
-                pwm_set_enabled(audio_pin_slice, true);
+                irq_set_enabled(PWM_IRQ_WRAP, true);
                 break;
             case SW7: //f#
-                audioTable=samples7;
+                irq_set_enabled(PWM_IRQ_WRAP, false);
                 AUDIO_SAMPLES=sizeof(samples7)/sizeof(samples7[0]);
+                audioTable=samples7;
+                irq_set_enabled(PWM_IRQ_WRAP, true);
                 break;
             case SW8: //g
+                irq_set_enabled(PWM_IRQ_WRAP, false);
                 audioTable=samples8;
                 AUDIO_SAMPLES=sizeof(samples8)/sizeof(samples8[0]);
+                irq_set_enabled(PWM_IRQ_WRAP, true);
                 break;
             case SW9: //g#
+                irq_set_enabled(PWM_IRQ_WRAP, false);
                 audioTable=samples9;
                 AUDIO_SAMPLES=sizeof(samples9)/sizeof(samples9[0]);
+                irq_set_enabled(PWM_IRQ_WRAP, true);
                 break;
             case SW10: //a
+                irq_set_enabled(PWM_IRQ_WRAP, false);
                 audioTable=samples10;
                 AUDIO_SAMPLES=sizeof(samples10)/sizeof(samples10[0]);
+                irq_set_enabled(PWM_IRQ_WRAP, true);
                 break; //a#
             case SW11: //b
+                irq_set_enabled(PWM_IRQ_WRAP, false);
                 audioTable=samples11;
                 AUDIO_SAMPLES=sizeof(samples11)/sizeof(samples11[0]);
+                irq_set_enabled(PWM_IRQ_WRAP, true);
                 break;
             case SW12: //b#
+                irq_set_enabled(PWM_IRQ_WRAP, false);
                 audioTable=samples12;
                 AUDIO_SAMPLES=sizeof(samples12)/sizeof(samples12[0]);
+                irq_set_enabled(PWM_IRQ_WRAP, true);
                 break;
             case SW13: //c5
+                irq_set_enabled(PWM_IRQ_WRAP, false);
                 audioTable=samples13;
                 AUDIO_SAMPLES=sizeof(samples13)/sizeof(samples13[0]);
+                irq_set_enabled(PWM_IRQ_WRAP, true);
                 break;
             case RE1:
                 /* code */
@@ -537,9 +554,8 @@ int main(void){
                 /* code */
                 break;
             default:
-            //printf("in default, key is %d\n", g_buttonPress);
-            AUDIO_SAMPLES=0;
-            audioTable=zeros;
+                irq_set_enabled(PWM_IRQ_WRAP, false);
+                audioTable = NULL; 
                 break;
             }
             g_buttonPress=-1;
@@ -547,8 +563,53 @@ int main(void){
         }
         if(!buttonValues[g_buttonPress])
         {
-            AUDIO_SAMPLES=0;
-            audioTable=zeros;
+            switch (g_buttonPress)
+            {
+            case SW1:  //c4
+                irq_set_enabled(PWM_IRQ_WRAP, false);
+                audioTable = NULL; 
+                break;
+            case SW2: //c#
+                irq_set_enabled(PWM_IRQ_WRAP, false);
+                audioTable = NULL; 
+                break;
+            case SW3: //d
+                irq_set_enabled(PWM_IRQ_WRAP, false);
+                break;
+            case SW4: //d#
+                irq_set_enabled(PWM_IRQ_WRAP, false);
+                break;
+            case SW5: //e
+                irq_set_enabled(PWM_IRQ_WRAP, false);
+                break;
+            case SW6: //f
+                irq_set_enabled(PWM_IRQ_WRAP, false);
+                break;
+            case SW7: //f#
+                irq_set_enabled(PWM_IRQ_WRAP, false);
+                break;
+            case SW8: //g
+                irq_set_enabled(PWM_IRQ_WRAP, false);
+                break;
+            case SW9: //g#
+                irq_set_enabled(PWM_IRQ_WRAP, false);
+                break;
+            case SW10: //a
+                irq_set_enabled(PWM_IRQ_WRAP, false);
+                break; //a#
+            case SW11: //b
+                irq_set_enabled(PWM_IRQ_WRAP, false);
+                break;
+            case SW12: //b#
+                irq_set_enabled(PWM_IRQ_WRAP, false);
+                break;
+            case SW13: //c5
+                /* code */
+                break;
+            default:
+                irq_set_enabled(PWM_IRQ_WRAP, false);
+                break;
+            }
         }
         bufferLength--;	 //	Decrease buffer size after reading
         readIndex++;	 //	Increase readIndex position to prepare for next read
