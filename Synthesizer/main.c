@@ -675,8 +675,7 @@ int main(void){
                 //f_unmount("0:");
                 spi_init(spi, 125000000);
 
-                sleep_ms(1000);
-
+                sleep_ms(100);
                 menuLocation = 5;
 
                 printMenuOptions();
@@ -689,7 +688,7 @@ int main(void){
             case SPECTRUM: 
 
                 LCD_clear(BLUE);
-                Paint_DrawString_EN(20, 30, "Loading Square Waves...", BLUE, WHITE);
+                Paint_DrawString_EN(20, 30, "Loading Square ...", BLUE, WHITE);
 
                 spi_init(spi, 25 * 1000 * 1000);
                 
@@ -788,7 +787,7 @@ int main(void){
                 //f_unmount("0:");
                 spi_init(spi, 125000000);
 
-                sleep_ms(1000);
+                sleep_ms(100);
 
                 menuLocation = 5;
 
@@ -801,7 +800,7 @@ int main(void){
                 break;
             case BEEPS:
                 LCD_clear(BLUE);
-                Paint_DrawString_EN(20, 30, "Loading Square Waves...", BLUE, WHITE);
+                Paint_DrawString_EN(20, 30, "Loading Square ...", BLUE, WHITE);
 
                 spi_init(spi, 25 * 1000 * 1000);
                 
@@ -900,7 +899,7 @@ int main(void){
                 //f_unmount("0:");
                 spi_init(spi, 125000000);
 
-                sleep_ms(1000);
+                //sleep_ms(1000);
 
                 menuLocation = 5;
 
@@ -916,15 +915,20 @@ int main(void){
                 if(lowPassEnable)
                 {
                     lowPassEnable=0;
-                    Paint_DrawString_EN(60, 30, "Low Pass Disabled", GREEN, WHITE);
+                    Paint_DrawString_EN(20, 60, "Low Pass Disabled", GREEN, WHITE);
 
                 }else
                 {
                     lowPassEnable=1;
-                    Paint_DrawString_EN(60, 30, "Low Pass Enabled", GREEN, WHITE);
+                    Paint_DrawString_EN(20, 60, "Low Pass Enabled", GREEN, WHITE);
                 }
                 sleep_ms(1000);
                 menuLocation = 5;
+                printMenuOptions();
+                irq_en(false);
+                Paint_DrawRectangle(39,prevY*20+51,200,prevY*20+51+19,MAGENTA,2,0);
+                Paint_DrawRectangle(39,squareY*20+51,200,squareY*20+51+19,BLACK,2,0);
+                irq_en(true);
                 break;
             case BOINKS:
                 LCD_clear(GRAY);
@@ -932,16 +936,21 @@ int main(void){
                 if(lowPassEnable)
                 {
                     lowPassEnable=0;
-                    Paint_DrawString_EN(60, 30, "High Pass Disabled", GRAY, WHITE);
+                    Paint_DrawString_EN(20, 60, "High Pass Disabled", GRAY, WHITE);
                     
                 }else
                 {
                     lowPassEnable=1;
-                    Paint_DrawString_EN(60, 30, "High Pass Enabled", GRAY, WHITE);
+                    Paint_DrawString_EN(20, 60, "High Pass Enabled", GRAY, WHITE);
                 }
                 
                 sleep_ms(1000);
                 menuLocation = 5;
+                printMenuOptions();
+                irq_en(false);
+                Paint_DrawRectangle(39,prevY*20+51,200,prevY*20+51+19,MAGENTA,2,0);
+                Paint_DrawRectangle(39,squareY*20+51,200,squareY*20+51+19,BLACK,2,0);
+                irq_en(true);
                 break;
             default:
                 break;
