@@ -138,7 +138,24 @@ bool repeating_timer_callback(struct repeating_timer *t)
 			// 	printf("\n    Buffer is full!\n\n    ");
 			// 	continue;
 			// }
-            if(rowState ==1) //button pressed
+            if(rowState==0) //button pressed
+            {
+                buttonValues[row_index*5+col_index]=0;
+                if(prevButtonValues[row_index*5+col_index]==1)
+                {
+                    // ring_buffer[writeIndex]=row_index*5+col_index;
+                    printf("162\n\n    ");
+                    // writeIndex++;
+                    index = (row_index*5+col_index);
+                    ring_buffer_write(&ringBuf, index); 
+                    bufferLength=1;
+                    prevButtonValues[row_index*5+col_index]=buttonValues[row_index*5+col_index];
+                    break;
+                }
+               // prevButtonValues[row_index*5+col_index]=buttonValues[row_index*5+col_index];
+                
+            }
+            else //(rowState ==0) //button released
             {
                 buttonValues[row_index*5+col_index]=1;
                 if(prevButtonValues[row_index*5+col_index]==0)
@@ -150,23 +167,13 @@ bool repeating_timer_callback(struct repeating_timer *t)
                     index = (row_index*5+col_index);
                     ring_buffer_write(&ringBuf, index); 
                     bufferLength=1;
+                    prevButtonValues[row_index*5+col_index]=buttonValues[row_index*5+col_index];
+                    break;
                 }
+                //prevButtonValues[row_index*5+col_index]=buttonValues[row_index*5+col_index];
+                
             }
-            else if(rowState ==0) //button released
-            {
-                buttonValues[row_index*5+col_index]=0;
-                if(prevButtonValues[row_index*5+col_index]==1)
-                {
-                    // ring_buffer[writeIndex]=row_index*5+col_index;
-                    // printf("\n    row state low %d\n\n    ", ring_buffer[writeIndex]);
-                    // writeIndex++;
-                    index = (row_index*5+col_index);
-                    ring_buffer_write(&ringBuf, index); 
-                    
-                    bufferLength=1;
-                }
-            }
-            prevButtonValues[row_index*5+col_index]=buttonValues[row_index*5+col_index];
+            
             // If at last index in buffer, set writeIndex back to 0
             // if (writeIndex == SIZE_OF_BUFFER) 
             // {
@@ -248,7 +255,7 @@ int main(void){
     stdio_init_all();
 
     struct repeating_timer timer;
-    add_repeating_timer_ms(100, repeating_timer_callback, NULL, &timer);
+    add_repeating_timer_ms(50, repeating_timer_callback, NULL, &timer);
     memset(buttonValues,0,30);
     memset(prevButtonValues,0,30);
     memset(ring_buffer,0,16*sizeof(ring_buffer[0]));
@@ -354,10 +361,11 @@ int main(void){
         *   input, and nested switch statements to determine the 
         *   action based on the input. 
         */
-        
-        if (bufferLength) //ring_buffer_read(&ringBuf) !=0
+        g_buttonPress= ring_buffer_read(&ringBuf);
+        if (g_buttonPress != 69) //ring_buffer_read(&ringBuf) !=0
         { // Check if there is data available to read from the ring buffer
-            g_buttonPress = ring_buffer_read(&ringBuf); 
+            printf("line 367 %d\n",g_buttonPress);
+            
         // if(bufferLength)
         // {
             //bufferLength=0;
@@ -767,6 +775,7 @@ int main(void){
 
                 f_close(&fil);
                 //f_unmount("0:");
+                ring_buffer_init(&ringBuf, 32);
                 spi_init(spi, 125000000);
 
                 sleep_ms(100);
@@ -878,6 +887,7 @@ int main(void){
                 printf("\r\n---\r\n");
 
                 f_close(&fil);
+                ring_buffer_init(&ringBuf, 32);
                 //f_unmount("0:");
                 spi_init(spi, 125000000);
 
@@ -990,6 +1000,7 @@ int main(void){
                 printf("\r\n---\r\n");
 
                 f_close(&fil);
+                ring_buffer_init(&ringBuf, 32);
                 //f_unmount("0:");
                 spi_init(spi, 125000000);
 
@@ -1075,14 +1086,15 @@ void ring_buffer_write(ring_buffer_t * buffer, uint8_t data) {
 }
 
 // Define the ring buffer read function
-uint8_t ring_buffer_read(ring_buffer_t * buffer) {
-    if (buffer->tail != buffer->head) { // Check if the buffer is not empty
-        uint8_t data = buffer->buffer[buffer->tail]; // Read the data from the buffer
-        buffer->tail = (buffer->tail + 1) % buffer->size; // Update the tail index
-        printf("in read %d and tail %ld\n",data,buffer->tail);
-        return data;
+uint8_t ring_buffer_read(ring_buffer_t *buffer) {
+    if (buffer->head == buffer->tail) { // Check if the buffer is empty
+    
+        return 69; // Return 0 if the buffer is empty
     }
-    return 0; // Return 0 if the buffer is empty
+    uint8_t data = buffer->buffer[buffer->tail]; // Read the data from the buffer
+    buffer->tail = (buffer->tail + 1) % buffer->size; // Update the tail index
+    printf("in read %d and tail %ld\n",data,buffer->head);
+    return data; // Return the data
 }
 
 void printMenuOptions() // prints menu options
