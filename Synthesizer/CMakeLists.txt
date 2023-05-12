@@ -22,7 +22,8 @@ add_executable(SYNTH
         hw_config.c
         MCP23017.c
         MCP23017.h
-        c4.h
+        hipass_coeffs.h
+        lopass_coeffs.h
         )
 #
 # pull in common dependencies

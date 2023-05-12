@@ -16,6 +16,8 @@
 #include "sd_card.h"
 #include "ff.h"
 #include "MCP23017.h"
+#include "lopass_coeffs.h"
+#include "hipass_coeffs.h"
 
 #define MainMenu 5
 #define SD 0
@@ -117,7 +119,7 @@ void printMenuOptions();
 void menuButtons_init(void);
 void irq_en(bool en);
 void *memset(void *str, int c, size_t n);
-void fir_delay_line(uint8_t *input, uint16_t *output, int nx, int nh, uint8_t *filter);
+void fir_delay_line(uint16_t *input, uint16_t *output, int nx, int nh, uint8_t *filter);
 void pwm_irh();
 void ring_buffer_write(ring_buffer_t * buffer, uint8_t data);
 uint8_t ring_buffer_read(ring_buffer_t * buffer);
@@ -239,6 +241,19 @@ int main(void){
     uint16_t samples11[48]={0};
     uint16_t samples12[45]={0};
     uint16_t samples13[43]={0};
+    uint16_t outsamples1[85]={0};
+    uint16_t outsamples2[80]={0};
+    uint16_t outsamples3[75]={0};
+    uint16_t outsamples4[71]={0};
+    uint16_t outsamples5[67]={0};
+    uint16_t outsamples6[64]={0};
+    uint16_t outsamples7[60]={0};
+    uint16_t outsamples8[57]={0};
+    uint16_t outsamples9[53]={0};
+    uint16_t outsamples10[51]={0};
+    uint16_t outsamples11[48]={0};
+    uint16_t outsamples12[45]={0};
+    uint16_t outsamples13[43]={0};
     uint16_t zeros[85]={0};
     int count = 0,  semicolon_count = 0;
 
@@ -251,6 +266,8 @@ int main(void){
     spi_inst_t *spi = spi0;
 
     int lowPassEnable=0;
+    int highPassEnable=0;
+  
 
     stdio_init_all();
 
@@ -362,19 +379,8 @@ int main(void){
         *   action based on the input. 
         */
         g_buttonPress= ring_buffer_read(&ringBuf);
-        if (g_buttonPress != 69) //ring_buffer_read(&ringBuf) !=0
-        { // Check if there is data available to read from the ring buffer
-            printf("line 367 %d\n",g_buttonPress);
-            
-        // if(bufferLength)
-        // {
-            //bufferLength=0;
-
-            //g_buttonPress=ring_buffer[readIndex];
-            // readIndex++;
-            // if (readIndex == SIZE_OF_BUFFER) {
-            //     readIndex = 0;
-            // }
+        if (g_buttonPress != 69) 
+        { 
             if(buttonValues[g_buttonPress])
             {
                 switch (g_buttonPress)
@@ -383,7 +389,13 @@ int main(void){
                     switch (menuLocation)
                     {
                         case MainMenu:
-                            
+                            irq_set_enabled(PWM_IRQ_WRAP, false);
+                            AUDIO_SAMPLES=14001;
+                            audioTable=roblox_oof;
+                            oled_fill(buf,0x00);
+                            oled_setCursor(0,0);
+                            oled_WriteString16("******OOF!******\n");
+                            irq_set_enabled(PWM_IRQ_WRAP, true);
                             break;
                         case SD:
                             
@@ -465,7 +477,6 @@ int main(void){
                         {
                             prevY = squareY;
                             squareY++;
-                            printf("in down %d\n", squareY);
                             irq_en(false);
                             Paint_DrawRectangle(39,prevY*20+51,200,prevY*20+51+19,MAGENTA,2,0);
                             Paint_DrawRectangle(39,squareY*20+51,200,squareY*20+51+19,BLACK,2,0);
@@ -496,78 +507,117 @@ int main(void){
                     irq_set_enabled(PWM_IRQ_WRAP, false);
                     audioTable=samples1;
                     AUDIO_SAMPLES=85;
+                    oled_fill(buf,0x00);
+                    oled_setCursor(0,0);
+                    oled_WriteString16("******C4******\n");
                     irq_set_enabled(PWM_IRQ_WRAP, true);
                     break;
                 case SW2: //c#
                     irq_set_enabled(PWM_IRQ_WRAP, false);
                     AUDIO_SAMPLES=80;
                     audioTable=samples2;
+                    oled_fill(buf,0x00);
+                    oled_setCursor(0,0);
+                    oled_WriteString16("******C#4******\n");
                     irq_set_enabled(PWM_IRQ_WRAP, true);
                     break;
                 case SW3: //d
                     irq_set_enabled(PWM_IRQ_WRAP, false);
                     AUDIO_SAMPLES=75;
                     audioTable=samples3;
+                    oled_fill(buf,0x00);
+                    oled_setCursor(0,0);
+                    oled_WriteString16("******D4******\n");
                     irq_set_enabled(PWM_IRQ_WRAP, true);
                     break;
                 case SW4: //d#
                     irq_set_enabled(PWM_IRQ_WRAP, false);
                     AUDIO_SAMPLES=71;
                     audioTable=samples4;
+                    oled_fill(buf,0x00);
+                    oled_setCursor(0,0);
+                    oled_WriteString16("******Eb4******\n");
                     irq_set_enabled(PWM_IRQ_WRAP, true);
                     break;
                 case SW5: //e
                     irq_set_enabled(PWM_IRQ_WRAP, false);
                     AUDIO_SAMPLES=67;
                     audioTable=samples5;
+                    oled_fill(buf,0x00);
+                    oled_setCursor(0,0);
+                    oled_WriteString16("******E4******\n");
                     irq_set_enabled(PWM_IRQ_WRAP, true);
                     break;
                 case SW6: //f
                     irq_set_enabled(PWM_IRQ_WRAP, false);
                     AUDIO_SAMPLES=64;
                     audioTable=samples6;
+                    oled_fill(buf,0x00);
+                    oled_setCursor(0,0);
+                    oled_WriteString16("******F4******\n");
                     irq_set_enabled(PWM_IRQ_WRAP, true);
                     break;
                 case SW7: //f#
                     irq_set_enabled(PWM_IRQ_WRAP, false);
                     AUDIO_SAMPLES=60;
                     audioTable=samples7;
+                    oled_fill(buf,0x00);
+                    oled_setCursor(0,0);
+                    oled_WriteString16("******F#4******\n");
                     irq_set_enabled(PWM_IRQ_WRAP, true);
                     break;
                 case SW8: //g
                     irq_set_enabled(PWM_IRQ_WRAP, false);
                     AUDIO_SAMPLES=57;
                     audioTable=samples8;
+                    oled_fill(buf,0x00);
+                    oled_setCursor(0,0);
+                    oled_WriteString16("******G4******\n");
                     irq_set_enabled(PWM_IRQ_WRAP, true);
                     break;
                 case SW9: //g#
                     irq_set_enabled(PWM_IRQ_WRAP, false);
                     AUDIO_SAMPLES=53;
                     audioTable=samples9;
+                    oled_fill(buf,0x00);
+                    oled_setCursor(0,0);
+                    oled_WriteString16("******G#4******\n");
                     irq_set_enabled(PWM_IRQ_WRAP, true);
                     break;
                 case SW10: //a
                     irq_set_enabled(PWM_IRQ_WRAP, false);
                     AUDIO_SAMPLES=51;
                     audioTable=samples10;
+                    oled_fill(buf,0x00);
+                    oled_setCursor(0,0);
+                    oled_WriteString16("******A4******\n");
                     irq_set_enabled(PWM_IRQ_WRAP, true);
                     break; //a#
                 case SW11: //b
                     irq_set_enabled(PWM_IRQ_WRAP, false);
                     AUDIO_SAMPLES=48;
                     audioTable=samples11;
+                    oled_fill(buf,0x00);
+                    oled_setCursor(0,0);
+                    oled_WriteString16("******Bb4******\n");
                     irq_set_enabled(PWM_IRQ_WRAP, true);
                     break;
                 case SW12: //b#
                     irq_set_enabled(PWM_IRQ_WRAP, false);
                     AUDIO_SAMPLES=45;
                     audioTable=samples12;
+                    oled_fill(buf,0x00);
+                    oled_setCursor(0,0);
+                    oled_WriteString16("******B4******\n");
                     irq_set_enabled(PWM_IRQ_WRAP, true);
                     break;
                 case SW13: //c5
                     irq_set_enabled(PWM_IRQ_WRAP, false);
                     AUDIO_SAMPLES=43;
                     audioTable=samples13;
+                    oled_fill(buf,0x00);
+                    oled_setCursor(0,0);
+                    oled_WriteString16("******C5******\n");
                     irq_set_enabled(PWM_IRQ_WRAP, true);
                     break;
                 // case RE1:
@@ -589,6 +639,8 @@ int main(void){
                     irq_set_enabled(PWM_IRQ_WRAP, false);
                     audioTable = zeros; 
                     AUDIO_SAMPLES=85;
+                    oled_setCursor(0,0);
+                    oled_WriteString16("***Nebraska ;)***\n");
                     break;
                 }
                 g_buttonPress=-1;
@@ -669,15 +721,17 @@ int main(void){
             switch (menuLocation)
             {
             case MainMenu: //print menu options with the box at prev location.
-                printMenuOptions();
                 irq_en(false);
+                printMenuOptions();
                 Paint_DrawRectangle(39,prevY*20+51,200,prevY*20+51+19,MAGENTA,2,0);
                 Paint_DrawRectangle(39,squareY*20+51,200,squareY*20+51+19,BLACK,2,0);
                 irq_en(true);
                 break;
             case SD: //open the file on the SD card and store samples in arrays
+                irq_en(false);
                 LCD_clear(RED);
                 Paint_DrawString_EN(20, 30, "Loading Sinusoids...", RED, WHITE);
+                irq_en(true);
 
                 spi_init(spi, 25 * 1000 * 1000);
                 
@@ -706,15 +760,6 @@ int main(void){
                         count = 0;
                     }
                 }
-
-                // for(int16_t i = 0; i < 13; i++)
-                // {
-                //     for (uint j = 0; j < (sizeof(samples[i]) / sizeof(samples[i][0])) && samples[i][j] != 0; j++)
-                //     {
-                //         printf("%d, ", samples[i][j]);
-                //     }
-                //     printf("\n\n");
-                // }
 
                 f_close(&fil);
                 for(int i=0; i<85; i++)
@@ -781,17 +826,18 @@ int main(void){
                 sleep_ms(100);
                 menuLocation = 5;
 
-                printMenuOptions();
                 irq_en(false);
+                printMenuOptions();
                 Paint_DrawRectangle(39,prevY*20+51,200,prevY*20+51+19,MAGENTA,2,0);
                 Paint_DrawRectangle(39,squareY*20+51,200,squareY*20+51+19,BLACK,2,0);
                 irq_en(true);
-
+                
                 break;
             case SPECTRUM: 
-
+                irq_en(false);
                 LCD_clear(BLUE);
                 Paint_DrawString_EN(20, 30, "Loading Square ...", BLUE, WHITE);
+                irq_en(true);
 
                 spi_init(spi, 25 * 1000 * 1000);
                 
@@ -894,18 +940,18 @@ int main(void){
                 sleep_ms(100);
 
                 menuLocation = 5;
-
-                printMenuOptions();
                 irq_en(false);
+                printMenuOptions();
                 Paint_DrawRectangle(39,prevY*20+51,200,prevY*20+51+19,MAGENTA,2,0);
                 Paint_DrawRectangle(39,squareY*20+51,200,squareY*20+51+19,BLACK,2,0);
                 irq_en(true);
 
                 break;
             case BEEPS:
+                irq_en(false);
                 LCD_clear(BLUE);
                 Paint_DrawString_EN(20, 30, "Loading Square ...", BLUE, WHITE);
-
+                irq_en(true);
                 spi_init(spi, 25 * 1000 * 1000);
                 
                 // Open file for reading
@@ -1007,16 +1053,15 @@ int main(void){
                 //sleep_ms(1000);
 
                 menuLocation = 5;
-
-                printMenuOptions();
                 irq_en(false);
+                printMenuOptions();
                 Paint_DrawRectangle(39,prevY*20+51,200,prevY*20+51+19,MAGENTA,2,0);
                 Paint_DrawRectangle(39,squareY*20+51,200,squareY*20+51+19,BLACK,2,0);
                 irq_en(true);
                 break;
             case BOOPS:
+                irq_en(false);
                 LCD_clear(GREEN);
-                lowPassEnable=1;
                 if(lowPassEnable)
                 {
                     lowPassEnable=0;
@@ -1027,32 +1072,30 @@ int main(void){
                     lowPassEnable=1;
                     Paint_DrawString_EN(20, 60, "Low Pass Enabled", GREEN, WHITE);
                 }
-                sleep_ms(1000);
+                //sleep_ms(1000);
                 menuLocation = 5;
                 printMenuOptions();
-                irq_en(false);
                 Paint_DrawRectangle(39,prevY*20+51,200,prevY*20+51+19,MAGENTA,2,0);
                 Paint_DrawRectangle(39,squareY*20+51,200,squareY*20+51+19,BLACK,2,0);
                 irq_en(true);
                 break;
             case BOINKS:
+                irq_en(false);
                 LCD_clear(GRAY);
-                lowPassEnable=1;
-                if(lowPassEnable)
+                if(highPassEnable)
                 {
-                    lowPassEnable=0;
+                    highPassEnable=0;
                     Paint_DrawString_EN(20, 60, "High Pass Disabled", GRAY, WHITE);
                     
                 }else
                 {
-                    lowPassEnable=1;
+                    highPassEnable=1;
                     Paint_DrawString_EN(20, 60, "High Pass Enabled", GRAY, WHITE);
                 }
                 
-                sleep_ms(1000);
+                //sleep_ms(1000);
                 menuLocation = 5;
                 printMenuOptions();
-                irq_en(false);
                 Paint_DrawRectangle(39,prevY*20+51,200,prevY*20+51+19,MAGENTA,2,0);
                 Paint_DrawRectangle(39,squareY*20+51,200,squareY*20+51+19,BLACK,2,0);
                 irq_en(true);
@@ -1063,8 +1106,142 @@ int main(void){
         }
         if(lowPassEnable)
         {
-           // fir_delay_line();
-            
+           fir_delay_line(samples1, outsamples1, 85, 59, LOPASS_CUT_0_750);
+           for(int i=0;i<85;i++)
+           {
+                samples1[i]=outsamples1[i];
+           }
+           fir_delay_line(samples2, outsamples2, 80, 59, LOPASS_CUT_0_750);
+           for(int i=0;i<80;i++)
+           {
+                samples2[i]=outsamples2[i];
+           }
+           fir_delay_line(samples3, outsamples3, 75, 59, LOPASS_CUT_0_750);
+           for(int i=0;i<75;i++)
+           {
+                samples3[i]=outsamples3[i];
+           }
+           fir_delay_line(samples4, outsamples4, 71, 59, LOPASS_CUT_0_750);
+           for(int i=0;i<71;i++)
+           {
+                samples4[i]=outsamples4[i];
+           }
+           fir_delay_line(samples5, outsamples5, 67, 59, LOPASS_CUT_0_750);
+           for(int i=0;i<67;i++)
+           {
+                samples5[i]=outsamples5[i];
+           }
+           fir_delay_line(samples6, outsamples6, 64, 59, LOPASS_CUT_0_750);
+           for(int i=0;i<64;i++)
+           {
+                samples6[i]=outsamples6[i];
+           }
+           fir_delay_line(samples7, outsamples7, 60, 59, LOPASS_CUT_0_750);
+           for(int i=0;i<60;i++)
+           {
+                samples7[i]=outsamples7[i];
+           }
+           fir_delay_line(samples8, outsamples8, 57, 59, LOPASS_CUT_0_750);
+           for(int i=0;i<57;i++)
+           {
+                samples8[i]=outsamples8[i];
+           }
+           fir_delay_line(samples9, outsamples9, 53, 59, LOPASS_CUT_0_750);
+           for(int i=0;i<53;i++)
+           {
+                samples9[i]=outsamples9[i];
+           }
+           fir_delay_line(samples10, outsamples10, 51, 59, LOPASS_CUT_0_750);
+           for(int i=0;i<51;i++)
+           {
+                samples10[i]=outsamples10[i];
+           }
+           fir_delay_line(samples11, outsamples11, 48, 59, LOPASS_CUT_0_750);
+           for(int i=0;i<48;i++)
+           {
+                samples11[i]=outsamples11[i];
+           }
+           fir_delay_line(samples12, outsamples12, 45, 59, LOPASS_CUT_0_750);
+           for(int i=0;i<45;i++)
+           {
+                samples12[i]=outsamples12[i];
+           }
+           fir_delay_line(samples13, outsamples13, 43, 59, LOPASS_CUT_0_750);
+           for(int i=0;i<43;i++)
+           {
+                samples13[i]=outsamples13[i];
+           }
+
+           //has an output buffer but doesn't return it. i think has to be set to something else but how to do that when each tone is different length
+        }
+        if(highPassEnable)
+        {
+            fir_delay_line(samples1, outsamples1, 85, 61, HIPASS_CUT_1000);
+            for(int i=0;i<85;i++)
+            {
+                    samples1[i]=outsamples1[i];
+            }
+            fir_delay_line(samples2, outsamples2, 80, 61, HIPASS_CUT_1000);
+            for(int i=0;i<80;i++)
+            {
+                    samples2[i]=outsamples2[i];
+            }
+            fir_delay_line(samples3, outsamples3, 75, 61, HIPASS_CUT_1000);
+            for(int i=0;i<75;i++)
+            {
+                    samples3[i]=outsamples3[i];
+            }
+             fir_delay_line(samples4, outsamples4, 71, 61, HIPASS_CUT_1000);
+           for(int i=0;i<71;i++)
+           {
+                samples4[i]=outsamples4[i];
+           }
+           fir_delay_line(samples5, outsamples5, 67, 61, HIPASS_CUT_1000);
+           for(int i=0;i<67;i++)
+           {
+                samples5[i]=outsamples5[i];
+           }
+           fir_delay_line(samples6, outsamples6, 64, 61, HIPASS_CUT_1000);
+           for(int i=0;i<64;i++)
+           {
+                samples6[i]=outsamples6[i];
+           }
+           fir_delay_line(samples7, outsamples7, 60, 61, HIPASS_CUT_1000);
+           for(int i=0;i<60;i++)
+           {
+                samples7[i]=outsamples7[i];
+           }
+           fir_delay_line(samples8, outsamples8, 57, 61, HIPASS_CUT_1000);
+           for(int i=0;i<57;i++)
+           {
+                samples8[i]=outsamples8[i];
+           }
+           fir_delay_line(samples9, outsamples9, 53, 61, HIPASS_CUT_1000);
+           for(int i=0;i<53;i++)
+           {
+                samples9[i]=outsamples9[i];
+           }
+           fir_delay_line(samples10, outsamples10, 51, 61, HIPASS_CUT_1000);
+           for(int i=0;i<51;i++)
+           {
+                samples10[i]=outsamples10[i];
+           }
+           fir_delay_line(samples11, outsamples11, 48, 61, HIPASS_CUT_1000);
+           for(int i=0;i<48;i++)
+           {
+                samples11[i]=outsamples11[i];
+           }
+           fir_delay_line(samples12, outsamples12, 45, 61, HIPASS_CUT_1000);
+           for(int i=0;i<45;i++)
+           {
+                samples12[i]=outsamples12[i];
+           }
+           fir_delay_line(samples13, outsamples13, 43, 61, HIPASS_CUT_1000);
+           for(int i=0;i<43;i++)
+           {
+                samples13[i]=outsamples13[i];
+           }
+
         }
     }
 }
@@ -1079,7 +1256,6 @@ void ring_buffer_init(ring_buffer_t *buffer, uint32_t size) {
 void ring_buffer_write(ring_buffer_t * buffer, uint8_t data) {
     uint32_t next_head = (buffer->head + 1) % buffer->size; // Calculate the index of the next head element
     if (next_head != buffer->tail) { // Check if the buffer is full
-        printf("in write %d and head %ld\n",data,buffer->head);
         buffer->buffer[buffer->head] = data; // Write the data to the buffer
         buffer->head = next_head; // Update the head index
     }
@@ -1093,7 +1269,6 @@ uint8_t ring_buffer_read(ring_buffer_t *buffer) {
     }
     uint8_t data = buffer->buffer[buffer->tail]; // Read the data from the buffer
     buffer->tail = (buffer->tail + 1) % buffer->size; // Update the tail index
-    printf("in read %d and tail %ld\n",data,buffer->head);
     return data; // Return the data
 }
 
@@ -1103,10 +1278,12 @@ LCD_clear(MAGENTA);
 Paint_DrawString_EN(5, 10, "Welcome to Dynth", MAGENTA, WHITE);
 Paint_DrawString_EN(5, 30, "------------------", MAGENTA, WHITE);
 Paint_DrawString_EN(5, 50, "- Sinusoid", MAGENTA, WHITE);
-Paint_DrawString_EN(5, 70, "- Square Wave", MAGENTA, WHITE);
-Paint_DrawString_EN(5, 90, "- Triangle Wave", MAGENTA, WHITE);
-Paint_DrawString_EN(5, 110, "- Low-Pass Filter ", MAGENTA, WHITE);
-Paint_DrawString_EN(5, 130,"- High Pass Filter ", MAGENTA, WHITE);
+Paint_DrawString_EN(5, 70, "- Square", MAGENTA, WHITE);
+Paint_DrawString_EN(5, 90, "- Triangle", MAGENTA, WHITE);
+Paint_DrawString_EN(5, 110, "- Low-Pass", MAGENTA, WHITE);
+Paint_DrawString_EN(5, 130,"- High Pass", MAGENTA, WHITE);
+oled_setCursor(0,0);
+oled_WriteString16("***Nebraska ;)***\n");
 }
 
 void menuButtons_init(void) 
@@ -1142,7 +1319,7 @@ void pwm_irh() {
         cur_sample = 0;
     }
 }
-void fir_delay_line(uint8_t *input, uint16_t *output, int nx, int nh, uint8_t *filter) {
+void fir_delay_line(uint16_t *input, uint16_t *output, int nx, int nh, uint8_t *filter) {
     
     int i, j;
     uint16_t sum;

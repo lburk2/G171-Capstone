@@ -2738,7 +2738,9 @@ CMakeFiles/SYNTH.dir/main.c.obj: ../lib/no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI/sd
 CMakeFiles/SYNTH.dir/main.c.obj: ../LCD.h
 CMakeFiles/SYNTH.dir/main.c.obj: ../MCP23017.h
 CMakeFiles/SYNTH.dir/main.c.obj: ../OLED.h
+CMakeFiles/SYNTH.dir/main.c.obj: ../hipass_coeffs.h
 CMakeFiles/SYNTH.dir/main.c.obj: ../imageN.h
+CMakeFiles/SYNTH.dir/main.c.obj: ../lopass_coeffs.h
 CMakeFiles/SYNTH.dir/main.c.obj: ../main.c
 CMakeFiles/SYNTH.dir/main.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/boards/include/boards/pico.h
 CMakeFiles/SYNTH.dir/main.c.obj: C:/VSARM/sdk/pico/pico-sdk/src/common/pico_base/include/pico.h

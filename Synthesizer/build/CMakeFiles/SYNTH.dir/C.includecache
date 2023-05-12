@@ -64,7 +64,15 @@ stdio.h
 stdint.h
 -
 
+C:/Users/jisat/OneDrive/Documents/GitHub/G171-Capstone/Synthesizer/hipass_coeffs.h
+stdint.h
+-
+
 C:/Users/jisat/OneDrive/Documents/GitHub/G171-Capstone/Synthesizer/imageN.h
+
+C:/Users/jisat/OneDrive/Documents/GitHub/G171-Capstone/Synthesizer/lopass_coeffs.h
+stdint.h
+-
 
 C:/Users/jisat/OneDrive/Documents/GitHub/G171-Capstone/Synthesizer/main.c
 stdio.h
@@ -99,6 +107,10 @@ ff.h
 C:/Users/jisat/OneDrive/Documents/GitHub/G171-Capstone/Synthesizer/ff.h
 MCP23017.h
 C:/Users/jisat/OneDrive/Documents/GitHub/G171-Capstone/Synthesizer/MCP23017.h
+lopass_coeffs.h
+C:/Users/jisat/OneDrive/Documents/GitHub/G171-Capstone/Synthesizer/lopass_coeffs.h
+hipass_coeffs.h
+C:/Users/jisat/OneDrive/Documents/GitHub/G171-Capstone/Synthesizer/hipass_coeffs.h
 
 C:/VSARM/sdk/pico/pico-sdk/src/boards/include/boards/pico.h
 
